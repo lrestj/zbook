@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=Utility
+Comment=A modern GUI video and audio downloader
+Exec=ytdownloader %U
+Icon=/home/libor/.dotfiles/icons/ytdl.svg
+Name=ytDownloader
+StartupWMClass=ytDownloader
+Type=Application

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "###########################"
+echo "# Instaluji nvidia-driver #" 
+echo "###########################"
+sleep 10
+sudo apt update
+sudo apt install linux-headers-amd64
+sudo apt install nvidia-driver
+sudo apt install nvidia-smi
+echo "options nvidia-drm modeset=1" | sudo tee /etc/modprobe.d/nvidia-drm-modeset.conf
+sudo update-initramfs -u
+
+###  END OF FILE  ###

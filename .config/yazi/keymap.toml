@@ -1,0 +1,71 @@
+[[mgr.prepend_keymap]]
+on   = "F"
+run  = "plugin jump-to-char"
+desc = "Jump to char"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "a" ]
+run  = "plugin compress"
+desc = "Archive selected files"
+
+[[mgr.prepend_keymap]]
+on   = [ "c", "a", "p" ]
+run  = "plugin compress -p"
+desc = "Passw zip"
+
+[[mgr.prepend_keymap]]
+on   = "<Enter>"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[mgr.prepend_keymap]]
+on = [ "Z" ]
+run = "plugin bookmarks save"
+desc = "Uložit jako záložku"
+
+[[mgr.prepend_keymap]]
+on = [ "b" ]
+run = "plugin bookmarks jump"
+desc = "Jít na záložku"
+
+[[mgr.prepend_keymap]]
+on = [ "B", "d" ]
+run = "plugin bookmarks delete"
+desc = "Smazat záložku"
+
+[[mgr.prepend_keymap]]
+on = [ "B", "D" ]
+run = "plugin bookmarks delete_all"
+desc = "Smazat všechny záložky"
+
+[[mgr.prepend_keymap]]
+on  = "M"
+run = "plugin mount"
+
+# Goto
+[[mgr.prepend_keymap]]
+on = [ "g", "h" ]       
+run = "cd ~"          
+desc = "Go to the home directory" 
+[[mgr.prepend_keymap]]
+on = [ "g", "c" ]
+run = "cd ~/.config"    
+desc = "Go to the config directory" 
+[[mgr.prepend_keymap]]
+on = [ "g", "d" ]      
+run = "cd ~/.dotfiles"
+desc = "Go to the dotfiles directory" 
+[[mgr.prepend_keymap]]
+on = [ "g", "s" ]
+run = "cd ~/Stažené"
+desc = "Go to the downloads directory" 
+[[mgr.prepend_keymap]]
+on = [ "g", "<Space>" ]
+run = "cd --interactive"
+desc = "Go to a directory interactively" 
+[[mgr.prepend_keymap]]
+on = [ "g", "n" ]
+run = "cd /nfs"
+desc = "Go to NAS" 
+
+### END OF FILE ###

@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Yazi
+Icon=/home/libor/.dotfiles/icons/yazi.svg
+Comment=Blazing fast terminal file manager written in Rust, based on async I/O
+Terminal=true
+TryExec=yazi
+Exec=--class yazi yazi %u
+Type=Application
+MimeType=inode/directory
+Categories=Utility;Core;System;FileTools;FileManager;ConsoleOnly
+Keywords=File;Manager;Explorer;Browser;Launcher
+Name[cs_CZ]=yazi.desktop

@@ -1,0 +1,214 @@
+##### SWAY CONFIG #####
+
+### Monitor settings
+    output * bg /home/libor/.dotfiles/wallpapers/wallpaper4.jpg fill
+
+### Input configuration
+    input 2:7:SynPS/2_Synaptics_TouchPad {
+        dwt enabled
+        tap enabled
+        natural_scroll disabled
+        middle_emulation enabled
+        pointer_accel 0.2
+    }
+    input type:keyboard {
+        xkb_layout "cz"
+        xkb_options caps:swapescape
+        xkb_numlock enabled
+    }
+
+    # Focus
+    for_window [urgent="latest"] focus
+    focus_follows_mouse no
+    workspace_layout default
+
+### Cursor theme
+    # seat seat0 xcursor_theme Banana 32
+    seat seat0 xcursor_theme Bibata-Modern-Classic 28
+
+### Status Bar:fa
+    bar {
+        swaybar_command waybar-sway
+        position top
+    }
+
+### Variables
+    set $mod Mod4
+    set $cs Ctrl+Shift
+    set $ca Ctrl+Alt
+    set $ma Mod4+Alt
+    set $ms Mod4+Shift
+    set $menu fuzzel
+    set $filemgr thunar
+
+### Apps at startup
+    exec nm-applet --indicator &
+    exec pipewire &
+    exec mako &
+    # exec lxqt-policykit-agent &
+    exec /usr/libexec/xfce-polkit &
+    exec wl-paste --watch cliphist store
+    exec wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000 # Screen blue light settings
+    exec udiskie -t
+    exec_always battery-check
+
+### Locking the system
+    # set $lock swaylock -f -F -e -k --color 000000
+    set $lock lockscreen
+    set $logout sleep 1 && swaymsg exit
+    set $reboot sleep 1 && systemctl reboot
+    bindsym --to-code $ms+Delete exec $lock
+    bindsym --to-code $mod+Delete exec $logout
+    bindsym $ma+Delete exec $reboot
+    
+### Idle configuration
+    exec swayidle -w \
+       timeout 150 'brightnessctl -s set 400' resume 'brightnessctl -r' \
+       timeout 580 'notify-send -i video-display "Displej se za okamžik vypne"' \
+       timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    
+### Borders and tabline look
+    default_border pixel 4
+    default_floating_border pixel 4
+    client.focused #8000FF #8000FF #8000FF
+    font none 0.1
+    titlebar_padding 3
+
+### Keybindings
+    bindsym $mod+a exec $TERMINAL
+    bindsym $mod+y exec $TERMINAL --app-id yazi -e yazi
+    bindsym $mod+Comma exec $TERMINAL --app-id btop -e btop
+    bindsym $mod+e exec foot --app-id vim bash -c "sleep 0.1; exec vim"
+    bindsym $mod+b exec $BROWSER
+    bindsym $mod+t exec thunar
+    bindsym $mod+p exec mpv --player-operation-mode=pseudo-gui
+    bindsym $mod+k exec pkill $kalk || $kalk
+    bindsym $mod+w exec waypaper
+    bindsym $mod+m exec clouds   
+    bindsym $mod+i exec webm
+    bindsym $mod+n exec confm
+    bindsym $ms+t exec touchpad
+
+    # Mako emergency
+    bindsym $ms+m exec makoctl dismiss --all && makoctl reload
+
+    # Show menus
+    # bindsym $mod+y exec pkill rofi || rofi -show drun -show-icons -sidebar-mode
+    bindsym $mod+Backslash exec pkill fuzzel || $menu
+    bindsym Alt+Backslash exec pkill fuzzel || bemoji
+    bindsym $mod+x exec pkill fuzzel || powercenter
+
+    # Nápověda
+    bindsym Alt+n exec binds
+
+    # Toggle waybar & taskbar
+    bindsym $mod+Return exec pkill waybar || waybar-sway
+    bindsym $ma+Return exec pkill waybar && waybar --config ~/.config/waybar/config-taskbar
+
+    # Clipboard toggle
+    bindsym $mod+c exec pkill fuzzel || cliphist-fuzzel-img
+    # bindsym $mod+c exec pkill rofi || cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy
+
+    # Opacity
+    bindsym $cs+p opacity plus 0.05
+    bindsym $cs+o opacity minus 0.05
+
+    # Reload the configuration file
+    bindsym $ms+c reload
+
+    # Kill focused window
+    bindsym $mod+q kill
+
+    # Move your focus around
+    bindsym $mod+Left focus left
+    bindsym $mod+Down focus down
+    bindsym $mod+Up focus up
+    bindsym $mod+Right focus right
+    bindsym $mod+Shift_L focus next
+
+    # Move window
+    bindsym $ms+h move left 10px
+    bindsym $ms+k move up 10px
+    bindsym $ms+j move down 10px
+    bindsym $ms+l move right 10px
+
+    # Resize window
+    bindsym $ms+Left resize shrink width 10px
+    bindsym $ms+Up resize grow height 10px
+    bindsym $ms+Down resize shrink height 10px
+    bindsym $ms+Right resize grow width 10px
+
+    # Switch to workspace
+    bindsym Alt+left workspace 1
+    bindsym Alt+right workspace 2
+    bindsym Alt+down workspace 3
+    bindsym Alt+up workspace 4
+
+    # Move focused container to workspace
+    bindsym Shift+Left move container to workspace 1
+    bindsym Shift+Right move container to workspace 2
+    bindsym Shift+Down move container to workspace 3
+    bindsym Shift+Up move container to workspace 4
+
+    # Move and focus focused container to workspace
+    bindsym $ma+Left move container to workspace 1; workspace 1
+    bindsym $ma+Right move container to workspace 2; workspace 2
+    bindsym $ma+Down move container to workspace 3; workspace 3
+    bindsym $ma+Up move container to workspace 4; workspace 4
+
+    # Center window and move it to corners
+    bindsym $mod+KP_0 floating toggle, resize set 1385 900
+    bindsym $mod+KP_7 floating enable, resize set 50ppt 50ppt, move position 0ppt 0ppt
+    bindsym $mod+KP_8 floating enable, resize set 50ppt 50ppt, move position 50ppt 0
+    bindsym $mod+KP_4 floating enable, resize set 50ppt 50ppt, move position 0 50ppt 
+    bindsym $mod+KP_5 floating enable, resize set 50ppt 50ppt, move position 50ppt 50ppt 
+
+    # Cycle workspaces
+    bindsym $mod+Tab workspace next
+ 
+    # Layout toggle
+    bindsym $cs+w layout toggle split
+    bindsym $mod+f layout toggle tabbed split
+
+    # Make the current focus fullscreen
+    bindsym $ma+f fullscreen
+
+    # Toggle between tiling and floating mode
+    bindsym $ms+f floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # Move window to the scratchpad and show
+    bindsym $ma+s move scratchpad 
+    bindsym $mod+s scratchpad show
+
+    # Screenshot with grimshot
+    # bindsym $mod+Insert exec grimshot --notify save anything
+    bindsym $mod+Insert exec screenshot
+
+    # Laptop multimedia keys for volume and LCD brightness
+    bindsym XF86AudioRaiseVolume exec volumeup
+    bindsym XF86AudioLowerVolume exec volumedown
+    bindsym XF86AudioMute exec mute
+    bindsym XF86AudioMicMute exec micmute
+    bindsym XF86MonBrightnessUp exec brightnessup
+    bindsym XF86MonBrightnessDown exec brightnessdown
+
+### Windows rules
+    for_window [class=".*"] move left
+    for_window [app_id="galculator"] floating enable
+    for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, resize set 630 400, move position 700 3
+    for_window [app_id="script"] floating enable, resize set 400 100
+    for_window [title="Authentication required"] floating enable
+    for_window [title="xeyes"] floating enable, move position 880 5
+    for_window [title="Rozbalení"] floating enable
+    for_window [app_id="btop"] floating enable, resize set 1385  900 
+    for_window [app_id="update"] floating enable, resize set 900  600 
+    for_window [class="Vlc"] floating enable
+    for_window [app_id="mpv"] floating enable
+
+### Important for Xdg Portals to work!!!
+    include /etc/sway/config.d/*
+
+#### END OF FILE #####

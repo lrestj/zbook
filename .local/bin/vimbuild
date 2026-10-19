@@ -1,0 +1,58 @@
+#!/bin/bash
+
+set -e
+
+echo
+echo "###################"
+echo "#  Instalace vim  #"
+echo "###################"
+
+vimver() { vim --version | head -1 | cut -d " " -f 5; }
+vimpatch() { vim --version | awk 'NR==2' | grep -oE '[0-9]+$'; }
+
+if [ -d /home/libor/.local/src/vim ]; then
+    cd $HOME/.local/src/vim
+    git fetch origin
+    LOCAL_HASH=$(git rev-parse HEAD)
+    REMOTE_HASH=$(git rev-parse @{u}) # @{u} is shorthand for the upstream branch
+    if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
+        echo "##############################################"
+        echo "#  Používáte verzi VIM $(vimver).$(vimpatch) #"
+        echo "#  Aktualizace k dispozici, provádím...      #"
+        echo "##############################################"
+        sleep 3
+        git merge origin/master
+        cd src
+        make distclean
+        make
+        sudo make install
+        echo
+        echo "##########################"
+        echo " Aktualizováno na verzi:  "
+        echo " $(vimver).$(vimpatch)    "  
+        echo "##########################"
+        sleep 3 
+    else
+        echo
+        echo "#################################"
+        echo "  Žádné dostupné aktualizace     "
+        echo "  pro VIM $(vimver).$(vimpatch)  "
+        echo "#################################"
+        sleep 3
+    fi
+else    
+    mkdir -p $HOME/.local/src
+    cd $HOME/.local/src
+    git clone --depth 222 https://github.com/vim/vim.git
+    cd vim/src
+    make
+    sudo make install
+    echo
+    echo "#################################"
+    echo "  Nainstalována verze            "
+    echo "  VIM $(vimver).$(vimpatch)  "
+    echo "#################################"
+    sleep 3
+fi
+
+### END OF FILE ###
