@@ -32,6 +32,7 @@ text/x-python=vim.desktop
 text/x-sql=vim.desktop
 text/x-vb=vim.desktop
 text/yaml=vim.desktop
+image/jpeg=org.gnome.Loupe.desktop
 
 [Added Associations]
 text/plain=vim.desktop;org.gnome.gedit.desktop;
@@ -62,3 +63,4 @@ text/x-perl=vim.desktop;
 text/x-sql=vim.desktop;
 text/x-vb=vim.desktop;
 text/yaml=vim.desktop;
+image/jpeg=org.gnome.Loupe.desktop;

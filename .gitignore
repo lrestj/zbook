@@ -113,3 +113,4 @@ install/
 .xsession-errors
 .xsession-errors.old
 .hplip/
+.local/share/grilo-plugins/

@@ -31,7 +31,6 @@ export GTK_THEME=Adwaita:dark
 export ADW_DISABLE_PORTAL=1
 export ADW_DEBUG_COLOR_SCHEME=prefer-dark
 export QT_QPA_PLATFORMTHEME=qt6ct
-export QT_QPA_PLATFORM=wayland
 export GSK_RENDERER=ngl  # Mesa errors workaround
 
 
