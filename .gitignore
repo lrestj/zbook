@@ -112,3 +112,4 @@ install/
 .gnupg/
 .xsession-errors
 .xsession-errors.old
+.hplip/
