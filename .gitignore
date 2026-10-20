@@ -114,3 +114,5 @@ install/
 .xsession-errors.old
 .hplip/
 .local/share/grilo-plugins/
+.config/evolution/
+.local/share/evolution/
