@@ -50,13 +50,13 @@ echo "#  Instalace balíčků  #"
 echo "#######################"
 sleep 2
 sudo apt -y install \
-    btop curl diodon evince fastfetch fd-find \
+    btop bibata-cursor-theme curl diodon evince fastfetch fd-find \
     firewall-applet firewalld fish font-manager fonts-jetbrains-mono fzf \
-    gcolor3 gvfs hplip-gui imagemagick jq nfs-common  \
-    papirus-icon-theme power-profiles-daemon qt6ct resvg ripgrep \
-    ristretto simple-scan system-config-printer vainfo wget \
+    gcolor3 hplip-gui imagemagick jq kitty nfs-common  \
+    papirus-icon-theme power-profiles-daemon qt6ct \
+    resvg ripgrep simple-scan vainfo wget \
     make gcc libncurses5-dev libx11-dev libxt-dev libxpm-dev python3-dev \
-    youtubedl-gui zenity zoxide 
+    youtubedl-gui zoxide 
 
 case $answer in
     [1]* ) echo
@@ -90,7 +90,7 @@ case $answer in
            echo "#  Probíhá konfigurace Probook...    #"
            echo "#                                    #"
            echo "######################################"
-           git clone --bare -b cinnamon https://github.com/lrestj/probook.git $HOME/.cfg.git
+           git clone --bare -b cinnamon https://github.com/lrestj/zbook.git $HOME/.cfg.git
            git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME checkout -f &&
            echo
            echo "###################################"
