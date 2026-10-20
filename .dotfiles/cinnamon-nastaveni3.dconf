@@ -38,6 +38,7 @@ cursor-size=34
 cursor-theme='Bibata-Modern-Classic'
 font-name='Sans 11'
 gtk-theme='Mint-X-Dark'
+icon-theme='Papirus-Dark'
 text-scaling-factor=1.0
 
 [desktop/keybindings]
@@ -76,6 +77,7 @@ name='Btop'
 [desktop/keybindings/media-keys]
 calculator=['XF86Calculator', '<Super>k']
 home=['XF86Explorer']
+logout=['<Control><Alt>Delete', '<Super>backslash']
 shutdown=['<Control><Alt>End', 'XF86PowerOff']
 terminal=['<Super>a']
 www=['<Super>b']
@@ -131,6 +133,10 @@ swipe-up-2='PUSH_TILE_UP::end'
 swipe-up-3='TOGGLE_EXPO::end'
 swipe-up-4='VOLUME_UP::end'
 tap-3='MEDIA_PLAY_PAUSE::end'
+
+[launcher]
+check-frequency=300
+memory-limit=2048
 
 [settings-daemon/peripherals/keyboard]
 numlock-state='on'
