@@ -141,8 +141,9 @@ git remote -v
 
 echo    
 echo "#######################################"
-echo "#  Autologin & firewall & swappiness  #"
+echo "#  Envars & firewall & swappiness  #"
 echo "#######################################"
+cat $HOME/.dotfiles/environment | sudo tee -a /etc/environment >> /dev/null
 sudo systemctl enable firewalld.service
 sudo mkdir -p /etc/sysctl.d
 echo vm.swappiness=10 | sudo tee /etc/sysctl.d/99-swappiness.conf
