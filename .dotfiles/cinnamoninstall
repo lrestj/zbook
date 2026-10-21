@@ -156,6 +156,7 @@ sudo systemctl enable firewalld.service
 sudo mkdir -p /etc/sysctl.d
 echo vm.swappiness=10 | sudo tee /etc/sysctl.d/99-swappiness.conf
 sudo cp -rv /home/libor/.dotfiles/journald.conf.d /etc/systemd/
+sudo cp -v /home/libor/.dotfiles/40-libinput.conf /etc/X11/xorg.conf.d/
 
 echo
 echo "###########################"
