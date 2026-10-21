@@ -32,12 +32,16 @@ picture-uri='file:///usr/share/desktop-base/joy-theme/wallpaper/gnome-background
 delay=15
 image-source='xml:///usr/share/gnome-background-properties/debian-joy.xml'
 
+[desktop/input-sources]
+sources=[('xkb', 'cz+bksl')]
+xkb-options=['terminate:ctrl_alt_bksp', 'caps:swapescape']
+
 [desktop/interface]
 cursor-blink-time=1318
 cursor-size=34
 cursor-theme='Bibata-Modern-Classic'
 font-name='Sans 11'
-gtk-theme='Mint-X-Dark'
+gtk-theme='Mint-Y-Dark-Blue'
 icon-theme='Papirus-Dark'
 text-scaling-factor=1.0
 
@@ -94,6 +98,9 @@ toggle-maximized=['<Alt>F10', '<Super>f']
 
 [desktop/media-handling]
 autorun-never=false
+autorun-x-content-ignore=['x-content/unix-software']
+autorun-x-content-open-folder=@as []
+autorun-x-content-start-app=@as []
 
 [desktop/peripherals/keyboard]
 delay=uint32 500
@@ -142,7 +149,7 @@ memory-limit=2048
 numlock-state='on'
 
 [settings-daemon/plugins/color]
-night-light-last-coordinates=(50.049999999999997, 14.26)
+night-light-last-coordinates=(50.083333000000003, 14.433332999999999)
 
 [settings-daemon/plugins/power]
 button-power='interactive'
@@ -154,4 +161,4 @@ sleep-inactive-ac-timeout=0
 sleep-inactive-battery-timeout=0
 
 [theme]
-name='Mint-X-Dark'
+name='Mint-Y-Dark-Blue'
