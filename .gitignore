@@ -117,3 +117,4 @@ install/
 .config/evolution/
 .local/share/evolution/
 .local/share/locale/
+.bash_logout
