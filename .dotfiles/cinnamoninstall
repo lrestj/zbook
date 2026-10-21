@@ -49,7 +49,7 @@ echo "#######################"
 echo "#  Instalace balíčků  #"
 echo "#######################"
 sleep 2
-sudo apt -y install \
+sudo apt install \
     btop bibata-cursor-theme curl diodon evince fastfetch fd-find \
     firewall-applet firewalld fish font-manager fonts-jetbrains-mono fzf \
     gcolor3 hplip-gui imagemagick jq kitty nfs-common  \
@@ -57,6 +57,14 @@ sudo apt -y install \
     resvg ripgrep simple-scan vainfo wget \
     make gcc libncurses5-dev libx11-dev libxt-dev libxpm-dev python3-dev \
     youtubedl-gui zoxide 
+echo 
+echo "#######################"
+echo "#  Instalace Yazi     #"
+echo "#######################"
+sleep 2
+curl -fsSL https://yazi-rs.github.io/builds/yazi-keyring.gpg | sudo tee /usr/share/keyrings/yazi-keyring.gpg >/dev/null
+echo 'deb [signed-by=/usr/share/keyrings/yazi-keyring.gpg] https://yazi-rs.github.io/builds/ stable main' | sudo tee /etc/apt/sources.list.d/yazi.list >/dev/null
+sudo apt update && sudo apt install yazi
 
 case $answer in
     [1]* ) echo
