@@ -50,13 +50,13 @@ echo "#  Instalace balíčků  #"
 echo "#######################"
 sleep 2
 sudo apt install \
-    btop bibata-cursor-theme curl diodon evince fastfetch fd-find \
+    btop bibata-cursor-theme curl evince fastfetch fd-find \
     firewall-applet firewalld fish font-manager fonts-jetbrains-mono fzf \
     gcolor3 hplip-gui imagemagick jq kitty nfs-common  \
     papirus-icon-theme power-profiles-daemon qt6ct \
     resvg ripgrep simple-scan vainfo wget \
     make gcc libncurses5-dev libx11-dev libxt-dev libxpm-dev python3-dev \
-    youtubedl-gui xclip zoxide 
+    youtubedl-gui xclip xfce4-clipman zoxide 
 echo 
 echo "#######################"
 echo "#  Instalace Yazi     #"
