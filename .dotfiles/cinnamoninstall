@@ -176,6 +176,14 @@ sudo update-grub
 
 sudo powerprofilesctl set performance
 
+echo
+echo "#########################"
+echo "#  Debian sources list  #"
+echo "#########################"
+sleep 2
+sudo cp /home/libor/.dotfiles/sources.list.d/* /etc/apt/sources.list.d/
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+
 # Nvidia install to Zbook
 case $answer in
     [1]* ) bash /home/libor/.local/bin/nvdinstall
