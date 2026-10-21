@@ -3,5 +3,5 @@
 # ibus session bus with the below address.
 # If the IBUS_ADDRESS environment variable is set, it will
 # be used rather than this file.
-IBUS_ADDRESS=unix:path=/home/libor/.cache/ibus/dbus-efpQV16e,guid=ae63e2d662a38ccf6cfd55c26ad8b8b8
-IBUS_DAEMON_PID=1372
+IBUS_ADDRESS=unix:path=/home/libor/.cache/ibus/dbus-fv6DYO3F,guid=e24ed246b31e406986e7edf96ad8c0bc
+IBUS_DAEMON_PID=53814
