@@ -116,3 +116,4 @@ install/
 .local/share/grilo-plugins/
 .config/evolution/
 .local/share/evolution/
+.local/share/locale/
