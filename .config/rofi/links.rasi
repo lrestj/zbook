@@ -36,8 +36,8 @@
     selected-active-background:  @selected-urgent-background;
 }
 window {
-    height: 550px;
-    width: 600px;
+    height: 350px;
+    width: 300px;
     background-color: @background;
     border:           0;
     padding:          5;
