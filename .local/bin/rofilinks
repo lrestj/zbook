@@ -4,7 +4,7 @@
 LIST_FILE="$HOME/.config/rofi/links.txt"
 
 # 1. Vytažení názvů a zobrazení v Rofi
-CHOSEN=$(cut -d',' -f1 "$LIST_FILE" | rofi -dmenu -i -p "Vyber akci:")
+CHOSEN=$(cut -d',' -f1 "$LIST_FILE" | rofi -dmenu -i -p "Vyber akci")
 
 # Pokud uživatel Rofi zavřel (ESC), ukonči skript
 [ -z "$CHOSEN" ] && exit 0
