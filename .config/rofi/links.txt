@@ -1,0 +1,4 @@
+✉️ Gmail,https://www.gmail.com
+📥 Sdilej.cz,https://www.sdilej.cz
+📥 Prehraj.to,https://www.prehraj.to
+📝 Vim update,kitty -e vimbuild
