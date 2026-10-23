@@ -26,11 +26,6 @@
   documentation.man.cache.enable = false;
   nixpkgs.config.allowUnfree = true;
   environment = {
-      loginShellInit = ''
-            if [ "$(tty)" = "/dev/tty1" ]; then
-            exec start
-            fi
-      '';
       localBinInPath = true;
       variables = {
           EDITOR = "vim";
@@ -39,7 +34,6 @@
           kalk = "galculator";
       };
       sessionVariables = {
-          NIXOS_OZONE_WL = "1";
           QT_QPA_PLATFORMTHEME= "qt6ct";
           ADW_DEBUG_COLOR_SCHEME= "prefer-dark";
       };
