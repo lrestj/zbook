@@ -1,3 +1,0 @@
-09:59:39: Audacity 3.7.5
-09:59:39: FFmpeg libraries loaded successfully from: /nix/store/wxjs6sb18xkfx3dgwrlmg2z77jn98iqa-ffmpeg-7.1.1-lib/lib/libavformat.so.61.7.100
-09:59:42: FFmpeg libraries loaded successfully from: /nix/store/wxjs6sb18xkfx3dgwrlmg2z77jn98iqa-ffmpeg-7.1.1-lib/lib/libavformat.so.61.7.100
