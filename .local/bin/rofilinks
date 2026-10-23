@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+# Cesta k vašemu seznamu odkazů a skriptů
+LIST_FILE="$HOME/.config/rofi/links.txt"
+
+# 1. Vytažení názvů a zobrazení v Rofi
+CHOSEN=$(cut -d',' -f1 "$LIST_FILE" | rofi -dmenu -i -p "Vyber akci")
+
+# Pokud uživatel Rofi zavřel (ESC), ukonči skript
+[ -z "$CHOSEN" ] && exit 0
+
+# 2. Vyhledání odpovídající akce podle zvoleného názvu
+ACTION=$(grep "^$CHOSEN," "$LIST_FILE" | cut -d',' -f2-)
+
+# 3. Rozhodnutí, zda jde o WWW odkaz nebo o skript/příkaz
+if [[ "$ACTION" =~ ^https?:// ]]; then
+    # Je to URL -> otevři ve výchozím prohlížeči
+    xdg-open "$ACTION" &
+else
+    # Je to příkaz/skript -> vyhodnoť ho a spusť na pozadí
+    eval "$ACTION" &
+fi
+

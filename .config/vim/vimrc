@@ -55,7 +55,7 @@ hi LineNr ctermbg=234
 hi cursorline ctermbg=235   
 
 "Plugins
-call plug#begin()
+call plug#begin('/home/libor/.config/vim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'Konfekt/filepicker.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

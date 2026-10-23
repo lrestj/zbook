@@ -7,6 +7,7 @@
   imports =
       [ # Include hardware-configuration.nix
         ./hardware-configuration.nix
+        ../../modules/cinnamon.nix
         ../../modules/pkgs.nix
         ../../modules/disableNvidia.nix
       ];
@@ -180,11 +181,11 @@
       tumbler.enable = true;
       udisks2.enable = true;
       xserver = {
-          enable = false;
+          # enable = false;
           xkb.layout = "cz";
           videoDrivers = [ "modesetting" ];
       };
-      journald.extraConfig = "SystemMaxUse=50M";
+      journald.settings.Journal = {SystemMaxUse="50M";};
       getty.autologinUser = "libor";
       pipewire = {
           enable = true;

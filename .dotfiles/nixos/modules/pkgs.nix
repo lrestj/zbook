@@ -46,7 +46,9 @@
             galculator
             gcolor3
             geany
+            gnome-characters
             gparted
+            kitty
             mesa-demos
             hunspellDicts.cs_CZ
             hunspellDicts.en_US
@@ -76,6 +78,7 @@
             reaper-reapack-extension
             reaper-sws-extension
             ripgrep
+            rofi
             simple-scan
             slurp
             udiskie
@@ -96,6 +99,7 @@
             xnviewmp
             xeyes
             xournalpp
+            xfce4-clipman-plugin
             xwayland-satellite
             yazi
             ytdownloader

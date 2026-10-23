@@ -95,3 +95,15 @@ voidsway/
 .config/xnviewmp/XnView-*.db 
 .config/xnviewmp/XnView.db
 .local/share/applications/userapp-xnviewmp-*.desktop
+.themes/
+.xsession-errors
+.xsession-errors.old
+zbook/
+.Xauthority
+.config/touchegg/
+.local/share/evolution/
+.local/share/icc/
+.config/evolution/
+.config/nemo/desktop-metadata
+.config/x-cinnamon-xdg-terminals.list
+.config/xdg-terminals.list
