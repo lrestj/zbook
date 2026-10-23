@@ -1,6 +1,4 @@
 #!/bin/bash
 
 sed -i -e 's/hash.*/hash = "";/g' /home/libor/.dotfiles/nixos/modules/vimoverlay.nix
-foot --app-id vim bash -c "sleep 0.1; exec vim /home/libor/.dotfiles/nixos/modules/vimoverlay.nix +12" &
-sleep 0.5
-exec foot
+kitty -e vim /home/libor/.dotfiles/nixos/modules/vimoverlay.nix +12 

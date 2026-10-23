@@ -23,7 +23,6 @@
   
     environment.systemPackages =
         (with pkgs; [
-            audacity
             baobab
             bemoji
             bibata-cursors

@@ -1,0 +1,147 @@
+[/]
+desktop-effects=false
+desktop-effects-on-dialogs=false
+desktop-effects-on-menus=false
+desktop-effects-workspace=false
+enable-vfade=false
+enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:separator@cinnamon.org:1', 'panel1:left:2:grouped-window-list@cinnamon.org:2', 'panel1:right:0:systray@cinnamon.org:3', 'panel1:right:1:xapp-status@cinnamon.org:4', 'panel1:right:2:notifications@cinnamon.org:5', 'panel1:right:4:removable-drives@cinnamon.org:7', 'panel1:right:5:keyboard@cinnamon.org:8', 'panel1:right:6:favorites@cinnamon.org:9', 'panel1:right:7:network@cinnamon.org:10', 'panel1:right:8:sound@cinnamon.org:11', 'panel1:right:9:power@cinnamon.org:12', 'panel1:right:10:calendar@cinnamon.org:13', 'panel1:right:11:cornerbar@cinnamon.org:14']
+next-applet-id=15
+panel-edit-mode=false
+panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 16}]'
+panels-autohide=['1:intel']
+panels-enabled=['1:0:top']
+panels-height=['1:40']
+startup-animation=false
+window-effect-speed=1
+
+[cinnamon-session]
+quit-time-delay=60
+
+[desktop/applications/calculator]
+exec='gnome-calculator'
+
+[desktop/applications/terminal]
+exec='kitty'
+exec-arg='--'
+
+[desktop/background]
+picture-options='zoom'
+picture-uri='file:///usr/share/desktop-base/joy-theme/wallpaper/gnome-background.xml'
+
+[desktop/background/slideshow]
+delay=15
+image-source='xml:///usr/share/gnome-background-properties/debian-joy.xml'
+
+[desktop/input-sources]
+sources=[('xkb', 'cz')]
+xkb-options=['terminate:ctrl_alt_bksp', 'caps:swapescape']
+
+[desktop/interface]
+cursor-blink-time=1318
+cursor-size=28
+cursor-theme='Bibata-Modern-Classic'
+font-name='Sans 11'
+gtk-theme='Mint-L-Dark-Blue'
+icon-theme='Mint-L-Blue'
+text-scaling-factor=1.0
+toolkit-accessibility=false
+
+[desktop/keybindings]
+custom-list=['custom1', 'custom2', 'custom0', 'custom3', 'custom4', 'custom5', 'custom6', 'custom7', '__dummy__']
+
+[desktop/keybindings/custom-keybindings/custom0]
+binding=['<Super>u']
+command='kitty -e /home/libor/.local/bin/vimbuild'
+name='Vim update'
+
+[desktop/keybindings/custom-keybindings/custom1]
+binding=['<Super>t']
+command='/bin/nemo'
+name='Nemo'
+
+[desktop/keybindings/custom-keybindings/custom2]
+binding=['<Super>y']
+command='kitty -e /usr/bin/yazi'
+name='Yazi'
+
+[desktop/keybindings/custom-keybindings/custom3]
+binding=['<Super>e']
+command='kitty -e vim'
+name='Vim'
+
+[desktop/keybindings/custom-keybindings/custom4]
+binding=['<Super>x']
+command='cinnamon-session-quit --power-off'
+name='Vypnout'
+
+[desktop/keybindings/custom-keybindings/custom5]
+binding=['<Alt>b']
+command='gnome-terminal -e btop'
+name='Btop'
+
+[desktop/keybindings/custom-keybindings/custom6]
+binding=['<Super>a']
+command='kitty'
+name='Kitty'
+
+[desktop/keybindings/custom-keybindings/custom7]
+binding=['<Super>n']
+command='rofilinks'
+name='Rofi menu'
+
+[desktop/keybindings/media-keys]
+home=['XF86Explorer']
+logout=['<Control><Alt>Delete', '<Super>backslash']
+shutdown=['<Control><Alt>End', 'XF86PowerOff']
+terminal=@as []
+www=['<Super>b']
+
+[desktop/keybindings/wm]
+close=['<Super>q']
+maximize=['<Super>f']
+move-to-center=['<Super>c']
+
+[desktop/media-handling]
+autorun-never=false
+
+[desktop/peripherals/keyboard]
+delay=uint32 500
+numlock-state=true
+repeat-interval=uint32 30
+
+[desktop/peripherals/mouse]
+double-click=400
+drag-threshold=8
+natural-scroll=true
+speed=0.0
+
+[desktop/peripherals/touchpad]
+natural-scroll=false
+speed=0.26593406593406588
+
+[desktop/sound]
+event-sounds=false
+
+[gestures]
+swipe-down-2='PUSH_TILE_DOWN::end'
+swipe-down-3='TOGGLE_OVERVIEW::end'
+swipe-down-4='VOLUME_DOWN::end'
+swipe-left-2='PUSH_TILE_LEFT::end'
+swipe-left-3='WORKSPACE_NEXT::end'
+swipe-left-4='WINDOW_WORKSPACE_PREVIOUS::end'
+swipe-right-2='PUSH_TILE_RIGHT::end'
+swipe-right-3='WORKSPACE_PREVIOUS::end'
+swipe-right-4='WINDOW_WORKSPACE_NEXT::end'
+swipe-up-2='PUSH_TILE_UP::end'
+swipe-up-3='TOGGLE_EXPO::end'
+swipe-up-4='VOLUME_UP::end'
+tap-3='MEDIA_PLAY_PAUSE::end'
+
+[settings-daemon/peripherals/keyboard]
+numlock-state='on'
+
+[settings-daemon/plugins/color]
+night-light-last-coordinates=(50.083333000000003, 14.433332999999999)
+
+[theme]
+name='Mint-L-Dark-Blue'
