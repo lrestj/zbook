@@ -28,7 +28,6 @@
             brave
             btop
             evince
-            exfatprogs
             fastfetch
             fcft
             file-roller

@@ -115,6 +115,10 @@
   boot = {
       kernelPackages = pkgs.linuxPackages_latest;
       kernel.sysctl."vm.swappiness" = 10;
+      supportedFilesystems = {
+          exfat = true;
+          ntfs = true;
+      };
       loader = {
           timeout = 2;
           systemd-boot = {
