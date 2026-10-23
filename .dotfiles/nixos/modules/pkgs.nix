@@ -23,15 +23,9 @@
   
     environment.systemPackages =
         (with pkgs; [
-            baobab
-            bemoji
             bibata-cursors
             brave
-            brightnessctl
             btop
-            cliphist
-            dconf-editor
-            efibootmgr
             evince
             exfatprogs
             fastfetch
@@ -39,71 +33,28 @@
             file-roller
             fish
             font-manager
-            foot
-            fuzzel
             fzf
-            galculator
             gcolor3
-            geany
             gnome-characters
-            gparted
             kitty
-            mesa-demos
-            hunspellDicts.cs_CZ
-            hunspellDicts.en_US
-            jq
             kdePackages.qt6ct
             kdePackages.qtsvg
-            kdePackages.qtwayland
             killall
             libnotify
             libreoffice
-            libva-utils
-            lshw
-            mako
-            mpv
-            nemo
-            networkmanagerapplet
-            nwg-look
-            pamixer
             papirus-icon-theme
-            pavucontrol
             pdfarranger
-            polkit_gnome
-            python314Packages.beautifulsoup4
-            python3Minimal
             rclone
-            reaper  
-            reaper-reapack-extension
-            reaper-sws-extension
             ripgrep
             rofi
             simple-scan
-            slurp
-            udiskie
-            udisks
-            unzip
             vlc
-            swaybg
-            swaylock
-            swayidle
-            qutebrowser zenity
-            waybar
-            waypaper
-            wget
-            wl-clipboard
-            wlsunset
-            xdg-user-dirs
-            xdg-utils
             xnviewmp
             xeyes
             xournalpp
             xfce4-clipman-plugin
-            xwayland-satellite
             yazi
             ytdownloader
-            zip
-            p7zip
             (pkgs.writeScriptBin "sct" ''
                 #!/bin/sh
                 killall wlsunset &> /dev/null;

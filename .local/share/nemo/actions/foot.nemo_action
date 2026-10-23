@@ -1,9 +1,0 @@
-[Nemo Action]
-
-Name=Foot terminál...
-Comment=Otevřít složku ve Foot terminálu
-Exec=foot --working-directory=%F
-Icon-Name=terminator
-Selection=any
-Extensions=dir;
-EscapeSpaces=true
