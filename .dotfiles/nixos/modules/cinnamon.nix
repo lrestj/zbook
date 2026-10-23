@@ -1,7 +1,14 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-   # Povolení X11 windowing systému
+   environment.cinnamon.excludePackages = with pkgs; [
+       timeshift
+       blueman
+       warpinator
+       thunderbolt
+       pix
+   ];
+
    services = {
        libinput.enable = true;
        displayManager = {

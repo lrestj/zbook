@@ -23,6 +23,7 @@
   
     environment.systemPackages =
         (with pkgs; [
+            baobab
             bibata-cursors
             brave
             btop
@@ -42,15 +43,12 @@
             killall
             libnotify
             libreoffice
-            papirus-icon-theme
             pdfarranger
             rclone
             ripgrep
             rofi
             simple-scan
             vlc
-            xnviewmp
-            xeyes
             xournalpp
             xfce4-clipman-plugin
             yazi
