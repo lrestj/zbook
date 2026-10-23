@@ -73,7 +73,6 @@
         ]);
   
   programs = {
-      niri.enable = true;
       dconf.enable = true;  
       nh = {
           enable = true;

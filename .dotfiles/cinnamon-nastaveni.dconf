@@ -1,10 +1,12 @@
 [/]
+desklet-snap-interval=25
 desktop-effects=false
 desktop-effects-on-dialogs=false
 desktop-effects-on-menus=false
 desktop-effects-workspace=false
 enable-vfade=false
 enabled-applets=['panel1:left:0:menu@cinnamon.org:0', 'panel1:left:1:separator@cinnamon.org:1', 'panel1:left:2:grouped-window-list@cinnamon.org:2', 'panel1:right:0:systray@cinnamon.org:3', 'panel1:right:1:xapp-status@cinnamon.org:4', 'panel1:right:2:notifications@cinnamon.org:5', 'panel1:right:4:removable-drives@cinnamon.org:7', 'panel1:right:5:keyboard@cinnamon.org:8', 'panel1:right:6:favorites@cinnamon.org:9', 'panel1:right:7:network@cinnamon.org:10', 'panel1:right:8:sound@cinnamon.org:11', 'panel1:right:9:power@cinnamon.org:12', 'panel1:right:10:calendar@cinnamon.org:13', 'panel1:right:11:cornerbar@cinnamon.org:14']
+enabled-desklets=@as []
 next-applet-id=15
 panel-edit-mode=false
 panel-zone-symbolic-icon-sizes='[{"panelId": 1, "left": 28, "center": 28, "right": 16}]'
@@ -26,11 +28,11 @@ exec-arg='--'
 
 [desktop/background]
 picture-options='zoom'
-picture-uri='file:///usr/share/desktop-base/joy-theme/wallpaper/gnome-background.xml'
+picture-uri='file:///home/libor/.dotfiles/wallpapers/wallpaperflare.com_wallpaper.jpg'
 
 [desktop/background/slideshow]
 delay=15
-image-source='xml:///usr/share/gnome-background-properties/debian-joy.xml'
+image-source='directory:///home/libor/.dotfiles/wallpapers'
 
 [desktop/input-sources]
 sources=[('xkb', 'cz')]
@@ -41,21 +43,22 @@ cursor-blink-time=1318
 cursor-size=28
 cursor-theme='Bibata-Modern-Classic'
 font-name='Sans 11'
-gtk-theme='Mint-L-Dark-Blue'
-icon-theme='Mint-L-Blue'
+gtk-theme='Mint-Y-Dark-Blue'
+icon-theme='Mint-Y-Blue'
 text-scaling-factor=1.0
 toolkit-accessibility=false
 
 [desktop/keybindings]
-custom-list=['custom1', 'custom2', 'custom0', 'custom3', 'custom4', 'custom5', 'custom6', 'custom7', '__dummy__']
+custom-list=['custom1', 'custom2', 'custom0', 'custom3', 'custom4', 'custom5', 'custom6', 'custom7']
+show-desklets=@as []
 
 [desktop/keybindings/custom-keybindings/custom0]
 binding=['<Super>u']
-command='kitty -e /home/libor/.local/bin/vimbuild'
+command='kitty -e /home/libor/.local/bin/vupdnx'
 name='Vim update'
 
 [desktop/keybindings/custom-keybindings/custom1]
-binding=['<Super>t']
+binding=['<Super>s']
 command='/bin/nemo'
 name='Nemo'
 
@@ -90,6 +93,7 @@ command='rofilinks'
 name='Rofi menu'
 
 [desktop/keybindings/media-keys]
+calculator=['XF86Calculator', '<Super>k']
 home=['XF86Explorer']
 logout=['<Control><Alt>Delete', '<Super>backslash']
 shutdown=['<Control><Alt>End', 'XF86PowerOff']
@@ -137,11 +141,18 @@ swipe-up-3='TOGGLE_EXPO::end'
 swipe-up-4='VOLUME_UP::end'
 tap-3='MEDIA_PLAY_PAUSE::end'
 
+[launcher]
+check-frequency=300
+memory-limit=2048
+
 [settings-daemon/peripherals/keyboard]
 numlock-state='on'
 
 [settings-daemon/plugins/color]
+night-light-enabled=true
 night-light-last-coordinates=(50.083333000000003, 14.433332999999999)
+night-light-schedule-mode='always'
+night-light-temperature=uint32 4800
 
 [theme]
-name='Mint-L-Dark-Blue'
+name='Mint-Y-Dark-Blue'
