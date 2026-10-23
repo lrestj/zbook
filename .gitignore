@@ -108,3 +108,4 @@ zbook/
 .config/x-cinnamon-xdg-terminals.list
 .config/xdg-terminals.list
 .local/share/applications/nemo.deskto
+.hplip/
