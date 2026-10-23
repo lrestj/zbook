@@ -1,6 +1,9 @@
 configuration {
     font: "mono 13";
     modes: "drun,run,ssh";
+    auto-select: true;
+    matching: "prefix";
+    tokenize: false;
     drun {
         display-name: "Aplikace";
     }
