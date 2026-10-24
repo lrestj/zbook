@@ -2,4 +2,4 @@
 📥 Prehraj.to,https://www.prehraj.to
 ⚠️ Configuration.nix,kitty -e vim /home/libor/.dotfiles/nixos/hosts/zbook/configuration.nix
 🗄️ Pkgs.nix,kitty -e vim /home/libor/.dotfiles/nixos/modules/pkgs.nix
-
+✅ Nový skript,addnew

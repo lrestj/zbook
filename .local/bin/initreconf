@@ -1,4 +1,0 @@
-#!/bin/bash
-ver=$(uname -r | cut -c 1-4)
-
-sudo xbps-reconfigure -f linux$ver

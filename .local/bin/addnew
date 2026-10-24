@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sel=$(fuzzel --lines 1 -d -p 'Jméno souboru:  ')
+sel=$(rofi -l 1 -dmenu -p 'Jméno souboru:  ')
 file=~/.local/bin/$sel
 
 case $sel in

@@ -31,11 +31,9 @@
           EDITOR = "vim";
           BROWSER = "brave";
           TERMINAL = "kitty";
-          kalk = "galculator";
       };
       sessionVariables = {
           QT_QPA_PLATFORMTHEME= "qt6ct";
-          ADW_DEBUG_COLOR_SCHEME= "prefer-dark";
       };
   };
   hardware = {
@@ -85,19 +83,6 @@
           AllowHybridSleep="no";
           AllowSuspendThenHibernate="no";
       };
-      user.services.polkit-gnome-authentication-agent-1 = {
-          description = "polkit-gnome-authentication-agent-1";
-          wantedBy = [ "graphical-session.target" ];
-          wants = [ "graphical-session.target" ];
-          after = [ "graphical-session.target" ];
-          serviceConfig = {
-              Type = "simple";
-              ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-              Restart = "on-failure";
-              RestartSec = 1;
-              TimeoutStopSec = 10;
-          };
-      };    
   };
   
   users.users.libor = {
