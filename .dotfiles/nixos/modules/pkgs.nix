@@ -8,11 +8,9 @@
   
   fonts.packages = with pkgs; [
       font-awesome
-      intel-one-mono
       jetbrains-mono
       corefonts vista-fonts
       noto-fonts
-      nerd-fonts.hack
       nerd-fonts.symbols-only
   ];
   

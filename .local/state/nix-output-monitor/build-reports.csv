@@ -279,7 +279,6 @@ hostname,derivation name,utc time,build seconds
 ,Xresources-Xft,2026-04-17 12:07:44,0
 ,Xresources-Xft,2026-10-23 12:31:45,0
 ,Xresources-Xft,2026-10-23 13:57:16,0
-,activate,2026-10-23 18:20:41,0
 ,activate,2026-10-23 18:39:23,0
 ,activate,2026-10-23 18:41:49,0
 ,activate,2026-10-23 18:49:26,0
@@ -289,6 +288,7 @@ hostname,derivation name,utc time,build seconds
 ,activate,2026-10-23 20:51:55,0
 ,activate,2026-10-24 08:44:51,0
 ,activate,2026-10-24 09:02:46,0
+,activate,2026-10-24 09:10:23,0
 ,andale32.exe,2026-04-25 09:18:44,3
 ,andale32.exe,2026-05-23 07:26:53,1
 ,andale32.exe,2026-06-21 09:29:32,0
@@ -345,7 +345,6 @@ hostname,derivation name,utc time,build seconds
 ,avahi-daemon.conf,2026-10-08 14:24:25,1
 ,avahi-daemon.conf,2026-10-23 13:57:17,0
 ,avahi-daemon.conf,2026-10-23 13:57:19,0
-,boot.json,2026-10-17 11:35:06,0
 ,boot.json,2026-10-23 12:31:45,0
 ,boot.json,2026-10-23 14:08:53,0
 ,boot.json,2026-10-23 14:51:21,0
@@ -355,7 +354,7 @@ hostname,derivation name,utc time,build seconds
 ,boot.json,2026-10-23 19:06:19,0
 ,boot.json,2026-10-23 19:56:03,0
 ,boot.json,2026-10-24 08:44:50,0
-,builder.pl,2026-09-19 10:30:49,0
+,boot.json,2026-10-24 09:10:21,0
 ,builder.pl,2026-10-08 14:24:26,2
 ,builder.pl,2026-10-17 11:34:34,0
 ,builder.pl,2026-10-23 12:31:45,0
@@ -365,6 +364,7 @@ hostname,derivation name,utc time,build seconds
 ,builder.pl,2026-10-23 18:59:36,0
 ,builder.pl,2026-10-23 19:06:19,0
 ,builder.pl,2026-10-23 19:56:03,0
+,builder.pl,2026-10-24 09:10:21,0
 ,check-mountpoints,2026-04-25 09:18:34,0
 ,check-mountpoints,2026-05-23 07:26:30,0
 ,check-mountpoints,2026-07-15 11:33:52,0
@@ -373,7 +373,6 @@ hostname,derivation name,utc time,build seconds
 ,check-mountpoints,2026-09-12 20:37:13,0
 ,check-mountpoints,2026-10-08 14:24:27,1
 ,check-mountpoints,2026-10-23 13:57:45,1
-,check-sshd-config,2026-10-08 14:25:11,0
 ,check-sshd-config,2026-10-23 12:31:51,0
 ,check-sshd-config,2026-10-23 13:57:41,0
 ,check-sshd-config,2026-10-23 14:51:21,0
@@ -383,6 +382,7 @@ hostname,derivation name,utc time,build seconds
 ,check-sshd-config,2026-10-23 19:06:19,0
 ,check-sshd-config,2026-10-23 19:56:03,0
 ,check-sshd-config,2026-10-24 08:44:49,0
+,check-sshd-config,2026-10-24 09:10:21,0
 ,chfn.pam,2026-04-07 12:24:17,0
 ,chfn.pam,2026-04-25 09:18:41,0
 ,chfn.pam,2026-05-23 07:25:58,0
@@ -522,7 +522,6 @@ hostname,derivation name,utc time,build seconds
 ,desktops,2026-10-23 12:31:54,0
 ,desktops,2026-10-23 14:08:33,0
 ,desktops,2026-10-23 19:06:19,0
-,dry-activate,2026-10-17 11:34:34,0
 ,dry-activate,2026-10-23 12:31:54,0
 ,dry-activate,2026-10-23 13:58:08,0
 ,dry-activate,2026-10-23 14:51:21,0
@@ -532,11 +531,11 @@ hostname,derivation name,utc time,build seconds
 ,dry-activate,2026-10-23 19:06:19,0
 ,dry-activate,2026-10-23 19:56:03,0
 ,dry-activate,2026-10-24 08:44:50,0
+,dry-activate,2026-10-24 09:10:21,0
 ,ensure-all-wrappers-paths-exist,2026-08-31 19:25:48,0
 ,ensure-all-wrappers-paths-exist,2026-09-12 20:40:44,0
 ,ensure-all-wrappers-paths-exist,2026-09-19 10:30:49,0
 ,ensure-all-wrappers-paths-exist,2026-10-11 14:34:56,0
-,ensure-wrapper-integrity,2026-10-17 11:34:35,1
 ,ensure-wrapper-integrity,2026-10-23 12:31:45,0
 ,ensure-wrapper-integrity,2026-10-23 13:58:08,0
 ,ensure-wrapper-integrity,2026-10-23 14:51:22,0
@@ -546,7 +545,7 @@ hostname,derivation name,utc time,build seconds
 ,ensure-wrapper-integrity,2026-10-23 19:06:20,0
 ,ensure-wrapper-integrity,2026-10-23 19:56:04,0
 ,ensure-wrapper-integrity,2026-10-24 08:44:50,0
-,etc,2026-10-23 18:20:41,0
+,ensure-wrapper-integrity,2026-10-24 09:10:21,0
 ,etc,2026-10-23 18:39:23,0
 ,etc,2026-10-23 18:41:49,0
 ,etc,2026-10-23 18:49:26,0
@@ -556,6 +555,7 @@ hostname,derivation name,utc time,build seconds
 ,etc,2026-10-23 20:51:55,0
 ,etc,2026-10-24 08:44:50,0
 ,etc,2026-10-24 09:02:45,0
+,etc,2026-10-24 09:10:23,0
 ,etc-UPower-UPower.conf,2026-10-23 12:31:45,0
 ,etc-UPower-UPower.conf,2026-10-23 13:57:18,0
 ,etc-X11-xorg.conf.d-00-keyboard.conf,2026-04-25 09:18:31,0
@@ -962,7 +962,6 @@ hostname,derivation name,utc time,build seconds
 ,eula.htm,2026-10-23 13:58:17,0
 ,evolution-with-plugins,2026-10-23 12:31:46,1
 ,evolution-with-plugins,2026-10-23 14:08:23,0
-,exec,2026-07-15 11:33:09,0
 ,exec,2026-08-03 11:59:15,0
 ,exec,2026-08-11 15:10:27,0
 ,exec,2026-08-31 19:19:09,0
@@ -972,6 +971,7 @@ hostname,derivation name,utc time,build seconds
 ,exec,2026-10-17 11:34:35,1
 ,exec,2026-10-23 12:31:46,0
 ,exec,2026-10-23 13:57:25,1
+,exec,2026-10-24 09:10:21,0
 ,extra-hosts,2026-04-25 09:18:36,0
 ,extra-hosts,2026-05-23 07:25:53,0
 ,extra-hosts,2026-07-15 11:33:09,0
@@ -1003,7 +1003,6 @@ hostname,derivation name,utc time,build seconds
 ,extra-utils,2026-04-02 13:28:44,7
 ,extra-utils,2026-04-03 08:23:40,6
 ,extra-utils,2026-04-07 12:24:27,6
-,fc-00-nixos-cache.conf,2026-08-03 12:03:11,0
 ,fc-00-nixos-cache.conf,2026-08-11 15:10:42,0
 ,fc-00-nixos-cache.conf,2026-08-31 19:26:40,0
 ,fc-00-nixos-cache.conf,2026-09-06 16:20:22,0
@@ -1013,6 +1012,7 @@ hostname,derivation name,utc time,build seconds
 ,fc-00-nixos-cache.conf,2026-10-17 11:34:46,1
 ,fc-00-nixos-cache.conf,2026-10-23 12:31:54,0
 ,fc-00-nixos-cache.conf,2026-10-23 14:08:35,0
+,fc-00-nixos-cache.conf,2026-10-24 09:10:22,0
 ,fc-10-nixos-rendering.conf,2026-04-25 09:18:37,0
 ,fc-10-nixos-rendering.conf,2026-05-23 07:25:54,0
 ,fc-10-nixos-rendering.conf,2026-07-15 11:33:09,0
@@ -1053,7 +1053,6 @@ hostname,derivation name,utc time,build seconds
 ,fc-53-user-aliases.conf,2026-09-12 20:36:55,0
 ,fc-53-user-aliases.conf,2026-10-08 14:24:53,2
 ,fc-53-user-aliases.conf,2026-10-23 13:57:27,0
-,fc-cache,2026-08-03 12:03:11,0
 ,fc-cache,2026-08-11 15:10:42,1
 ,fc-cache,2026-08-31 19:26:40,0
 ,fc-cache,2026-09-06 16:20:22,0
@@ -1063,6 +1062,7 @@ hostname,derivation name,utc time,build seconds
 ,fc-cache,2026-10-17 11:34:44,7
 ,fc-cache,2026-10-23 12:31:54,6
 ,fc-cache,2026-10-23 14:08:35,1
+,fc-cache,2026-10-24 09:10:22,0
 ,fhsenv-ensure-gsettings-schemas-directory,2026-04-25 09:18:37,0
 ,fhsenv-ensure-gsettings-schemas-directory,2026-05-23 07:25:54,0
 ,fhsenv-ensure-gsettings-schemas-directory,2026-07-15 11:33:10,0
@@ -1110,7 +1110,6 @@ hostname,derivation name,utc time,build seconds
 ,firmware,2026-09-19 10:33:39,1
 ,firmware,2026-10-08 14:26:45,3
 ,firmware,2026-10-23 14:08:17,1
-,font-dirs,2026-08-03 12:03:10,0
 ,font-dirs,2026-08-11 15:10:41,0
 ,font-dirs,2026-08-31 19:26:39,0
 ,font-dirs,2026-09-06 16:20:21,0
@@ -1120,7 +1119,7 @@ hostname,derivation name,utc time,build seconds
 ,font-dirs,2026-10-17 11:34:35,0
 ,font-dirs,2026-10-23 12:31:47,0
 ,font-dirs,2026-10-23 14:08:32,0
-,fontconfig-conf,2026-08-03 12:03:11,0
+,font-dirs,2026-10-24 09:10:21,0
 ,fontconfig-conf,2026-08-11 15:10:42,0
 ,fontconfig-conf,2026-08-31 19:26:40,0
 ,fontconfig-conf,2026-09-06 16:20:22,0
@@ -1130,7 +1129,7 @@ hostname,derivation name,utc time,build seconds
 ,fontconfig-conf,2026-10-17 11:34:47,0
 ,fontconfig-conf,2026-10-23 12:31:55,0
 ,fontconfig-conf,2026-10-23 14:08:35,0
-,fontconfig-etc,2026-08-03 12:03:12,0
+,fontconfig-conf,2026-10-24 09:10:22,0
 ,fontconfig-etc,2026-08-11 15:10:43,0
 ,fontconfig-etc,2026-08-31 19:26:40,0
 ,fontconfig-etc,2026-09-06 16:20:22,0
@@ -1140,6 +1139,7 @@ hostname,derivation name,utc time,build seconds
 ,fontconfig-etc,2026-10-17 11:34:49,1
 ,fontconfig-etc,2026-10-23 12:31:55,0
 ,fontconfig-etc,2026-10-23 14:08:36,0
+,fontconfig-etc,2026-10-24 09:10:22,0
 ,georgi32.exe,2026-04-25 09:18:42,1
 ,georgi32.exe,2026-05-23 07:26:54,0
 ,georgi32.exe,2026-06-21 09:29:33,1
@@ -1462,6 +1462,7 @@ hostname,derivation name,utc time,build seconds
 ,lightdm.conf,2026-10-23 14:51:22,0
 ,lightdm.conf,2026-10-23 15:13:28,0
 ,lightdm.conf,2026-10-23 19:06:21,0
+,lightdm.conf,2026-10-24 09:10:22,0
 ,lightdm.pam,2026-04-17 12:07:44,0
 ,limits.conf,2026-04-25 09:18:39,0
 ,limits.conf,2026-05-23 07:25:57,0
@@ -1824,7 +1825,6 @@ hostname,derivation name,utc time,build seconds
 ,nixos-system-nixos-26.11.20261014.55bfb4d,2026-10-23 13:08:35,0
 ,nixos-system-nixos-26.11.20261014.55bfb4d,2026-10-23 13:13:07,0
 ,nixos-system-nixos-26.11.20261014.55bfb4d,2026-10-23 13:25:50,0
-,nixos-system-nixos-26.11.20261020.02c087f,2026-10-23 18:20:41,0
 ,nixos-system-nixos-26.11.20261020.02c087f,2026-10-23 18:39:24,0
 ,nixos-system-nixos-26.11.20261020.02c087f,2026-10-23 18:41:49,0
 ,nixos-system-nixos-26.11.20261020.02c087f,2026-10-23 18:49:27,0
@@ -1834,6 +1834,7 @@ hostname,derivation name,utc time,build seconds
 ,nixos-system-nixos-26.11.20261020.02c087f,2026-10-23 20:51:56,0
 ,nixos-system-nixos-26.11.20261020.02c087f,2026-10-24 08:44:51,0
 ,nixos-system-nixos-26.11.20261020.02c087f,2026-10-24 09:02:46,0
+,nixos-system-nixos-26.11.20261020.02c087f,2026-10-24 09:10:23,0
 ,nixos-tmpfiles.d,2026-05-23 07:26:00,0
 ,nixos-tmpfiles.d,2026-06-21 09:29:30,0
 ,nixos-tmpfiles.d,2026-07-15 11:33:30,1
@@ -2111,7 +2112,6 @@ hostname,derivation name,utc time,build seconds
 ,stage-1-init.sh,2026-04-03 08:23:40,0
 ,stage-1-init.sh,2026-04-07 12:24:28,0
 ,stage-1-init.sh,2026-04-17 13:08:53,0
-,stage-2-init.sh,2026-10-08 14:25:10,0
 ,stage-2-init.sh,2026-10-23 12:31:49,1
 ,stage-2-init.sh,2026-10-23 13:58:08,0
 ,stage-2-init.sh,2026-10-23 14:51:22,0
@@ -2121,6 +2121,7 @@ hostname,derivation name,utc time,build seconds
 ,stage-2-init.sh,2026-10-23 19:06:20,0
 ,stage-2-init.sh,2026-10-23 19:56:04,1
 ,stage-2-init.sh,2026-10-24 08:44:50,0
+,stage-2-init.sh,2026-10-24 09:10:22,0
 ,string-hosts,2026-04-25 09:18:46,0
 ,string-hosts,2026-05-23 07:26:02,0
 ,string-hosts,2026-07-15 11:33:35,0
@@ -3789,7 +3790,6 @@ hostname,derivation name,utc time,build seconds
 ,x-cinnamon-mimeapps,2026-10-23 13:57:59,1
 ,xdg-desktop-portal-wlr.ini,2026-06-21 09:39:27,0
 ,xdg-desktop-portal-wlr.ini,2026-06-22 06:36:04,0
-,xkb-validated,2026-04-15 10:07:10,0
 ,xkb-validated,2026-10-23 12:31:53,0
 ,xkb-validated,2026-10-23 13:57:58,0
 ,xkb-validated,2026-10-23 14:51:23,0
@@ -3799,6 +3799,7 @@ hostname,derivation name,utc time,build seconds
 ,xkb-validated,2026-10-23 19:06:21,0
 ,xkb-validated,2026-10-23 19:56:05,0
 ,xkb-validated,2026-10-24 08:44:50,0
+,xkb-validated,2026-10-24 09:10:22,0
 ,xlock.pam,2026-04-02 13:50:15,0
 ,xlock.pam,2026-04-07 12:24:21,0
 ,xnviewmp,2026-07-15 11:41:52,0
@@ -3897,9 +3898,11 @@ hostname,derivation name,utc time,build seconds
 ,xserver-wrapper,2026-10-23 12:31:55,0
 ,xserver-wrapper,2026-10-23 14:08:34,0
 ,xserver-wrapper,2026-10-23 19:06:21,0
+,xserver-wrapper,2026-10-24 09:10:22,0
 ,xserver.conf,2026-04-17 12:07:45,0
 ,xserver.conf,2026-10-23 12:31:53,0
 ,xserver.conf,2026-10-23 14:08:33,0
+,xserver.conf,2026-10-24 09:10:22,0
 ,xsession-wrapper,2026-04-17 12:07:45,0
 ,xsession-wrapper,2026-10-23 12:31:54,0
 ,xsession-wrapper,2026-10-23 13:58:00,1
