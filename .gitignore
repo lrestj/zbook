@@ -109,3 +109,4 @@ zbook/
 .config/xdg-terminals.list
 .local/share/applications/nemo.deskto
 .hplip/
+.icons/
