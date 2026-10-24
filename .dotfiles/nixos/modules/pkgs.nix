@@ -34,7 +34,6 @@
             kitty
             kdePackages.qt6ct
             kdePackages.qtsvg
-            killall
             libnotify
             libreoffice
             pdfarranger
