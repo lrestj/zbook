@@ -2,6 +2,7 @@
 
 {
    environment.cinnamon.excludePackages = with pkgs; [
+       evolution
        timeshift
        blueman
        warpinator

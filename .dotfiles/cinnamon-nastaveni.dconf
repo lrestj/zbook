@@ -102,11 +102,15 @@ www=['<Super>b']
 
 [desktop/keybindings/wm]
 close=['<Super>q']
-maximize=['<Super>f']
+maximize=@as []
 move-to-center=['<Super>c']
+toggle-maximized=['<Super>f']
 
 [desktop/media-handling]
 autorun-never=false
+autorun-x-content-ignore=['x-content/bootable-media']
+autorun-x-content-open-folder=@as []
+autorun-x-content-start-app=['x-content/unix-software', 'x-content/bootable-media']
 
 [desktop/peripherals/keyboard]
 delay=uint32 500
@@ -117,11 +121,16 @@ repeat-interval=uint32 30
 double-click=400
 drag-threshold=8
 natural-scroll=true
-speed=0.0
+speed=0.0045045045045044585
 
 [desktop/peripherals/touchpad]
+edge-scrolling-enabled=false
 natural-scroll=false
-speed=0.26593406593406588
+speed=0.28828828828828823
+two-finger-scrolling-enabled=true
+
+[desktop/screensaver]
+layout-group=0
 
 [desktop/sound]
 event-sounds=false
@@ -153,6 +162,14 @@ night-light-enabled=true
 night-light-last-coordinates=(50.083333000000003, 14.433332999999999)
 night-light-schedule-mode='always'
 night-light-temperature=uint32 4800
+
+[settings-daemon/plugins/power]
+lid-close-ac-action='nothing'
+lid-close-battery-action='nothing'
+sleep-display-ac=1800
+sleep-display-battery=1800
+sleep-inactive-ac-timeout=0
+sleep-inactive-battery-timeout=0
 
 [theme]
 name='Mint-Y-Dark-Blue'

@@ -22,12 +22,9 @@
     environment.systemPackages =
         (with pkgs; [
             baobab
-            bibata-cursors
             brave
             btop
-            evince
             fastfetch
-            fcft
             file-roller
             fish
             font-manager
@@ -45,7 +42,6 @@
             ripgrep
             rofi
             simple-scan
-            vlc
             xournalpp
             xfce4-clipman-plugin
             yazi
