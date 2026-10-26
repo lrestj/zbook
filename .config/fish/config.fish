@@ -8,6 +8,7 @@ fzf --fish | source
 
 abbr in "sudo apt install"
 abbr rem "sudo apt remove"
+abbr se "apt search"
 abbr yay "sudo apt update && sudo apt upgrade"
 abbr ls "ls --color=auto"
 abbr grep "grep --color=auto"
