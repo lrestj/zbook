@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # 1. Definice požadovaných rozměrů okna
-TARGET_W=1200
-TARGET_H=950
+TARGET_W=1234
+TARGET_H=911
 
 # 2. Odstranění maximalizace okna (jinak wmctrl okno nepřesune)
 wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
