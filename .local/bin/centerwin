@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# 1. Definice požadovaných rozměrů okna
+TARGET_W=1200
+TARGET_H=950
+
+# 2. Odstranění maximalizace okna (jinak wmctrl okno nepřesune)
+wmctrl -r :ACTIVE: -b remove,maximized_vert,maximized_horz
+
+# 3. Získání rozlišení aktuálního monitoru (zvládá i konfigurace s více monitory)
+# Získáme rozměry aktivní pracovní plochy (workarea), která nepočítá panely úloh
+SCREEN_INFO=$(xdotool getdisplaygeometry)
+SCREEN_W=$(echo "$SCREEN_INFO" | awk '{print $1}')
+SCREEN_INFO_Y=$(wmctrl -d | grep '*' | awk '{print $4}' | cut -d'x' -f2)
+SCREEN_H=${SCREEN_INFO_Y:-$(echo "$SCREEN_INFO" | awk '{print $2}')}
+
+# Pokud xdotool selže, použijeme záložní metodu přes xrandr
+if [ -z "$SCREEN_W" ]; then
+    SCREEN_W=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d'x' -f1)
+    SCREEN_H=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d'x' -f2)
+fi
+
+# 4. Výpočet souřadnic pro vycentrování okna
+X=$(( (SCREEN_W - TARGET_W) / 2 ))
+Y=$(( (SCREEN_H - TARGET_H) / 2 ))
+
+# 5. Přesunutí a změna velikosti aktivního okna
+# Formát: gravitace, X, Y, šířka, výška
+wmctrl -r :ACTIVE: -e 0,$X,$Y,$TARGET_W,$TARGET_H
+
+
+###  END OF FILE  ###

@@ -41,6 +41,7 @@
             ripgrep
             rofi
             simple-scan
+            wmctrl xdotool
             xournalpp
             xfce4-clipman-plugin
             yazi
