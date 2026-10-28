@@ -2,5 +2,12 @@
 ratio = [ 2, 4, 3 ]
 show_hidden = true
 
+[preview]
+image_preview_delay = 100
+# vynucení protokolu ueberzug pro terminály bez nativní grafiky (jako Alacritty)
+ueberzug_scale = 1
+ueberzug_x = 0
+ueberzug_y = 0
+
 ### END OF FILE ###
 
