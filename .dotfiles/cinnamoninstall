@@ -50,7 +50,7 @@ echo "#  Instalace balíčků  #"
 echo "#######################"
 sleep 2
 sudo apt install \
-    btop bibata-cursor-theme curl evince fastfetch fd-find \
+    alacritty btop bibata-cursor-theme curl evince fastfetch fd-find \
     firewall-applet firewalld fish font-manager fonts-jetbrains-mono fzf \
     gcolor3 hplip-gui imagemagick jq kitty nfs-common  \
     papirus-icon-theme power-profiles-daemon qt6ct \
