@@ -63,21 +63,6 @@ spawn-sh-at-startup "battery-check"
 spawn-sh-at-startup "wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000"
 
 // Window rules
-// window-rule {
-//     match app-id="^foot$"
-//     background-effect {
-//         blur true
-//     }
-// }
-
-// // Enable blur behind the fuzzel launcher.
-// layer-rule {
-//     match namespace="^launcher$"
-//     background-effect {
-//         blur true
-//     }
-// }
-
 window-rule {
     match app-id="foot"
     match app-id="vim"
@@ -130,7 +115,7 @@ binds {
     Mod+X hotkey-overlay-title="PowerMenu" { spawn "powercenterniri"; }
     Mod+N hotkey-overlay-title="Config menu" { spawn "confm"; }
     Mod+I hotkey-overlay-title="Config menu" { spawn "webm"; }
-    Mod+T hotkey-overlay-title="Open a FileMgr" { spawn "nemo"; }
+    Mod+S hotkey-overlay-title="Open a FileMgr" { spawn "nemo"; }
     Mod+K hotkey-overlay-title="Open a Galculator" { spawn-sh "galculator"; }
     Mod+A hotkey-overlay-title="Open a Terminal" { spawn "foot"; }
     Mod+Backslash hotkey-overlay-title="Run a menu" { spawn-sh "pkill fuzzel || exec fuzzel"; }
@@ -173,7 +158,7 @@ binds {
     Mod+Ctrl+End  { move-column-to-last; }
 
     // Scratschpad
-    Mod+S { spawn-sh "niri msg workspaces | grep \"\\*.*Void\" && niri msg action focus-workspace-previous || niri msg action focus-workspace Void"; }
+    // Mod+S { spawn-sh "niri msg workspaces | grep \"\\*.*Void\" && niri msg action focus-workspace-previous || niri msg action focus-workspace Void"; }
 
     // Workspaces:
     Alt+down { focus-workspace-down; }
