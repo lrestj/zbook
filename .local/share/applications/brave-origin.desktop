@@ -1,0 +1,24 @@
+[Desktop Entry]
+Version=1.0
+Name=Brave Origin
+GenericName[cs]=WWW prohlížeč
+Comment[cs]=Přístup k internetu
+StartupNotify=true
+StartupWMClass=brave-origin
+Exec=brave-origin %U
+Terminal=false
+Icon=brave
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/chromium;
+Actions=new-window;new-private-window;
+
+[Desktop Action new-window]
+Name=New Window
+Name[cs]=Nové okno
+Exec=brave-origin
+
+[Desktop Action new-private-window]
+Name=New Incognito Window
+Name[cs]=Nové anonymní okno
+Exec=brave-origin --incognito
