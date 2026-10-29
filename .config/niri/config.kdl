@@ -135,7 +135,7 @@ binds {
     Mod+A hotkey-overlay-title="Open a Terminal" { spawn "foot"; }
     Mod+Backslash hotkey-overlay-title="Run a menu" { spawn-sh "pkill fuzzel || exec fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Super+B hotkey-overlay-title="Brave browser" { spawn-sh "brave-browser"; }
+    Super+B hotkey-overlay-title="Brave browser" { spawn-sh "brave-origin"; }
     Super+V hotkey-overlay-title="Qutebrowser" { spawn-sh "qutebrowser"; }
     Super+G hotkey-overlay-title="Gmail" { spawn-sh "$BROWSER www.gmail.com"; }
     Super+E hotkey-overlay-title="Vim" { spawn-sh "wrappedvim"; }
