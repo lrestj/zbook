@@ -14,3 +14,9 @@ nemo-icon-position=91,48
 monitor=0
 icon-scale=1
 nemo-icon-position-timestamp=1792577880
+
+[NixOS.volume]
+nemo-icon-position=91,45
+monitor=0
+icon-scale=1
+nemo-icon-position-timestamp=1793306205
