@@ -113,7 +113,7 @@ binds {
     Mod+U hotkey-overlay-title="Update vim" { spawn-sh "foot --app-id update vimbuild"; }
     Alt+B hotkey-overlay-title="Btop" { spawn-sh "foot --app-id btop btop"; }
     Mod+X hotkey-overlay-title="PowerMenu" { spawn "powercenterniri"; }
-    Mod+N hotkey-overlay-title="Config menu" { spawn "confm"; }
+    Mod+M hotkey-overlay-title="Config menu" { spawn "confm"; }
     Mod+I hotkey-overlay-title="Config menu" { spawn "webm"; }
     Mod+S hotkey-overlay-title="Open a FileMgr" { spawn "nemo"; }
     Mod+K hotkey-overlay-title="Open a Galculator" { spawn-sh "galculator"; }
