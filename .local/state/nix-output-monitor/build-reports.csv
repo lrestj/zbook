@@ -24,7 +24,6 @@ hostname,derivation name,utc time,build seconds
 ,50-coredump.conf,2026-10-08 14:27:10,0
 ,50-coredump.conf,2026-10-23 13:57:50,0
 ,50-coredump.conf,2026-10-25 08:36:40,0
-,50-envfs.conf,2026-07-21 09:36:54,0
 ,50-envfs.conf,2026-08-03 11:59:05,1
 ,50-envfs.conf,2026-08-11 15:10:26,0
 ,50-envfs.conf,2026-08-31 19:19:03,0
@@ -34,6 +33,7 @@ hostname,derivation name,utc time,build seconds
 ,50-envfs.conf,2026-10-17 11:34:34,0
 ,50-envfs.conf,2026-10-23 13:57:16,0
 ,50-envfs.conf,2026-10-25 08:35:18,0
+,50-envfs.conf,2026-10-29 17:27:15,0
 ,Debian.conf,2026-04-28 09:52:06,0
 ,Debian.conf,2026-05-23 07:25:48,0
 ,Debian.conf,2026-07-15 11:33:03,0
@@ -107,7 +107,6 @@ hostname,derivation name,utc time,build seconds
 ,X-Restart-Triggers-dbus,2026-04-17 17:22:33,0
 ,X-Restart-Triggers-dbus,2026-04-18 09:35:22,0
 ,X-Restart-Triggers-dbus,2026-04-23 16:35:52,0
-,X-Restart-Triggers-dbus-broker,2026-10-24 15:29:47,0
 ,X-Restart-Triggers-dbus-broker,2026-10-24 15:39:51,0
 ,X-Restart-Triggers-dbus-broker,2026-10-24 15:59:11,0
 ,X-Restart-Triggers-dbus-broker,2026-10-24 16:01:02,0
@@ -117,6 +116,7 @@ hostname,derivation name,utc time,build seconds
 ,X-Restart-Triggers-dbus-broker,2026-10-28 10:40:01,0
 ,X-Restart-Triggers-dbus-broker,2026-10-28 10:46:59,0
 ,X-Restart-Triggers-dbus-broker,2026-10-28 11:48:51,0
+,X-Restart-Triggers-dbus-broker,2026-10-29 17:41:52,0
 ,X-Restart-Triggers-nfs-blkmap,2026-04-25 09:18:43,0
 ,X-Restart-Triggers-nfs-blkmap,2026-05-23 07:26:00,0
 ,X-Restart-Triggers-nfs-blkmap,2026-07-15 11:33:29,0
@@ -143,7 +143,6 @@ hostname,derivation name,utc time,build seconds
 ,X-Restart-Triggers-nix-daemon,2026-10-17 11:34:50,0
 ,X-Restart-Triggers-nix-daemon,2026-10-23 13:57:36,0
 ,X-Restart-Triggers-nix-daemon,2026-10-25 08:35:37,0
-,X-Restart-Triggers-polkit,2026-10-24 15:29:46,0
 ,X-Restart-Triggers-polkit,2026-10-24 15:39:50,0
 ,X-Restart-Triggers-polkit,2026-10-24 15:59:10,0
 ,X-Restart-Triggers-polkit,2026-10-24 16:01:01,0
@@ -153,6 +152,7 @@ hostname,derivation name,utc time,build seconds
 ,X-Restart-Triggers-polkit,2026-10-28 10:40:01,0
 ,X-Restart-Triggers-polkit,2026-10-28 10:46:59,0
 ,X-Restart-Triggers-polkit,2026-10-28 11:48:51,0
+,X-Restart-Triggers-polkit,2026-10-29 17:41:52,0
 ,X-Restart-Triggers-reload-systemd-vconsole-setup,2026-04-25 09:18:55,0
 ,X-Restart-Triggers-reload-systemd-vconsole-setup,2026-05-23 07:26:10,0
 ,X-Restart-Triggers-reload-systemd-vconsole-setup,2026-07-15 11:34:07,0
@@ -244,7 +244,6 @@ hostname,derivation name,utc time,build seconds
 ,X-Restart-Triggers-systemd-tmpfiles-resetup,2026-10-23 13:58:48,0
 ,X-Restart-Triggers-systemd-tmpfiles-resetup,2026-10-23 14:08:16,0
 ,X-Restart-Triggers-systemd-tmpfiles-resetup,2026-10-25 08:37:02,0
-,X-Restart-Triggers-systemd-udevd,2026-08-31 19:27:34,0
 ,X-Restart-Triggers-systemd-udevd,2026-09-06 16:20:28,0
 ,X-Restart-Triggers-systemd-udevd,2026-09-12 20:42:24,0
 ,X-Restart-Triggers-systemd-udevd,2026-09-19 10:33:41,0
@@ -254,6 +253,7 @@ hostname,derivation name,utc time,build seconds
 ,X-Restart-Triggers-systemd-udevd,2026-10-23 13:58:48,0
 ,X-Restart-Triggers-systemd-udevd,2026-10-23 14:08:17,0
 ,X-Restart-Triggers-systemd-udevd,2026-10-25 08:37:10,0
+,X-Restart-Triggers-systemd-udevd,2026-10-29 17:27:57,0
 ,X-Restart-Triggers-wpa_supplicant,2026-04-25 09:18:36,0
 ,X-Restart-Triggers-wpa_supplicant,2026-05-23 07:25:54,0
 ,X-Restart-Triggers-wpa_supplicant,2026-07-15 11:33:09,0
@@ -280,7 +280,6 @@ hostname,derivation name,utc time,build seconds
 ,Xresources-Xft,2026-04-17 12:07:44,0
 ,Xresources-Xft,2026-10-23 12:31:45,0
 ,Xresources-Xft,2026-10-23 13:57:16,0
-,activate,2026-10-24 15:39:53,0
 ,activate,2026-10-24 15:59:13,0
 ,activate,2026-10-24 16:01:04,0
 ,activate,2026-10-24 16:02:57,0
@@ -290,6 +289,7 @@ hostname,derivation name,utc time,build seconds
 ,activate,2026-10-28 10:47:02,0
 ,activate,2026-10-28 10:55:03,0
 ,activate,2026-10-28 11:48:54,0
+,activate,2026-10-29 17:41:57,0
 ,andale32.exe,2026-04-25 09:18:44,3
 ,andale32.exe,2026-05-23 07:26:53,1
 ,andale32.exe,2026-06-21 09:29:32,0
@@ -346,7 +346,6 @@ hostname,derivation name,utc time,build seconds
 ,avahi-daemon.conf,2026-10-08 14:24:25,1
 ,avahi-daemon.conf,2026-10-23 13:57:17,0
 ,avahi-daemon.conf,2026-10-23 13:57:19,0
-,boot.json,2026-10-23 18:04:50,0
 ,boot.json,2026-10-23 18:59:36,0
 ,boot.json,2026-10-23 19:06:19,0
 ,boot.json,2026-10-23 19:56:03,0
@@ -356,6 +355,7 @@ hostname,derivation name,utc time,build seconds
 ,boot.json,2026-10-25 08:36:47,0
 ,boot.json,2026-10-27 18:10:20,0
 ,boot.json,2026-10-28 11:48:45,0
+,boot.json,2026-10-29 17:36:08,0
 ,builder.pl,2026-10-23 13:57:17,0
 ,builder.pl,2026-10-23 17:44:22,0
 ,builder.pl,2026-10-23 18:04:50,0
@@ -423,7 +423,6 @@ hostname,derivation name,utc time,build seconds
 ,comic32.exe,2026-09-12 20:37:17,0
 ,comic32.exe,2026-10-08 14:24:52,2
 ,comic32.exe,2026-10-23 13:58:19,3
-,command-not-found,2026-08-11 15:10:27,1
 ,command-not-found,2026-08-31 19:25:54,0
 ,command-not-found,2026-09-06 16:19:45,0
 ,command-not-found,2026-09-12 20:39:54,0
@@ -433,6 +432,7 @@ hostname,derivation name,utc time,build seconds
 ,command-not-found,2026-10-17 11:34:34,0
 ,command-not-found,2026-10-23 13:57:57,0
 ,command-not-found,2026-10-25 08:35:17,0
+,command-not-found,2026-10-29 17:27:14,0
 ,console-env,2026-04-25 09:18:47,0
 ,console-env,2026-05-23 07:25:57,1
 ,console-env,2026-07-15 11:33:11,0
@@ -507,8 +507,6 @@ hostname,derivation name,utc time,build seconds
 ,cupsd.conf,2026-09-12 20:36:49,0
 ,cupsd.conf,2026-10-08 14:24:27,1
 ,cupsd.conf,2026-10-23 13:57:18,0
-,dbus,2026-10-24 15:39:50,0
-,dbus,2026-10-24 15:59:10,0
 ,dbus,2026-10-24 16:01:01,0
 ,dbus,2026-10-24 16:02:55,0
 ,dbus,2026-10-25 08:36:38,0
@@ -517,12 +515,15 @@ hostname,derivation name,utc time,build seconds
 ,dbus,2026-10-28 10:40:01,0
 ,dbus,2026-10-28 10:46:59,0
 ,dbus,2026-10-28 11:48:51,0
+,dbus,2026-10-29 17:27:15,0
+,dbus,2026-10-29 17:41:52,0
 ,desktops,2026-04-15 10:07:14,0
 ,desktops,2026-04-18 09:35:18,0
 ,desktops,2026-10-23 12:31:54,0
 ,desktops,2026-10-23 14:08:33,0
 ,desktops,2026-10-23 19:06:19,0
 ,desktops,2026-10-25 08:37:13,0
+,desktops,2026-10-29 17:30:51,0
 ,dry-activate,2026-10-23 15:13:28,0
 ,dry-activate,2026-10-23 18:04:50,0
 ,dry-activate,2026-10-23 18:59:36,0
@@ -537,7 +538,6 @@ hostname,derivation name,utc time,build seconds
 ,ensure-all-wrappers-paths-exist,2026-09-12 20:40:44,0
 ,ensure-all-wrappers-paths-exist,2026-09-19 10:30:49,0
 ,ensure-all-wrappers-paths-exist,2026-10-11 14:34:56,0
-,ensure-wrapper-integrity,2026-10-23 18:04:50,0
 ,ensure-wrapper-integrity,2026-10-23 18:59:36,0
 ,ensure-wrapper-integrity,2026-10-23 19:06:20,0
 ,ensure-wrapper-integrity,2026-10-23 19:56:04,0
@@ -547,7 +547,7 @@ hostname,derivation name,utc time,build seconds
 ,ensure-wrapper-integrity,2026-10-25 08:36:48,0
 ,ensure-wrapper-integrity,2026-10-27 18:10:21,0
 ,ensure-wrapper-integrity,2026-10-28 11:48:46,1
-,etc,2026-10-24 15:39:53,0
+,ensure-wrapper-integrity,2026-10-29 17:27:14,0
 ,etc,2026-10-24 15:59:13,0
 ,etc,2026-10-24 16:01:04,0
 ,etc,2026-10-24 16:02:57,0
@@ -557,6 +557,7 @@ hostname,derivation name,utc time,build seconds
 ,etc,2026-10-28 10:47:02,0
 ,etc,2026-10-28 10:55:03,0
 ,etc,2026-10-28 11:48:54,0
+,etc,2026-10-29 17:41:56,0
 ,etc-UPower-UPower.conf,2026-10-23 12:31:45,0
 ,etc-UPower-UPower.conf,2026-10-23 13:57:18,0
 ,etc-X11-xorg.conf.d-00-keyboard.conf,2026-04-25 09:18:31,0
@@ -585,7 +586,6 @@ hostname,derivation name,utc time,build seconds
 ,etc-bash_logout,2026-09-12 20:36:49,0
 ,etc-bash_logout,2026-10-08 14:24:28,2
 ,etc-bash_logout,2026-10-23 13:57:18,0
-,etc-bashrc,2026-08-31 19:25:54,0
 ,etc-bashrc,2026-09-06 16:19:46,0
 ,etc-bashrc,2026-09-12 20:39:54,0
 ,etc-bashrc,2026-09-19 10:33:46,0
@@ -595,6 +595,7 @@ hostname,derivation name,utc time,build seconds
 ,etc-bashrc,2026-10-23 12:31:46,0
 ,etc-bashrc,2026-10-23 13:57:59,1
 ,etc-bashrc,2026-10-25 08:36:36,0
+,etc-bashrc,2026-10-29 17:27:16,0
 ,etc-environment.d-50-systemd-path.conf,2026-05-23 07:25:50,0
 ,etc-environment.d-50-systemd-path.conf,2026-07-15 11:33:04,0
 ,etc-environment.d-50-systemd-path.conf,2026-08-03 11:59:11,2
@@ -724,7 +725,6 @@ hostname,derivation name,utc time,build seconds
 ,etc-netgroup,2026-09-12 20:36:51,0
 ,etc-netgroup,2026-10-08 14:24:35,1
 ,etc-netgroup,2026-10-23 13:57:21,0
-,etc-nix-registry.json,2026-08-31 19:19:06,0
 ,etc-nix-registry.json,2026-08-31 19:25:42,0
 ,etc-nix-registry.json,2026-09-06 16:19:44,0
 ,etc-nix-registry.json,2026-09-12 20:36:51,0
@@ -734,6 +734,7 @@ hostname,derivation name,utc time,build seconds
 ,etc-nix-registry.json,2026-10-17 11:34:34,0
 ,etc-nix-registry.json,2026-10-23 13:57:21,1
 ,etc-nix-registry.json,2026-10-25 08:35:17,0
+,etc-nix-registry.json,2026-10-29 17:27:14,0
 ,etc-nscd.conf,2026-04-25 09:18:33,0
 ,etc-nscd.conf,2026-05-23 07:25:51,0
 ,etc-nscd.conf,2026-07-15 11:33:06,0
@@ -750,7 +751,6 @@ hostname,derivation name,utc time,build seconds
 ,etc-nsswitch.conf,2026-09-12 20:36:51,0
 ,etc-nsswitch.conf,2026-10-08 14:24:37,1
 ,etc-nsswitch.conf,2026-10-23 13:57:22,0
-,etc-os-release,2026-08-31 19:19:07,0
 ,etc-os-release,2026-08-31 19:25:42,0
 ,etc-os-release,2026-09-06 16:19:44,0
 ,etc-os-release,2026-09-12 20:36:51,0
@@ -760,7 +760,7 @@ hostname,derivation name,utc time,build seconds
 ,etc-os-release,2026-10-17 11:34:35,1
 ,etc-os-release,2026-10-23 13:57:22,0
 ,etc-os-release,2026-10-25 08:35:17,0
-,etc-pam-environment,2026-09-19 10:33:40,0
+,etc-os-release,2026-10-29 17:27:14,0
 ,etc-pam-environment,2026-10-11 14:35:19,1
 ,etc-pam-environment,2026-10-17 11:34:46,0
 ,etc-pam-environment,2026-10-23 12:31:54,0
@@ -770,6 +770,7 @@ hostname,derivation name,utc time,build seconds
 ,etc-pam-environment,2026-10-23 20:51:54,0
 ,etc-pam-environment,2026-10-24 09:02:42,0
 ,etc-pam-environment,2026-10-25 08:37:13,0
+,etc-pam-environment,2026-10-29 17:30:52,0
 ,etc-polkit-1-rules.d-10-nixos.rules,2026-04-04 09:12:26,0
 ,etc-polkit-1-rules.d-10-nixos.rules,2026-04-25 09:18:34,0
 ,etc-polkit-1-rules.d-10-nixos.rules,2026-05-23 07:25:51,0
@@ -780,7 +781,6 @@ hostname,derivation name,utc time,build seconds
 ,etc-polkit-1-rules.d-10-nixos.rules,2026-10-08 14:24:38,2
 ,etc-polkit-1-rules.d-10-nixos.rules,2026-10-23 13:57:22,0
 ,etc-polkit-1-rules.d-10-nixos.rules,2026-10-24 09:02:42,0
-,etc-profile,2026-10-17 11:34:48,1
 ,etc-profile,2026-10-23 12:31:55,0
 ,etc-profile,2026-10-23 12:44:19,0
 ,etc-profile,2026-10-23 14:08:35,0
@@ -790,6 +790,7 @@ hostname,derivation name,utc time,build seconds
 ,etc-profile,2026-10-24 09:02:44,0
 ,etc-profile,2026-10-25 08:37:14,0
 ,etc-profile,2026-10-28 10:55:02,0
+,etc-profile,2026-10-29 17:30:52,0
 ,etc-request-key.conf,2026-04-15 10:07:09,0
 ,etc-request-key.conf,2026-04-25 09:19:17,0
 ,etc-request-key.conf,2026-05-23 07:27:08,0
@@ -966,7 +967,7 @@ hostname,derivation name,utc time,build seconds
 ,evolution-with-plugins,2026-10-23 12:31:46,1
 ,evolution-with-plugins,2026-10-23 14:08:23,0
 ,evolution-with-plugins,2026-10-25 08:37:12,0
-,exec,2026-08-11 15:10:27,0
+,evolution-with-plugins,2026-10-29 17:29:30,0
 ,exec,2026-08-31 19:19:09,0
 ,exec,2026-09-12 20:36:54,0
 ,exec,2026-09-19 10:30:49,0
@@ -976,6 +977,7 @@ hostname,derivation name,utc time,build seconds
 ,exec,2026-10-23 13:57:25,1
 ,exec,2026-10-24 09:10:21,0
 ,exec,2026-10-25 08:35:18,0
+,exec,2026-10-29 17:27:15,0
 ,extra-hosts,2026-04-25 09:18:36,0
 ,extra-hosts,2026-05-23 07:25:53,0
 ,extra-hosts,2026-07-15 11:33:09,0
@@ -984,7 +986,6 @@ hostname,derivation name,utc time,build seconds
 ,extra-hosts,2026-09-12 20:36:54,0
 ,extra-hosts,2026-10-08 14:24:47,1
 ,extra-hosts,2026-10-23 13:57:26,1
-,extra-hwdb-file,2026-08-03 11:59:15,0
 ,extra-hwdb-file,2026-08-11 15:10:27,0
 ,extra-hwdb-file,2026-08-31 19:19:09,0
 ,extra-hwdb-file,2026-09-12 20:36:54,0
@@ -994,7 +995,7 @@ hostname,derivation name,utc time,build seconds
 ,extra-hwdb-file,2026-10-23 12:31:46,0
 ,extra-hwdb-file,2026-10-23 13:57:26,1
 ,extra-hwdb-file,2026-10-25 08:35:18,0
-,extra-udev-rules,2026-07-21 09:36:55,0
+,extra-hwdb-file,2026-10-29 17:27:15,0
 ,extra-udev-rules,2026-08-03 11:59:15,0
 ,extra-udev-rules,2026-08-11 15:10:28,0
 ,extra-udev-rules,2026-08-31 19:19:09,0
@@ -1004,10 +1005,10 @@ hostname,derivation name,utc time,build seconds
 ,extra-udev-rules,2026-10-23 12:31:46,0
 ,extra-udev-rules,2026-10-23 13:57:26,1
 ,extra-udev-rules,2026-10-25 08:35:18,0
+,extra-udev-rules,2026-10-29 17:27:15,0
 ,extra-utils,2026-04-02 13:28:44,7
 ,extra-utils,2026-04-03 08:23:40,6
 ,extra-utils,2026-04-07 12:24:27,6
-,fc-00-nixos-cache.conf,2026-08-31 19:26:40,0
 ,fc-00-nixos-cache.conf,2026-09-06 16:20:22,0
 ,fc-00-nixos-cache.conf,2026-09-12 20:41:39,0
 ,fc-00-nixos-cache.conf,2026-09-19 10:30:56,0
@@ -1017,6 +1018,7 @@ hostname,derivation name,utc time,build seconds
 ,fc-00-nixos-cache.conf,2026-10-23 14:08:35,0
 ,fc-00-nixos-cache.conf,2026-10-24 09:10:22,0
 ,fc-00-nixos-cache.conf,2026-10-25 08:37:00,0
+,fc-00-nixos-cache.conf,2026-10-29 17:28:00,0
 ,fc-10-nixos-rendering.conf,2026-04-25 09:18:37,0
 ,fc-10-nixos-rendering.conf,2026-05-23 07:25:54,0
 ,fc-10-nixos-rendering.conf,2026-07-15 11:33:09,0
@@ -1057,7 +1059,6 @@ hostname,derivation name,utc time,build seconds
 ,fc-53-user-aliases.conf,2026-09-12 20:36:55,0
 ,fc-53-user-aliases.conf,2026-10-08 14:24:53,2
 ,fc-53-user-aliases.conf,2026-10-23 13:57:27,0
-,fc-cache,2026-08-31 19:26:40,0
 ,fc-cache,2026-09-06 16:20:22,0
 ,fc-cache,2026-09-12 20:41:39,0
 ,fc-cache,2026-09-19 10:30:55,3
@@ -1067,6 +1068,7 @@ hostname,derivation name,utc time,build seconds
 ,fc-cache,2026-10-23 14:08:35,1
 ,fc-cache,2026-10-24 09:10:22,0
 ,fc-cache,2026-10-25 08:37:00,1
+,fc-cache,2026-10-29 17:28:00,1
 ,fhsenv-ensure-gsettings-schemas-directory,2026-04-25 09:18:37,0
 ,fhsenv-ensure-gsettings-schemas-directory,2026-05-23 07:25:54,0
 ,fhsenv-ensure-gsettings-schemas-directory,2026-07-15 11:33:10,0
@@ -1114,7 +1116,6 @@ hostname,derivation name,utc time,build seconds
 ,firmware,2026-09-19 10:33:39,1
 ,firmware,2026-10-08 14:26:45,3
 ,firmware,2026-10-23 14:08:17,1
-,font-dirs,2026-08-31 19:26:39,0
 ,font-dirs,2026-09-06 16:20:21,0
 ,font-dirs,2026-09-12 20:41:38,0
 ,font-dirs,2026-09-19 10:30:50,0
@@ -1124,7 +1125,7 @@ hostname,derivation name,utc time,build seconds
 ,font-dirs,2026-10-23 14:08:32,0
 ,font-dirs,2026-10-24 09:10:21,0
 ,font-dirs,2026-10-25 08:36:58,0
-,fontconfig-conf,2026-08-31 19:26:40,0
+,font-dirs,2026-10-29 17:27:59,0
 ,fontconfig-conf,2026-09-06 16:20:22,0
 ,fontconfig-conf,2026-09-12 20:41:39,0
 ,fontconfig-conf,2026-09-19 10:30:56,0
@@ -1134,7 +1135,7 @@ hostname,derivation name,utc time,build seconds
 ,fontconfig-conf,2026-10-23 14:08:35,0
 ,fontconfig-conf,2026-10-24 09:10:22,0
 ,fontconfig-conf,2026-10-25 08:37:00,0
-,fontconfig-etc,2026-08-31 19:26:40,0
+,fontconfig-conf,2026-10-29 17:28:00,0
 ,fontconfig-etc,2026-09-06 16:20:22,0
 ,fontconfig-etc,2026-09-12 20:41:39,0
 ,fontconfig-etc,2026-09-19 10:30:57,0
@@ -1144,6 +1145,7 @@ hostname,derivation name,utc time,build seconds
 ,fontconfig-etc,2026-10-23 14:08:36,0
 ,fontconfig-etc,2026-10-24 09:10:22,0
 ,fontconfig-etc,2026-10-25 08:37:00,0
+,fontconfig-etc,2026-10-29 17:28:00,0
 ,georgi32.exe,2026-04-25 09:18:42,1
 ,georgi32.exe,2026-05-23 07:26:54,0
 ,georgi32.exe,2026-06-21 09:29:33,1
@@ -1218,7 +1220,6 @@ hostname,derivation name,utc time,build seconds
 ,hosts,2026-09-12 20:37:04,0
 ,hosts,2026-10-08 14:25:11,0
 ,hosts,2026-10-23 13:57:40,0
-,hwdb.bin,2026-08-11 15:10:31,1
 ,hwdb.bin,2026-08-31 19:27:34,1
 ,hwdb.bin,2026-09-06 16:20:28,2
 ,hwdb.bin,2026-09-12 20:42:24,1
@@ -1228,6 +1229,7 @@ hostname,derivation name,utc time,build seconds
 ,hwdb.bin,2026-10-23 12:31:50,1
 ,hwdb.bin,2026-10-23 13:58:21,1
 ,hwdb.bin,2026-10-25 08:37:09,1
+,hwdb.bin,2026-10-29 17:27:56,0
 ,idmapd.conf,2026-04-25 09:18:37,0
 ,idmapd.conf,2026-05-23 07:25:55,0
 ,idmapd.conf,2026-07-15 11:33:10,0
@@ -1245,7 +1247,6 @@ hostname,derivation name,utc time,build seconds
 ,impact32.exe,2026-09-12 20:37:18,0
 ,impact32.exe,2026-10-08 14:24:55,1
 ,impact32.exe,2026-10-23 13:58:19,1
-,initrd-bin-env,2026-07-21 09:36:57,0
 ,initrd-bin-env,2026-08-03 12:00:06,0
 ,initrd-bin-env,2026-08-11 15:10:28,0
 ,initrd-bin-env,2026-08-31 19:21:45,0
@@ -1255,6 +1256,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-bin-env,2026-10-17 11:34:36,0
 ,initrd-bin-env,2026-10-23 13:57:48,1
 ,initrd-bin-env,2026-10-25 08:36:39,0
+,initrd-bin-env,2026-10-29 17:27:16,1
 ,initrd-fsinfo,2026-04-02 13:28:35,0
 ,initrd-fsinfo,2026-04-03 08:23:30,0
 ,initrd-fsinfo,2026-04-07 12:24:19,0
@@ -1267,7 +1269,6 @@ hostname,derivation name,utc time,build seconds
 ,initrd-fstab,2026-09-12 20:36:56,0
 ,initrd-fstab,2026-10-08 14:24:54,0
 ,initrd-fstab,2026-10-23 13:57:28,0
-,initrd-group,2026-07-21 09:36:55,0
 ,initrd-group,2026-08-03 11:59:17,0
 ,initrd-group,2026-08-11 15:10:28,0
 ,initrd-group,2026-08-31 19:19:11,0
@@ -1277,7 +1278,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-group,2026-10-17 11:34:35,0
 ,initrd-group,2026-10-23 13:57:28,0
 ,initrd-group,2026-10-25 08:35:17,0
-,initrd-hostname,2026-07-15 11:33:10,0
+,initrd-group,2026-10-29 17:27:14,0
 ,initrd-hostname,2026-07-21 09:36:55,0
 ,initrd-hostname,2026-08-03 11:59:17,0
 ,initrd-hostname,2026-08-11 15:10:28,0
@@ -1287,7 +1288,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-hostname,2026-10-08 14:24:55,1
 ,initrd-hostname,2026-10-23 13:57:28,0
 ,initrd-hostname,2026-10-25 08:35:17,0
-,initrd-linux,2026-08-03 12:03:36,3
+,initrd-hostname,2026-10-29 17:27:15,0
 ,initrd-linux,2026-08-11 15:11:54,3
 ,initrd-linux,2026-08-31 19:26:40,2
 ,initrd-linux,2026-09-06 16:21:15,3
@@ -1297,7 +1298,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-linux,2026-10-17 11:35:06,3
 ,initrd-linux,2026-10-23 14:08:53,0
 ,initrd-linux,2026-10-25 08:36:46,3
-,initrd-nixos.conf,2026-08-11 15:10:28,0
+,initrd-linux,2026-10-29 17:36:08,2
 ,initrd-nixos.conf,2026-08-31 19:19:11,0
 ,initrd-nixos.conf,2026-09-12 20:36:57,0
 ,initrd-nixos.conf,2026-09-19 10:30:50,0
@@ -1306,7 +1307,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-nixos.conf,2026-10-17 11:34:36,1
 ,initrd-nixos.conf,2026-10-23 13:57:28,0
 ,initrd-nixos.conf,2026-10-25 08:35:17,0
-,initrd-passwd,2026-07-15 11:33:11,0
+,initrd-nixos.conf,2026-10-29 17:27:15,0
 ,initrd-passwd,2026-07-21 09:36:56,0
 ,initrd-passwd,2026-08-03 11:59:17,0
 ,initrd-passwd,2026-08-11 15:10:28,0
@@ -1316,7 +1317,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-passwd,2026-10-08 14:24:56,1
 ,initrd-passwd,2026-10-23 13:57:37,0
 ,initrd-passwd,2026-10-25 08:35:18,0
-,initrd-release,2026-07-21 09:36:56,0
+,initrd-passwd,2026-10-29 17:27:16,0
 ,initrd-release,2026-08-03 11:59:17,0
 ,initrd-release,2026-08-11 15:10:29,0
 ,initrd-release,2026-08-31 19:19:11,0
@@ -1326,7 +1327,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-release,2026-10-17 11:34:36,1
 ,initrd-release,2026-10-23 13:57:29,0
 ,initrd-release,2026-10-25 08:35:17,1
-,initrd-shadow,2026-07-21 09:36:56,0
+,initrd-release,2026-10-29 17:27:16,0
 ,initrd-shadow,2026-08-03 11:59:17,0
 ,initrd-shadow,2026-08-11 15:10:29,0
 ,initrd-shadow,2026-08-31 19:19:12,1
@@ -1336,7 +1337,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-shadow,2026-10-17 11:34:37,0
 ,initrd-shadow,2026-10-23 13:57:29,1
 ,initrd-shadow,2026-10-25 08:35:18,0
-,initrd-shells,2026-07-21 09:36:56,0
+,initrd-shadow,2026-10-29 17:27:16,0
 ,initrd-shells,2026-08-03 11:59:18,0
 ,initrd-shells,2026-08-11 15:10:29,0
 ,initrd-shells,2026-08-31 19:19:12,0
@@ -1346,7 +1347,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-shells,2026-10-17 11:34:37,0
 ,initrd-shells,2026-10-23 13:57:37,1
 ,initrd-shells,2026-10-25 08:35:18,0
-,initrd-system.conf,2026-07-21 09:36:56,0
+,initrd-shells,2026-10-29 17:27:16,0
 ,initrd-system.conf,2026-08-03 11:59:18,0
 ,initrd-system.conf,2026-08-11 15:10:29,0
 ,initrd-system.conf,2026-08-31 19:19:12,0
@@ -1356,7 +1357,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-system.conf,2026-10-17 11:34:37,0
 ,initrd-system.conf,2026-10-23 13:57:30,0
 ,initrd-system.conf,2026-10-25 08:35:19,0
-,initrd-tmpfiles.d,2026-07-21 09:36:56,0
+,initrd-system.conf,2026-10-29 17:27:16,0
 ,initrd-tmpfiles.d,2026-08-03 11:59:18,1
 ,initrd-tmpfiles.d,2026-08-11 15:10:29,0
 ,initrd-tmpfiles.d,2026-08-31 19:19:12,0
@@ -1366,8 +1367,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-tmpfiles.d,2026-10-17 11:34:36,0
 ,initrd-tmpfiles.d,2026-10-23 13:57:29,0
 ,initrd-tmpfiles.d,2026-10-25 08:35:19,0
-,initrd-udev-rules,2026-09-19 10:30:51,0
-,initrd-udev-rules,2026-09-19 10:30:53,1
+,initrd-tmpfiles.d,2026-10-29 17:27:17,0
 ,initrd-udev-rules,2026-10-08 14:24:58,1
 ,initrd-udev-rules,2026-10-08 14:27:10,12
 ,initrd-udev-rules,2026-10-17 11:34:37,1
@@ -1376,7 +1376,8 @@ hostname,derivation name,utc time,build seconds
 ,initrd-udev-rules,2026-10-23 13:58:11,2
 ,initrd-udev-rules,2026-10-25 08:35:19,0
 ,initrd-udev-rules,2026-10-25 08:36:42,2
-,initrd-unit-env,2026-07-21 09:36:57,1
+,initrd-udev-rules,2026-10-29 17:27:16,0
+,initrd-udev-rules,2026-10-29 17:27:34,0
 ,initrd-unit-env,2026-08-03 11:59:24,0
 ,initrd-unit-env,2026-08-11 15:10:29,0
 ,initrd-unit-env,2026-08-31 19:19:49,0
@@ -1386,7 +1387,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-unit-env,2026-10-17 11:34:37,0
 ,initrd-unit-env,2026-10-23 13:57:30,1
 ,initrd-unit-env,2026-10-25 08:35:19,0
-,initrd-units,2026-07-21 09:37:03,0
+,initrd-unit-env,2026-10-29 17:27:17,1
 ,initrd-units,2026-08-03 12:03:33,1
 ,initrd-units,2026-08-11 15:10:35,0
 ,initrd-units,2026-08-31 19:26:37,0
@@ -1396,6 +1397,7 @@ hostname,derivation name,utc time,build seconds
 ,initrd-units,2026-10-17 11:34:49,0
 ,initrd-units,2026-10-23 14:08:53,0
 ,initrd-units,2026-10-25 08:36:39,1
+,initrd-units,2026-10-29 17:27:19,0
 ,input.conf,2026-10-23 12:31:47,0
 ,input.conf,2026-10-23 13:57:30,0
 ,install-systemd-boot.sh,2026-07-15 11:33:56,0
@@ -1408,7 +1410,6 @@ hostname,derivation name,utc time,build seconds
 ,install-systemd-boot.sh,2026-10-17 11:34:54,3
 ,install-systemd-boot.sh,2026-10-23 13:57:53,0
 ,install-systemd-boot.sh,2026-10-25 08:36:41,0
-,ipv6-privacy-extensions.rules,2026-08-11 15:10:30,0
 ,ipv6-privacy-extensions.rules,2026-08-31 19:19:12,0
 ,ipv6-privacy-extensions.rules,2026-09-12 20:36:58,0
 ,ipv6-privacy-extensions.rules,2026-09-19 10:30:52,0
@@ -1417,7 +1418,8 @@ hostname,derivation name,utc time,build seconds
 ,ipv6-privacy-extensions.rules,2026-10-23 12:31:47,1
 ,ipv6-privacy-extensions.rules,2026-10-23 13:57:30,0
 ,ipv6-privacy-extensions.rules,2026-10-25 08:35:19,0
-,issue,2026-08-31 19:19:12,0
+,ipv6-privacy-extensions.rules,2026-10-29 17:27:16,0
+,ipv6-privacy-extensions.rules,2026-10-29 17:27:17,0
 ,issue,2026-08-31 19:25:42,0
 ,issue,2026-09-06 16:19:45,0
 ,issue,2026-09-12 20:36:58,0
@@ -1427,6 +1429,7 @@ hostname,derivation name,utc time,build seconds
 ,issue,2026-10-17 11:34:38,1
 ,issue,2026-10-23 13:57:30,0
 ,issue,2026-10-25 08:35:19,0
+,issue,2026-10-29 17:27:17,0
 ,jack-libs,2026-04-25 09:19:27,0
 ,jack-libs,2026-05-23 07:27:26,0
 ,jack-libs,2026-07-15 11:34:27,0
@@ -1470,6 +1473,7 @@ hostname,derivation name,utc time,build seconds
 ,lightdm.conf,2026-10-23 19:06:21,0
 ,lightdm.conf,2026-10-24 09:10:22,0
 ,lightdm.conf,2026-10-25 08:37:14,0
+,lightdm.conf,2026-10-29 17:30:53,0
 ,lightdm.pam,2026-04-17 12:07:44,0
 ,limits.conf,2026-04-25 09:18:39,0
 ,limits.conf,2026-05-23 07:25:57,0
@@ -1544,8 +1548,10 @@ hostname,derivation name,utc time,build seconds
 ,linux-7.2.9-modules-shrunk,2026-10-08 14:27:12,14
 ,linux-7.3-modules,2026-10-23 13:57:31,1
 ,linux-7.3-modules,2026-10-25 08:36:34,0
+,linux-7.3-modules,2026-10-29 17:36:03,0
 ,linux-7.3-modules-shrunk,2026-10-23 14:08:20,2
 ,linux-7.3-modules-shrunk,2026-10-25 08:36:36,1
+,linux-7.3-modules-shrunk,2026-10-29 17:36:05,1
 ,local-cmds,2026-04-25 09:18:40,0
 ,local-cmds,2026-05-23 07:25:57,0
 ,local-cmds,2026-07-15 11:33:13,0
@@ -1630,6 +1636,7 @@ hostname,derivation name,utc time,build seconds
 ,nemo-with-extensions,2026-10-23 12:31:48,0
 ,nemo-with-extensions,2026-10-23 14:08:34,0
 ,nemo-with-extensions,2026-10-25 08:37:10,1
+,nemo-with-extensions,2026-10-29 17:29:05,0
 ,net.conf,2026-10-23 12:31:48,0
 ,net.conf,2026-10-23 13:57:33,1
 ,net.conf,2026-10-23 17:44:22,0
@@ -1703,8 +1710,6 @@ hostname,derivation name,utc time,build seconds
 ,nixos-generate-config,2026-10-23 12:31:48,0
 ,nixos-generate-config,2026-10-23 13:57:57,0
 ,nixos-generate-config,2026-10-25 08:36:39,1
-,nixos-help,2026-08-31 19:26:16,0
-,nixos-help,2026-09-06 16:20:02,0
 ,nixos-help,2026-09-12 20:41:24,0
 ,nixos-help,2026-09-19 10:33:50,0
 ,nixos-help,2026-10-11 14:35:17,2
@@ -1713,6 +1718,7 @@ hostname,derivation name,utc time,build seconds
 ,nixos-help,2026-10-23 14:08:20,0
 ,nixos-help,2026-10-25 08:36:56,0
 ,nixos-help,2026-10-25 08:36:57,0
+,nixos-help,2026-10-29 17:30:54,0
 ,nixos-install,2026-04-07 12:24:21,0
 ,nixos-install,2026-04-25 09:18:44,0
 ,nixos-install,2026-05-23 07:26:31,0
@@ -1722,7 +1728,6 @@ hostname,derivation name,utc time,build seconds
 ,nixos-install,2026-09-12 20:37:13,0
 ,nixos-install,2026-10-08 14:25:05,1
 ,nixos-install,2026-10-23 13:57:49,1
-,nixos-manual-html,2026-08-03 12:03:04,11
 ,nixos-manual-html,2026-08-11 15:10:54,10
 ,nixos-manual-html,2026-08-31 19:26:10,11
 ,nixos-manual-html,2026-09-06 16:20:02,11
@@ -1732,6 +1737,7 @@ hostname,derivation name,utc time,build seconds
 ,nixos-manual-html,2026-10-17 11:34:50,11
 ,nixos-manual-html,2026-10-23 13:58:15,13
 ,nixos-manual-html,2026-10-25 08:36:55,11
+,nixos-manual-html,2026-10-29 17:30:54,9
 ,nixos-manual.desktop,2026-04-25 09:18:43,0
 ,nixos-manual.desktop,2026-05-23 07:26:00,0
 ,nixos-manual.desktop,2026-07-15 11:33:30,1
@@ -1853,6 +1859,7 @@ hostname,derivation name,utc time,build seconds
 ,nixos-system-nixos-26.11.20261023.3ec,2026-10-28 10:47:02,0
 ,nixos-system-nixos-26.11.20261023.3ec,2026-10-28 10:55:03,0
 ,nixos-system-nixos-26.11.20261023.3ec,2026-10-28 11:48:54,0
+,nixos-system-nixos-26.11.20261027.31ecbac,2026-10-29 17:41:57,0
 ,nixos-tmpfiles.d,2026-06-21 09:29:30,0
 ,nixos-tmpfiles.d,2026-07-15 11:33:30,1
 ,nixos-tmpfiles.d,2026-08-03 11:59:21,0
@@ -1863,7 +1870,6 @@ hostname,derivation name,utc time,build seconds
 ,nixos-tmpfiles.d,2026-10-23 12:31:48,1
 ,nixos-tmpfiles.d,2026-10-23 13:57:34,1
 ,nixos-tmpfiles.d,2026-10-25 08:36:35,0
-,nixos-version,2026-08-31 19:19:15,1
 ,nixos-version,2026-08-31 19:25:43,1
 ,nixos-version,2026-09-06 16:19:45,0
 ,nixos-version,2026-09-12 20:37:01,0
@@ -1873,6 +1879,7 @@ hostname,derivation name,utc time,build seconds
 ,nixos-version,2026-10-17 11:34:38,1
 ,nixos-version,2026-10-23 13:57:35,1
 ,nixos-version,2026-10-25 08:35:21,0
+,nixos-version,2026-10-29 17:27:17,0
 ,nixos-vimrc,2026-05-23 07:26:00,0
 ,nixos-vimrc,2026-07-15 11:33:31,1
 ,nixos-vimrc,2026-08-03 11:59:21,0
@@ -1890,7 +1897,6 @@ hostname,derivation name,utc time,build seconds
 ,nixos.conf,2026-09-12 20:37:01,1
 ,nixos.conf,2026-10-08 14:25:03,1
 ,nixos.conf,2026-10-23 13:57:35,0
-,nuke-refs,2026-07-21 09:36:58,1
 ,nuke-refs,2026-08-03 11:59:24,0
 ,nuke-refs,2026-08-11 15:10:30,1
 ,nuke-refs,2026-08-31 19:19:49,0
@@ -1900,6 +1906,7 @@ hostname,derivation name,utc time,build seconds
 ,nuke-refs,2026-10-17 11:34:39,2
 ,nuke-refs,2026-10-23 13:57:35,1
 ,nuke-refs,2026-10-25 08:35:20,1
+,nuke-refs,2026-10-29 17:27:17,0
 ,nvidia-settings,2026-04-02 16:55:35,17
 ,nvidia-settings,2026-04-02 17:23:26,16
 ,nvidia-settings,2026-04-02 17:31:43,17
@@ -2055,7 +2062,6 @@ hostname,derivation name,utc time,build seconds
 ,sct,2026-09-12 20:37:03,0
 ,sct,2026-10-08 14:25:07,0
 ,sct,2026-10-23 13:57:37,0
-,set-environment,2026-10-11 14:35:20,1
 ,set-environment,2026-10-17 11:34:47,1
 ,set-environment,2026-10-23 12:31:54,0
 ,set-environment,2026-10-23 14:08:34,0
@@ -2065,7 +2071,7 @@ hostname,derivation name,utc time,build seconds
 ,set-environment,2026-10-24 09:02:42,0
 ,set-environment,2026-10-25 08:37:14,0
 ,set-environment,2026-10-28 10:55:02,0
-,shutdown-ramfs-contents.json,2026-08-31 19:21:45,0
+,set-environment,2026-10-29 17:30:52,0
 ,shutdown-ramfs-contents.json,2026-08-31 19:25:43,0
 ,shutdown-ramfs-contents.json,2026-09-06 16:19:45,0
 ,shutdown-ramfs-contents.json,2026-09-12 20:40:26,0
@@ -2075,6 +2081,7 @@ hostname,derivation name,utc time,build seconds
 ,shutdown-ramfs-contents.json,2026-10-17 11:34:38,1
 ,shutdown-ramfs-contents.json,2026-10-23 13:57:49,0
 ,shutdown-ramfs-contents.json,2026-10-25 08:36:39,0
+,shutdown-ramfs-contents.json,2026-10-29 17:27:17,0
 ,slick-greeter.conf,2026-10-23 12:31:49,0
 ,slick-greeter.conf,2026-10-23 13:57:38,0
 ,snmp.conf,2026-04-25 09:18:45,0
@@ -2166,7 +2173,6 @@ hostname,derivation name,utc time,build seconds
 ,swaylock.pam,2026-04-25 09:18:46,0
 ,swaylock.pam,2026-05-23 07:26:03,0
 ,swaylock.pam,2026-07-15 11:33:44,9
-,system-generators,2026-09-06 16:20:04,0
 ,system-generators,2026-09-12 20:42:13,0
 ,system-generators,2026-09-19 10:31:01,0
 ,system-generators,2026-10-11 14:35:17,1
@@ -2176,7 +2182,7 @@ hostname,derivation name,utc time,build seconds
 ,system-generators,2026-10-23 18:41:42,0
 ,system-generators,2026-10-23 19:06:19,0
 ,system-generators,2026-10-25 08:37:12,0
-,system-path,2026-10-24 15:29:46,3
+,system-generators,2026-10-29 17:29:30,0
 ,system-path,2026-10-24 15:39:50,3
 ,system-path,2026-10-24 15:59:10,3
 ,system-path,2026-10-24 16:01:01,3
@@ -2186,7 +2192,7 @@ hostname,derivation name,utc time,build seconds
 ,system-path,2026-10-28 10:40:00,5
 ,system-path,2026-10-28 10:46:58,3
 ,system-path,2026-10-28 11:48:50,4
-,system-shutdown,2026-09-06 16:20:04,0
+,system-path,2026-10-29 17:41:51,8
 ,system-shutdown,2026-09-12 20:42:13,0
 ,system-shutdown,2026-09-19 10:31:02,0
 ,system-shutdown,2026-10-11 14:35:17,0
@@ -2196,7 +2202,7 @@ hostname,derivation name,utc time,build seconds
 ,system-shutdown,2026-10-23 18:41:42,0
 ,system-shutdown,2026-10-23 19:06:20,0
 ,system-shutdown,2026-10-25 08:37:13,0
-,system-units,2026-10-24 15:29:48,1
+,system-shutdown,2026-10-29 17:29:30,0
 ,system-units,2026-10-24 15:39:52,1
 ,system-units,2026-10-24 15:59:12,1
 ,system-units,2026-10-24 16:01:03,1
@@ -2206,6 +2212,7 @@ hostname,derivation name,utc time,build seconds
 ,system-units,2026-10-28 10:40:03,1
 ,system-units,2026-10-28 10:47:01,1
 ,system-units,2026-10-28 11:48:53,1
+,system-units,2026-10-29 17:41:55,2
 ,systemd,2026-04-25 09:19:15,0
 ,systemd,2026-05-23 07:26:33,0
 ,systemd,2026-07-15 11:33:47,6
@@ -2280,7 +2287,6 @@ hostname,derivation name,utc time,build seconds
 ,udev-path,2026-10-08 14:27:09,10
 ,udev-path,2026-10-23 13:58:08,0
 ,udev-path,2026-10-25 08:36:40,0
-,udev-rules,2026-08-11 15:10:32,0
 ,udev-rules,2026-08-31 19:27:34,0
 ,udev-rules,2026-09-06 16:20:28,1
 ,udev-rules,2026-09-12 20:42:24,1
@@ -2290,6 +2296,7 @@ hostname,derivation name,utc time,build seconds
 ,udev-rules,2026-10-23 12:31:52,3
 ,udev-rules,2026-10-23 13:58:27,6
 ,udev-rules,2026-10-25 08:37:10,2
+,udev-rules,2026-10-29 17:27:56,1
 ,udiskie,2026-10-23 14:08:53,31
 ,udisks2.conf,2026-04-25 09:18:47,0
 ,udisks2.conf,2026-05-23 07:26:03,0
@@ -2349,7 +2356,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-NetworkManager.service,2026-10-11 14:35:18,0
 ,unit-NetworkManager.service,2026-10-23 14:08:40,0
 ,unit-NetworkManager.service,2026-10-25 08:36:40,1
-,unit-accounts-daemon.service,2026-10-24 15:29:47,0
 ,unit-accounts-daemon.service,2026-10-24 15:39:50,0
 ,unit-accounts-daemon.service,2026-10-24 15:59:10,0
 ,unit-accounts-daemon.service,2026-10-24 16:01:02,0
@@ -2359,6 +2365,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-accounts-daemon.service,2026-10-28 10:40:01,0
 ,unit-accounts-daemon.service,2026-10-28 10:46:59,0
 ,unit-accounts-daemon.service,2026-10-28 11:48:51,0
+,unit-accounts-daemon.service,2026-10-29 17:41:52,0
 ,unit-auth-rpcgss-module.service,2026-04-25 09:19:33,0
 ,unit-auth-rpcgss-module.service,2026-05-23 07:27:07,0
 ,unit-auth-rpcgss-module.service,2026-07-15 11:34:16,0
@@ -2437,7 +2444,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-cups.socket,2026-09-12 20:37:04,0
 ,unit-cups.socket,2026-10-08 14:25:13,0
 ,unit-cups.socket,2026-10-23 13:57:39,1
-,unit-dbus-broker.service,2026-10-24 16:01:02,0
 ,unit-dbus-broker.service,2026-10-24 16:02:55,0
 ,unit-dbus-broker.service,2026-10-25 08:38:58,0
 ,unit-dbus-broker.service,2026-10-25 08:38:59,0
@@ -2446,7 +2452,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-dbus-broker.service,2026-10-28 10:46:59,0
 ,unit-dbus-broker.service,2026-10-28 10:47:00,0
 ,unit-dbus-broker.service,2026-10-28 11:48:51,0
-,unit-dbus.service,2026-08-31 19:26:29,0
+,unit-dbus-broker.service,2026-10-29 17:41:53,0
 ,unit-dbus.service,2026-09-12 20:40:09,0
 ,unit-dbus.service,2026-09-12 20:40:28,0
 ,unit-dbus.service,2026-09-19 10:30:53,0
@@ -2456,7 +2462,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-dbus.service,2026-10-23 14:08:42,0
 ,unit-dbus.service,2026-10-25 08:35:19,0
 ,unit-dbus.service,2026-10-25 08:36:41,0
-,unit-dbus.socket,2026-08-11 15:10:31,0
+,unit-dbus.service,2026-10-29 17:27:17,0
 ,unit-dbus.socket,2026-08-31 19:19:17,1
 ,unit-dbus.socket,2026-08-31 19:19:18,1
 ,unit-dbus.socket,2026-09-12 20:37:04,1
@@ -2466,12 +2472,14 @@ hostname,derivation name,utc time,build seconds
 ,unit-dbus.socket,2026-10-17 11:34:40,1
 ,unit-dbus.socket,2026-10-23 13:57:40,1
 ,unit-dbus.socket,2026-10-25 08:35:20,0
+,unit-dbus.socket,2026-10-29 17:27:18,0
 ,unit-display-manager.service,2026-04-17 12:07:45,0
 ,unit-display-manager.service,2026-10-23 12:31:55,0
 ,unit-display-manager.service,2026-10-23 14:08:42,0
 ,unit-display-manager.service,2026-10-23 14:51:23,0
 ,unit-display-manager.service,2026-10-23 19:06:20,0
 ,unit-display-manager.service,2026-10-25 08:37:14,0
+,unit-display-manager.service,2026-10-29 17:30:52,0
 ,unit-filter-chain.service,2026-04-17 17:20:26,0
 ,unit-filter-chain.service,2026-04-25 09:19:33,0
 ,unit-filter-chain.service,2026-05-23 07:27:08,0
@@ -2525,7 +2533,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-gcr-ssh-agent.socket,2026-09-12 20:37:05,0
 ,unit-gcr-ssh-agent.socket,2026-10-08 14:25:14,0
 ,unit-gcr-ssh-agent.socket,2026-10-23 13:57:41,1
-,unit-generate-shutdown-ramfs.service,2026-08-03 12:03:25,0
 ,unit-generate-shutdown-ramfs.service,2026-08-11 15:10:31,0
 ,unit-generate-shutdown-ramfs.service,2026-08-31 19:26:30,0
 ,unit-generate-shutdown-ramfs.service,2026-09-06 16:19:47,0
@@ -2535,6 +2542,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-generate-shutdown-ramfs.service,2026-10-17 11:34:42,0
 ,unit-generate-shutdown-ramfs.service,2026-10-23 14:08:42,0
 ,unit-generate-shutdown-ramfs.service,2026-10-25 08:36:42,0
+,unit-generate-shutdown-ramfs.service,2026-10-29 17:27:18,0
 ,unit-getty-.service,2026-04-25 09:19:34,0
 ,unit-getty-.service,2026-05-02 20:27:02,0
 ,unit-getty-.service,2026-05-23 07:27:09,0
@@ -2558,7 +2566,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-greetd.service,2026-04-05 20:25:33,0
 ,unit-greetd.service,2026-04-17 12:52:46,0
 ,unit-greetd.service,2026-04-18 09:35:19,0
-,unit-initrd-find-nixos-closure.service,2026-07-21 09:37:01,0
 ,unit-initrd-find-nixos-closure.service,2026-08-03 12:03:25,0
 ,unit-initrd-find-nixos-closure.service,2026-08-11 15:10:34,1
 ,unit-initrd-find-nixos-closure.service,2026-08-31 19:26:30,0
@@ -2568,7 +2575,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-initrd-find-nixos-closure.service,2026-10-17 11:34:48,1
 ,unit-initrd-find-nixos-closure.service,2026-10-23 14:08:43,0
 ,unit-initrd-find-nixos-closure.service,2026-10-25 08:35:30,0
-,unit-initrd-nixos-activation.service,2026-07-21 09:37:01,0
+,unit-initrd-find-nixos-closure.service,2026-10-29 17:27:19,0
 ,unit-initrd-nixos-activation.service,2026-08-03 12:03:25,0
 ,unit-initrd-nixos-activation.service,2026-08-11 15:10:34,0
 ,unit-initrd-nixos-activation.service,2026-08-31 19:26:30,0
@@ -2578,7 +2585,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-initrd-nixos-activation.service,2026-10-17 11:34:40,1
 ,unit-initrd-nixos-activation.service,2026-10-23 14:08:43,0
 ,unit-initrd-nixos-activation.service,2026-10-25 08:35:21,0
-,unit-initrd-parse-etc.service,2026-07-21 09:36:59,0
+,unit-initrd-nixos-activation.service,2026-10-29 17:27:19,0
 ,unit-initrd-parse-etc.service,2026-08-03 12:03:25,0
 ,unit-initrd-parse-etc.service,2026-08-11 15:10:32,0
 ,unit-initrd-parse-etc.service,2026-08-31 19:26:30,0
@@ -2588,7 +2595,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-initrd-parse-etc.service,2026-10-17 11:34:42,1
 ,unit-initrd-parse-etc.service,2026-10-23 14:08:43,0
 ,unit-initrd-parse-etc.service,2026-10-25 08:35:20,0
-,unit-initrd-switch-root.service,2026-07-21 09:36:59,0
+,unit-initrd-parse-etc.service,2026-10-29 17:27:18,0
 ,unit-initrd-switch-root.service,2026-08-03 12:03:25,0
 ,unit-initrd-switch-root.service,2026-08-11 15:10:32,0
 ,unit-initrd-switch-root.service,2026-08-31 19:26:30,0
@@ -2598,7 +2605,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-initrd-switch-root.service,2026-10-17 11:34:42,1
 ,unit-initrd-switch-root.service,2026-10-23 14:08:43,0
 ,unit-initrd-switch-root.service,2026-10-25 08:35:20,0
-,unit-initrd.target,2026-07-21 09:36:59,0
+,unit-initrd-switch-root.service,2026-10-29 17:27:18,0
 ,unit-initrd.target,2026-08-03 11:59:25,0
 ,unit-initrd.target,2026-08-11 15:10:32,0
 ,unit-initrd.target,2026-08-31 19:19:19,0
@@ -2608,6 +2615,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-initrd.target,2026-10-17 11:34:42,0
 ,unit-initrd.target,2026-10-23 13:57:41,1
 ,unit-initrd.target,2026-10-25 08:35:20,0
+,unit-initrd.target,2026-10-29 17:27:18,0
 ,unit-keys.target,2026-04-25 09:18:48,0
 ,unit-keys.target,2026-05-23 07:26:05,0
 ,unit-keys.target,2026-07-15 11:33:57,0
@@ -2680,7 +2688,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-logrotate.timer,2026-10-08 14:25:21,6
 ,unit-logrotate.timer,2026-10-08 14:27:10,10
 ,unit-logrotate.timer,2026-10-23 13:57:42,1
-,unit-modprobe-.service,2026-08-11 15:10:32,0
 ,unit-modprobe-.service,2026-08-31 19:26:31,0
 ,unit-modprobe-.service,2026-09-12 20:40:09,0
 ,unit-modprobe-.service,2026-09-12 20:40:29,0
@@ -2690,6 +2697,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-modprobe-.service,2026-10-23 14:08:44,0
 ,unit-modprobe-.service,2026-10-25 08:35:20,0
 ,unit-modprobe-.service,2026-10-25 08:36:43,0
+,unit-modprobe-.service,2026-10-29 17:27:18,0
 ,unit-multi-user.target,2026-04-25 09:18:49,0
 ,unit-multi-user.target,2026-05-23 07:26:05,0
 ,unit-multi-user.target,2026-07-15 11:33:58,0
@@ -2875,7 +2883,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-obex.service,2026-10-23 12:31:51,0
 ,unit-obex.service,2026-10-23 14:08:46,0
 ,unit-obex.service,2026-10-25 08:36:45,0
-,unit-panic-on-fail.service,2026-07-21 09:37:00,0
 ,unit-panic-on-fail.service,2026-08-03 12:03:27,0
 ,unit-panic-on-fail.service,2026-08-11 15:10:32,0
 ,unit-panic-on-fail.service,2026-08-31 19:26:32,0
@@ -2885,6 +2892,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-panic-on-fail.service,2026-10-17 11:34:44,1
 ,unit-panic-on-fail.service,2026-10-23 14:08:46,0
 ,unit-panic-on-fail.service,2026-10-25 08:35:20,0
+,unit-panic-on-fail.service,2026-10-29 17:27:18,0
 ,unit-pipewire-pulse.service,2026-04-25 09:19:37,0
 ,unit-pipewire-pulse.service,2026-05-23 07:27:13,0
 ,unit-pipewire-pulse.service,2026-07-15 11:34:23,0
@@ -2987,7 +2995,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-polkit-gnome-authentication-agent-1.service,2026-09-12 20:41:00,0
 ,unit-polkit-gnome-authentication-agent-1.service,2026-10-11 14:35:35,1
 ,unit-polkit-gnome-authentication-agent-1.service,2026-10-23 14:08:47,0
-,unit-polkit.service,2026-10-24 15:29:47,0
 ,unit-polkit.service,2026-10-24 15:39:50,0
 ,unit-polkit.service,2026-10-24 15:59:10,0
 ,unit-polkit.service,2026-10-24 16:01:02,0
@@ -2997,6 +3004,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-polkit.service,2026-10-28 10:40:01,0
 ,unit-polkit.service,2026-10-28 10:46:59,0
 ,unit-polkit.service,2026-10-28 11:48:51,0
+,unit-polkit.service,2026-10-29 17:41:52,0
 ,unit-post-boot.service,2026-04-15 10:07:10,0
 ,unit-post-boot.service,2026-04-25 09:19:38,0
 ,unit-post-boot.service,2026-05-23 07:27:14,0
@@ -3116,7 +3124,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-script-display-manager-start,2026-10-23 12:31:52,0
 ,unit-script-display-manager-start,2026-10-23 13:57:59,1
 ,unit-script-display-manager-start,2026-10-25 08:36:55,1
-,unit-script-initrd-find-nixos-closure-start,2026-07-21 09:37:00,0
 ,unit-script-initrd-find-nixos-closure-start,2026-08-03 12:00:06,0
 ,unit-script-initrd-find-nixos-closure-start,2026-08-11 15:10:33,0
 ,unit-script-initrd-find-nixos-closure-start,2026-08-31 19:19:22,0
@@ -3126,7 +3133,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-script-initrd-find-nixos-closure-start,2026-10-17 11:34:45,1
 ,unit-script-initrd-find-nixos-closure-start,2026-10-23 13:57:47,1
 ,unit-script-initrd-find-nixos-closure-start,2026-10-25 08:35:30,0
-,unit-script-initrd-nixos-activation-start,2026-07-15 11:34:02,0
+,unit-script-initrd-find-nixos-closure-start,2026-10-29 17:27:18,0
 ,unit-script-initrd-nixos-activation-start,2026-07-21 09:37:00,0
 ,unit-script-initrd-nixos-activation-start,2026-08-03 12:00:06,0
 ,unit-script-initrd-nixos-activation-start,2026-08-11 15:10:33,0
@@ -3136,6 +3143,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-script-initrd-nixos-activation-start,2026-10-08 14:27:18,1
 ,unit-script-initrd-nixos-activation-start,2026-10-23 13:57:47,1
 ,unit-script-initrd-nixos-activation-start,2026-10-25 08:35:21,1
+,unit-script-initrd-nixos-activation-start,2026-10-29 17:27:18,0
 ,unit-script-linger-users-start,2026-04-25 09:19:16,0
 ,unit-script-linger-users-start,2026-05-23 07:26:33,0
 ,unit-script-linger-users-start,2026-07-15 11:34:02,0
@@ -3258,7 +3266,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-script-sshd-keygen-start,2026-09-12 20:37:10,0
 ,unit-script-sshd-keygen-start,2026-10-11 14:34:40,2
 ,unit-script-sshd-keygen-start,2026-10-23 13:57:53,0
-,unit-script-suid-sgid-wrappers-start,2026-07-15 11:34:39,0
 ,unit-script-suid-sgid-wrappers-start,2026-07-21 09:37:01,0
 ,unit-script-suid-sgid-wrappers-start,2026-08-03 12:00:28,0
 ,unit-script-suid-sgid-wrappers-start,2026-08-11 15:10:33,0
@@ -3268,6 +3275,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-script-suid-sgid-wrappers-start,2026-10-23 12:31:52,0
 ,unit-script-suid-sgid-wrappers-start,2026-10-23 13:58:09,0
 ,unit-script-suid-sgid-wrappers-start,2026-10-25 08:36:53,1
+,unit-script-suid-sgid-wrappers-start,2026-10-29 17:27:18,0
 ,unit-serial-getty-.service,2026-04-25 09:19:39,0
 ,unit-serial-getty-.service,2026-05-02 20:27:02,0
 ,unit-serial-getty-.service,2026-05-23 07:27:15,1
@@ -3288,7 +3296,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-sleep-actions.service,2026-10-11 14:35:37,1
 ,unit-sleep-actions.service,2026-10-23 14:08:48,0
 ,unit-sleep-actions.service,2026-10-25 08:36:48,0
-,unit-sockets.target,2026-07-15 11:34:04,0
 ,unit-sockets.target,2026-07-21 09:37:01,0
 ,unit-sockets.target,2026-08-03 11:59:29,0
 ,unit-sockets.target,2026-08-11 15:10:33,0
@@ -3298,6 +3305,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-sockets.target,2026-10-11 14:34:35,1
 ,unit-sockets.target,2026-10-23 13:57:54,1
 ,unit-sockets.target,2026-10-25 08:35:21,0
+,unit-sockets.target,2026-10-29 17:27:19,0
 ,unit-speech-dispatcher.socket,2026-04-25 09:18:53,0
 ,unit-speech-dispatcher.socket,2026-05-23 07:26:08,0
 ,unit-speech-dispatcher.socket,2026-07-15 11:34:04,0
@@ -3356,7 +3364,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-sshd.service,2026-10-23 12:31:53,0
 ,unit-sshd.service,2026-10-23 14:08:49,0
 ,unit-sshd.service,2026-10-25 08:36:49,0
-,unit-suid-sgid-wrappers.service,2026-07-15 11:34:40,0
 ,unit-suid-sgid-wrappers.service,2026-07-21 09:37:02,0
 ,unit-suid-sgid-wrappers.service,2026-08-03 12:03:29,0
 ,unit-suid-sgid-wrappers.service,2026-08-11 15:10:34,0
@@ -3366,6 +3373,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-suid-sgid-wrappers.service,2026-10-23 12:31:54,0
 ,unit-suid-sgid-wrappers.service,2026-10-23 14:08:49,0
 ,unit-suid-sgid-wrappers.service,2026-10-25 08:36:55,0
+,unit-suid-sgid-wrappers.service,2026-10-29 17:27:19,0
 ,unit-sway-session.target,2026-06-21 09:39:27,0
 ,unit-sway-session.target,2026-06-22 06:36:04,0
 ,unit-sysinit-reactivation.target,2026-04-25 09:18:53,0
@@ -3376,7 +3384,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-sysinit-reactivation.target,2026-09-12 20:37:10,0
 ,unit-sysinit-reactivation.target,2026-10-11 14:34:42,3
 ,unit-sysinit-reactivation.target,2026-10-23 13:57:55,1
-,unit-sysroot-run.mount,2026-07-15 11:34:04,0
 ,unit-sysroot-run.mount,2026-07-21 09:37:01,0
 ,unit-sysroot-run.mount,2026-08-03 11:59:29,0
 ,unit-sysroot-run.mount,2026-08-11 15:10:33,0
@@ -3386,6 +3393,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-sysroot-run.mount,2026-10-11 14:34:42,3
 ,unit-sysroot-run.mount,2026-10-23 13:57:55,1
 ,unit-sysroot-run.mount,2026-10-25 08:35:21,0
+,unit-sysroot-run.mount,2026-10-29 17:27:19,0
 ,unit-system.slice,2026-04-25 09:18:54,0
 ,unit-system.slice,2026-05-23 07:26:08,0
 ,unit-system.slice,2026-07-15 11:34:04,0
@@ -3620,7 +3628,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-systemd-tmpfiles-resetup.service,2026-10-23 12:31:53,0
 ,unit-systemd-tmpfiles-resetup.service,2026-10-23 14:08:52,0
 ,unit-systemd-tmpfiles-resetup.service,2026-10-25 08:37:02,0
-,unit-systemd-tmpfiles-setup-sysroot.service,2026-07-21 09:37:02,1
 ,unit-systemd-tmpfiles-setup-sysroot.service,2026-08-03 12:03:31,0
 ,unit-systemd-tmpfiles-setup-sysroot.service,2026-08-11 15:10:33,0
 ,unit-systemd-tmpfiles-setup-sysroot.service,2026-08-31 19:26:36,0
@@ -3630,7 +3637,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-systemd-tmpfiles-setup-sysroot.service,2026-10-17 11:34:45,1
 ,unit-systemd-tmpfiles-setup-sysroot.service,2026-10-23 14:08:52,0
 ,unit-systemd-tmpfiles-setup-sysroot.service,2026-10-25 08:35:21,0
-,unit-systemd-tmpfiles-setup.service,2026-08-11 15:10:33,0
+,unit-systemd-tmpfiles-setup-sysroot.service,2026-10-29 17:27:19,0
 ,unit-systemd-tmpfiles-setup.service,2026-08-31 19:26:36,0
 ,unit-systemd-tmpfiles-setup.service,2026-09-12 20:40:09,0
 ,unit-systemd-tmpfiles-setup.service,2026-09-12 20:40:36,0
@@ -3640,7 +3647,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-systemd-tmpfiles-setup.service,2026-10-23 14:08:52,0
 ,unit-systemd-tmpfiles-setup.service,2026-10-25 08:35:21,0
 ,unit-systemd-tmpfiles-setup.service,2026-10-25 08:36:56,1
-,unit-systemd-udevd.service,2026-08-11 15:10:35,0
+,unit-systemd-tmpfiles-setup.service,2026-10-29 17:27:19,0
 ,unit-systemd-udevd.service,2026-08-31 19:27:35,0
 ,unit-systemd-udevd.service,2026-09-06 16:20:28,0
 ,unit-systemd-udevd.service,2026-09-12 20:42:25,0
@@ -3650,6 +3657,7 @@ hostname,derivation name,utc time,build seconds
 ,unit-systemd-udevd.service,2026-10-23 12:31:55,1
 ,unit-systemd-udevd.service,2026-10-23 14:08:52,0
 ,unit-systemd-udevd.service,2026-10-25 08:37:10,0
+,unit-systemd-udevd.service,2026-10-29 17:27:57,0
 ,unit-systemd-update-utmp.service,2026-04-25 09:19:43,0
 ,unit-systemd-update-utmp.service,2026-05-23 07:27:19,0
 ,unit-systemd-update-utmp.service,2026-07-15 11:34:35,1
@@ -3738,7 +3746,6 @@ hostname,derivation name,utc time,build seconds
 ,unit-xdg-autostart-if-no-desktop-manager.target,2026-10-23 13:57:56,1
 ,unit-xdg-desktop-portal-wlr.service,2026-06-21 09:39:27,0
 ,unit-xdg-desktop-portal-wlr.service,2026-06-22 06:36:04,0
-,user-generators,2026-09-06 16:20:04,0
 ,user-generators,2026-09-12 20:42:13,0
 ,user-generators,2026-09-19 10:31:02,0
 ,user-generators,2026-10-11 14:35:51,1
@@ -3748,7 +3755,7 @@ hostname,derivation name,utc time,build seconds
 ,user-generators,2026-10-23 18:41:42,0
 ,user-generators,2026-10-23 19:06:21,0
 ,user-generators,2026-10-25 08:37:13,0
-,user-units,2026-10-24 15:29:47,0
+,user-generators,2026-10-29 17:29:30,0
 ,user-units,2026-10-24 15:39:51,0
 ,user-units,2026-10-24 15:59:11,0
 ,user-units,2026-10-24 16:01:02,0
@@ -3758,6 +3765,7 @@ hostname,derivation name,utc time,build seconds
 ,user-units,2026-10-28 10:40:02,0
 ,user-units,2026-10-28 10:47:00,0
 ,user-units,2026-10-28 11:48:52,0
+,user-units,2026-10-29 17:41:53,0
 ,useradd,2026-04-25 09:18:54,0
 ,useradd,2026-05-23 07:26:09,0
 ,useradd,2026-07-15 11:34:05,0
@@ -3996,11 +4004,13 @@ hostname,derivation name,utc time,build seconds
 ,xserver-wrapper,2026-10-23 19:06:21,0
 ,xserver-wrapper,2026-10-24 09:10:22,0
 ,xserver-wrapper,2026-10-25 08:37:14,0
+,xserver-wrapper,2026-10-29 17:30:53,0
 ,xserver.conf,2026-04-17 12:07:45,0
 ,xserver.conf,2026-10-23 12:31:53,0
 ,xserver.conf,2026-10-23 14:08:33,0
 ,xserver.conf,2026-10-24 09:10:22,0
 ,xserver.conf,2026-10-25 08:36:58,0
+,xserver.conf,2026-10-29 17:29:05,0
 ,xsession-wrapper,2026-04-17 12:07:45,0
 ,xsession-wrapper,2026-10-23 12:31:54,0
 ,xsession-wrapper,2026-10-23 13:58:00,1
