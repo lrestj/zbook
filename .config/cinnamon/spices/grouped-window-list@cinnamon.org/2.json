@@ -370,7 +370,8 @@
             "firefox.desktop",
             "brave-browser.desktop",
             "startcenter.desktop",
-            "org.gnome.SimpleScan.desktop"
+            "org.gnome.SimpleScan.desktop",
+            "brave-origin.desktop"
         ]
     },
     "__md5__": "3df0dfb46c743f29a6405292b645807a"
