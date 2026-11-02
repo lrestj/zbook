@@ -21,7 +21,7 @@ hi="\0icon\x1fpreferences-system-services"
 ii="\0icon\x1fpreferences-system-services"
 ji="\0icon\x1fadd"
 
-selected=$(echo -e "$b$bi\n$a$ai\n$e$ei\n$c$ci\n$d$di\n$f$fi\n$j$ji" | fuzzel --auto-select --lines 14 -d )
+selected=$(echo -e "$b$bi\n$g$gi\n$i$ii\n$a$ai\n$e$ei\n$c$ci\n$d$di\n$f$fi\n$j$ji" | fuzzel --auto-select --lines 14 -d )
 case $selected in
     "$a")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
