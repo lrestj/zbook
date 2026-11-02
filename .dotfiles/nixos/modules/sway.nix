@@ -9,12 +9,17 @@
   
     environment.systemPackages =
         (with pkgs; [
+          bibata-cursors
           brightnessctl
           cliphist
+          file-roller
           foot
           fuzzel
           geany
           mako
+          mint-y-icons
+          nemo
+          networkmanagerapplet
           nwg-look
           pamixer
           papirus-icon-theme

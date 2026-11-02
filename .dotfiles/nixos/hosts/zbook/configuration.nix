@@ -7,7 +7,7 @@
   imports =
       [ # Include hardware-configuration.nix
         ./hardware-configuration.nix
-        ../../modules/cinnamon.nix
+        # ../../modules/cinnamon.nix
         ../../modules/pkgs.nix
         ../../modules/disableNvidia.nix
       ];
