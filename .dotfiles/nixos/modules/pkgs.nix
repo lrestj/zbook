@@ -21,7 +21,7 @@
   
     environment.systemPackages =
         (with pkgs; [
-            foot mako fuzzel pamixer pavucontrol resvg brightnessctl udiskie papirus-icon-theme
+            foot mako fuzzel pamixer pavucontrol resvg brightnessctl udiskie papirus-icon-theme geany wl-clipboard cliphist
             baobab
             brave-origin
             btop

@@ -43,11 +43,11 @@
     ],
 
     "sway/workspaces": {
-            "format": "{value}",
-            "format-icons": {
-                "default": "",
-                "active": ""
-            }
+        "format": "{value}",
+        "format-icons": {
+            "default": "",
+            "active": ""
+        }
     },
 
     "memory": {
