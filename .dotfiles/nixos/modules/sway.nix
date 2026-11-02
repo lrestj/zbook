@@ -9,18 +9,19 @@
   
     environment.systemPackages =
         (with pkgs; [
+          brightnessctl
+          cliphist
           foot
-          mako
           fuzzel
+          geany
+          mako
+          nwg-look
           pamixer
+          papirus-icon-theme
           pavucontrol
           resvg
-          brightnessctl
           udiskie
-          papirus-icon-theme
-          geany
           wl-clipboard
-          cliphist
        ])
 
         ++

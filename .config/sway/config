@@ -78,7 +78,7 @@
     bindsym Alt+b exec $TERMINAL --app-id btop -e btop
     bindsym $mod+e exec $TERMINAL --app-id vim bash -c "sleep 0.1;exec vim"
     bindsym $mod+b exec $BROWSER
-    bindsym $mod+t exec nemo
+    bindsym $mod+s exec nemo
     bindsym $mod+p exec mpv --player-operation-mode=pseudo-gui
     bindsym Alt+k exec pkill $kalk || $kalk
     bindsym $mod+w exec waypaper
@@ -179,8 +179,8 @@
     bindsym $mod+space focus mode_toggle
 
     # Move window to the scratchpad and show
-    bindsym $ma+s move scratchpad 
-    bindsym $mod+s scratchpad show
+    # bindsym $ma+s move scratchpad 
+    # bindsym $mod+s scratchpad show
 
     # Screenshot with grimshot
     # bindsym $mod+Insert exec grimshot --notify save anything
