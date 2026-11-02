@@ -8,6 +8,7 @@
       [ # Include hardware-configuration.nix
         ./hardware-configuration.nix
         # ../../modules/cinnamon.nix
+        ../../modules/sway.nix
         ../../modules/pkgs.nix
         ../../modules/disableNvidia.nix
       ];

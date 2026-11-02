@@ -2,17 +2,11 @@
 
 {
 
-  _module.args.pkgsStable = import inputs.nixpkgs-stable {
-      inherit (pkgs.stdenv.hostPlatform) system;
-      inherit (config.nixpkgs) config;
-  };
-  
     environment.systemPackages =
         (with pkgs; [
           bibata-cursors
           brightnessctl
           cliphist
-          file-roller
           foot
           fuzzel
           geany

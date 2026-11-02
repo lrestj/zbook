@@ -3,7 +3,6 @@
 {
 
   imports = [ 
-      ./sway.nix
       ./vimoverlay.nix
   ]; 
   
@@ -22,7 +21,6 @@
   
     environment.systemPackages =
         (with pkgs; [
-            foot mako fuzzel pamixer pavucontrol resvg brightnessctl udiskie papirus-icon-theme geany wl-clipboard cliphist
             baobab
             brave-origin
             btop
@@ -34,7 +32,6 @@
             galculator
             gcolor3
             gnome-characters
-            kitty
             kdePackages.qt6ct
             kdePackages.qtsvg
             libnotify
@@ -42,24 +39,12 @@
             pdfarranger
             rclone
             ripgrep
-            rofi
             simple-scan
-            wmctrl xdotool
+            wmctrl
+            xdotool
             xournalpp
-            xfce4-clipman-plugin
             yazi
             ytdownloader
-            (pkgs.writeScriptBin "sct" ''
-                #!/bin/sh
-                killall wlsunset &> /dev/null;
-                if [ $# -eq 1 ]; then
-                    temphigh=$(( $1 + 1 ))
-                    templow=$1
-                    wlsunset -t $templow -T $temphigh &> /dev/null &
-                else
-                    killall wlsunset &> /dev/null;
-                fi
-            '')
             ])
 
         ++
