@@ -44,7 +44,7 @@
     exec mako &
     exec_always waypaper --restore &
     exec nm-applet --indicator &
-    exec /usr/libexec/polkit-gnome-authentication-agent-1 &
+    exec --no-startup-id /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
     exec wl-paste --watch cliphist store
     exec wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000 # Screen blue light settings
     exec udiskie -t
@@ -202,7 +202,7 @@
     for_window [title="Authentication Required"] floating enable
     for_window [title="xeyes"] floating enable, move position 880 5
     for_window [title="Rozbalení"] floating enable
-    for_window [app_id="btop"] floating enable, resize set 1285  700 
+    for_window [app_id="btop"] floating enable, resize set 1654  999 
     for_window [app_id="update"] floating enable, resize set 900  600 
     for_window [class="Vlc"] floating enable
     for_window [app_id="mpv"] floating enable

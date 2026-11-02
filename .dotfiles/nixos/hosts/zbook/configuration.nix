@@ -65,7 +65,10 @@
   
   security = {
       rtkit.enable = true;
-      polkit.enable = true;
+      polkit = {
+          enable = true;
+          enablePkexecWrapper = true;
+      };
   };
 
   systemd = {
