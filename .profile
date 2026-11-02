@@ -35,5 +35,5 @@ export XDG_CURRENT_DESKTOP=sway
 
 
 if [ "$(tty)" = "/dev/tty1" ]; then
-    exec sway-run
+    exec start
 fi
