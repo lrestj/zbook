@@ -31,6 +31,7 @@
             fish
             font-manager
             fzf
+            galculator
             gcolor3
             gnome-characters
             kitty
