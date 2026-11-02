@@ -76,7 +76,7 @@
     bindsym $mod+a exec $TERMINAL
     bindsym $mod+y exec $TERMINAL --app-id yazi -e yazi
     bindsym Alt+b exec $TERMINAL --app-id btop -e btop
-    bindsym $mod+e exec foot --app-id vim bash -c "sleep 0.1;exec vim"
+    bindsym $mod+e exec $TERMINAL --app-id vim bash -c "sleep 0.1;exec vim"
     bindsym $mod+b exec $BROWSER
     bindsym $mod+t exec nemo
     bindsym $mod+p exec mpv --player-operation-mode=pseudo-gui
