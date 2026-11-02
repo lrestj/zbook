@@ -1,0 +1,3 @@
+#!/bin/bash
+
+swaylock -f -F -e -k -i /home/libor/.dotfiles/wallpapers/bluelock.jpg
