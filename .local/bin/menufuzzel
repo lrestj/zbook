@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Variables declarations
+
+declare -A OPTION
+
+OPTION[suspend]='systemctl suspend'
+OPTION[hibernate]='systemctl hibernate'
+OPTION[reboot]='systemctl reboot'
+OPTION[poweroff]='systemctl poweroff'
+
+# It prints per line the indexes of $OPTION
+# to finally gets a $SELECTION
+SELECTION=$(printf '%s\n' "${!OPTION[@]}" | fuzzel --dmenu --match-mode=exact --auto-select)
+
+# Launch
+if [[ -n $SELECTION ]]; then
+    ${OPTION[$SELECTION]}
+fi

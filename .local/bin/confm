@@ -1,0 +1,47 @@
+#!/bin/bash
+
+a=" Vimrc"
+b="Niri conf"
+c="Waybar config"
+d="Mako config"
+e="Wallpaper"
+f="Stuff2remember"
+g="Configuration.nix"
+h="Flake.nix"
+i="Pkgs"
+j="Add new script"
+ai="\0icon\x1fvim"
+bi="\0icon\x1fniri"
+ci="\0icon\x1fwayland"
+di="\0icon\x1fnotion"
+ei="\0icon\x1fdesktop-effects"
+fi="\0icon\x1fnotepad"
+gi="\0icon\x1fpreferences-system-services"
+hi="\0icon\x1fpreferences-system-services"
+ii="\0icon\x1fpreferences-system-services"
+ji="\0icon\x1fadd"
+
+selected=$(echo -e "$b$bi\n$a$ai\n$e$ei\n$c$ci\n$d$di\n$f$fi\n$j$ji" | fuzzel --lines 7 -d )
+case $selected in
+    "$a")
+        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
+    "$b")
+        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/niri/config.kdl";;
+    "$c")
+        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/config.jsonc";;
+    "$d")
+        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/mako/config";;
+    "$e")
+        waypaper;;
+    "$f")
+        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.dotfiles/other/stuff2remember.txt";;
+    "$g")
+        $TERMINAL -e vim ~/.dotfiles/nixos/hosts/zbook/configuration.nix;;
+    "$h")
+        $TERMINAL -e vim ~/.dotfiles/nixos/flake.nix;;
+    "$i")
+        $TERMINAL -e vim ~/.dotfiles/nixos/modules/pkgs.nix;;
+    "$j")
+        addnew
+esac
+

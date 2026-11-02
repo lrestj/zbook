@@ -21,6 +21,7 @@
   
     environment.systemPackages =
         (with pkgs; [
+            foot mako fuzzel pamixer pavucontrol resvg brightnessctl udiskie papirus-icon-theme
             baobab
             brave-origin
             btop
@@ -73,6 +74,23 @@
           clean.extraArgs = "--keep-since 7d --keep 3";
           flake = "$HOME/.dotfiles/nixos/";
       };
+
+      sway = {
+              enable = true;
+              wrapperFeatures.gtk = true;
+              xwayland.enable = true;
+              extraPackages = with pkgs; [
+                  grim
+                  swaybg
+                  swaylock
+                  swayidle
+                  sway-contrib.grimshot
+                  wlprop
+                  wl-color-picker
+                  waybar
+                  waypaper
+              ];
+          };
 
       git = {
           enable = true;

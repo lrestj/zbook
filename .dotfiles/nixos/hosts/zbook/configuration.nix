@@ -83,6 +83,7 @@
   };
 
   boot = {
+      kernelParams = [ "reboot=acpi" ];
       kernelPackages = pkgs.linuxPackages_latest;
       kernel.sysctl."vm.swappiness" = 10;
       supportedFilesystems = {

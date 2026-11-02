@@ -1,0 +1,4 @@
+#!/bin/bash
+
+notify-send -c center "jas" -h string:x-canonical-private-synchronous:progress \
+        -h int:value:$(brightnessctl set 5%+ | sed -En 's/.*\(([0-9]+)%\).*/\1/p')

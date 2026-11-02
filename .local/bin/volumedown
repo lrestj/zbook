@@ -1,0 +1,4 @@
+#!/bin/bash
+
+notify-send -c center "hlasitost" -h string:x-canonical-private-synchronous:progress \
+-h int:value:$(( (( $(pamixer --allow-boost --set-limit 150 -d 5 && pamixer --get-volume) - 1 )) % 100 + 1 ))
