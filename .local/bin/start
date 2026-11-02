@@ -1,0 +1,40 @@
+#!/bin/bash
+
+echo
+echo " ##############################"
+echo " #                            #"
+echo " #  HOLA, VYBER SEZENÍ:       #"
+echo " #                            #"
+echo " #  s) SPUSTIT NIXOS          #"
+echo " #  r) RESTARTOVAT            #"
+echo " #  x) VYPNOUT                #"
+echo " #                            #"
+echo " ##############################"
+while true; do
+  read -n 1 -s wm_choice
+    case $wm_choice in
+    "")
+    echo
+    echo "Spouštím Nixos..."
+    exec sway-run
+    ;;
+    s)
+    echo
+    echo "Spouštím Nixos..."
+    exec sway-run
+    ;;
+    [xv])
+    echo "Vypínání..."
+    exec systemctl poweroff
+    sleep 1
+    ;;
+    r)
+    echo "Restart..."
+    sleep 1
+    exec systemctl reboot
+    ;;
+    *)
+    echo "Zvolte jednu z možností"
+    ;;
+    esac
+done
