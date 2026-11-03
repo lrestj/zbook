@@ -11,6 +11,8 @@
           foot
           fuzzel
           geany
+          gnome-themes-extra
+          gparted
           mako
           mint-y-icons
           nemo
