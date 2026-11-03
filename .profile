@@ -22,7 +22,8 @@ fi
 
 export BROWSER=brave-origin
 export TERMINAL=foot
-export kalk=galculator
+export KALK=galculator
+export FILEMGR=nemo
 export EDITOR=vim
 export GTK_THEME=Adwaita:dark
 export ADW_DISABLE_PORTAL=1

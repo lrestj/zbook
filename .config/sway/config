@@ -36,9 +36,6 @@
     set $ca Ctrl+Alt
     set $ma Mod4+Alt
     set $ms Mod4+Shift
-    set $browser brave
-    set $menu fuzzel
-    set $filemgr nemo
 
 ### Apps at startup
     exec mako &
@@ -50,15 +47,6 @@
     exec udiskie -t
     exec_always battery-check
 
-### Locking the system
-    # set $lock swaylock -f -F -e -k --color 000000
-    set $lock lockscreen
-    set $logout sleep 1 && swaymsg exit
-    set $reboot sleep 1 && systemctl reboot
-    bindsym --to-code $ms+Delete exec $lock
-    bindsym --to-code $mod+Delete exec $logout
-    bindsym $ma+Delete exec $reboot
-    
 ### Idle configuration
     exec swayidle -w \
        timeout 150 'brightnessctl -s set 400' resume 'brightnessctl -r' \
@@ -78,25 +66,16 @@
     bindsym Alt+b exec $TERMINAL --app-id btop -e btop
     bindsym $mod+e exec $TERMINAL --app-id vim bash -c "sleep 0.1;exec vim"
     bindsym $mod+b exec $BROWSER
-    bindsym $mod+s exec nemo
+    bindsym $mod+n exec $FILEMGR
     bindsym $mod+p exec mpv --player-operation-mode=pseudo-gui
-    bindsym Alt+k exec pkill $kalk || $kalk
+    bindsym Alt+k exec pkill $KALK || $KALK
     bindsym $mod+w exec waypaper
     bindsym $mod+i exec webm
     bindsym $mod+m exec confm
-    bindsym $ms+t exec touchpad
-
-    # Mako emergency
-    bindsym $ms+m exec makoctl dismiss --all && makoctl reload
 
     # Show menus
-    # bindsym $mod+y exec pkill rofi || rofi -show drun -show-icons -sidebar-mode
     bindsym $mod+Backslash exec pkill fuzzel || $menu
-    bindsym Alt+Backslash exec pkill fuzzel || bemoji
     bindsym $mod+x exec pkill fuzzel || powercenter
-
-    # Nápověda
-    bindsym Alt+n exec binds
 
     # Toggle waybar & taskbar
     bindsym $mod+Return exec pkill waybar || waybar
@@ -104,7 +83,6 @@
 
     # Clipboard toggle
     bindsym $mod+c exec pkill fuzzel || cliphist-fuzzel-img
-    # bindsym $mod+c exec pkill rofi || cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy
 
     # Opacity
     bindsym $cs+p opacity plus 0.05
@@ -142,6 +120,7 @@
     bindsym Alt+right workspace 2
     bindsym Alt+down workspace 3
     bindsym Alt+up workspace 4
+    bindsym $mod+Tab workspace next
     bindsym Alt+space workspace back_and_forth
 
     # Move focused container to workspace
@@ -163,9 +142,6 @@
     bindsym $mod+KP_4 floating enable, resize set 50ppt 50ppt, move position 0 50ppt 
     bindsym $mod+KP_5 floating enable, resize set 50ppt 50ppt, move position 50ppt 50ppt 
 
-    # Cycle workspaces
-    bindsym $mod+Tab workspace next
- 
     # Layout toggle
     bindsym $cs+w layout toggle split
     bindsym $mod+f layout toggle tabbed split
@@ -180,11 +156,10 @@
     bindsym $mod+space focus mode_toggle
 
     # Move window to the scratchpad and show
-    # bindsym $ma+s move scratchpad 
-    # bindsym $mod+s scratchpad show
+    bindsym $ma+s move scratchpad 
+    bindsym $mod+s scratchpad show
 
     # Screenshot with grimshot
-    # bindsym $mod+Insert exec grimshot --notify save anything
     bindsym $mod+Insert exec screenshot
 
     # Laptop multimedia keys for volume and LCD brightness

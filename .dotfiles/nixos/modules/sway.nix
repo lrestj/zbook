@@ -21,6 +21,7 @@
           resvg
           udiskie
           wl-clipboard
+          wlsunset
        ])
 
         ++

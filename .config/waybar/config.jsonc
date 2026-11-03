@@ -89,7 +89,7 @@
     "custom/kalk": {
         "format":"       ",
         "tooltip-format": "Kalkulačka",
-        "on-click": "pkill $kalk || $kalk"
+        "on-click": "pkill $KALK || $KALK"
     },
 
     "custom/text": {
@@ -101,13 +101,13 @@
    "custom/fm": {
         "format":"        ",
         "tooltip-format": "Soubory",
-        "on-click": "pkill nemo || nemo"
+        "on-click": "pkill $FILEMGR || $FILEMGR"
     },
 
    "custom/browser": {
         "format":"      ",
         "tooltip-format": "Internet",
-        "on-click": "brave-origin"
+        "on-click":"$BROWSER"
     },
     "wlr/taskbar": {
         "format": "{icon}",
