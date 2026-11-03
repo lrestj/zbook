@@ -116,24 +116,24 @@
     # Switch to workspace
     bindgesture swipe:down workspace next
     bindgesture swipe:up workspace prev
-    bindsym Alt+left workspace 1
-    bindsym Alt+right workspace 2
-    bindsym Alt+down workspace 3
-    bindsym Alt+up workspace 4
+    bindsym Alt+KP_1 workspace 1
+    bindsym Alt+KP_2 workspace 2
+    bindsym Alt+KP_3 workspace 3
+    bindsym Alt+KP_4 workspace 4
     bindsym $mod+Tab workspace next
     bindsym Alt+space workspace back_and_forth
 
     # Move focused container to workspace
-    bindsym Shift+Left move container to workspace 1
-    bindsym Shift+Right move container to workspace 2
-    bindsym Shift+Down move container to workspace 3
-    bindsym Shift+Up move container to workspace 4
+    bindsym Shift+KP_1 move container to workspace 1
+    bindsym Shift+KP_2 move container to workspace 2
+    bindsym Shift+KP_3 move container to workspace 3
+    bindsym Shift+KP_4 move container to workspace 4
 
     # Move and focus focused container to workspace
-    bindsym $ma+Left move container to workspace 1; workspace 1
-    bindsym $ma+Right move container to workspace 2; workspace 2
-    bindsym $ma+Down move container to workspace 3; workspace 3
-    bindsym $ma+Up move container to workspace 4; workspace 4
+    bindsym $ma+KP_1 move container to workspace 1; workspace 1
+    bindsym $ma+KP_2 move container to workspace 2; workspace 2
+    bindsym $ma+KP_3 move container to workspace 3; workspace 3
+    bindsym $ma+KP_4 move container to workspace 4; workspace 4
 
     # Center window and move it to corners
     bindsym $mod+KP_0 floating toggle, resize set 1300 900

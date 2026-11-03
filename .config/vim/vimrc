@@ -6,6 +6,10 @@ nnoremap Q ZQ
 noremap <leader><leader> :set relativenumber!<CR>
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
+"Line Up nad Down
+nnoremap <A-up> :m .-2<CR>==
+nnoremap <A-down> :m .+1<CR>==
+
 "Window next, buffer next, delete and vsplit
 noremap <leader>n <C-w>w
 noremap <leader>b :bn<CR>
