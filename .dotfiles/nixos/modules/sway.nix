@@ -7,6 +7,7 @@
           bibata-cursors
           brightnessctl
           cliphist
+          evince
           foot
           fuzzel
           geany
@@ -19,6 +20,7 @@
           papirus-icon-theme
           pavucontrol
           resvg
+          ristretto
           udiskie
           wl-clipboard
           wlsunset
