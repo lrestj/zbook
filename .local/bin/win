@@ -1,0 +1,4 @@
+#!/bin/bash
+
+swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | "App: \(.app_id // .window_properties.class) | Title: \(.name) | Size: \(.rect.width)x\(.rect.height)"'
+

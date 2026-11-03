@@ -13,6 +13,7 @@
           geany
           gnome-themes-extra
           gparted
+          jq
           mako
           mint-y-icons
           nemo
