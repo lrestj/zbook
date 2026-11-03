@@ -16,6 +16,7 @@
     // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
+        "sway/scratchpad",
         "memory",
         "cpu",
         "temperature",
@@ -47,6 +48,17 @@
         "format-icons": {
             "default": "",
             "active": ""
+        }
+    },
+
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}",
+        "format-icons": {
+            "empty": "",
+            "default": ""
         }
     },
 

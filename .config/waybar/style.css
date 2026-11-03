@@ -105,12 +105,13 @@ button:hover {
 #clock,
 #battery,
 #cpu,
+#scratchpad,
 #memory,
 #pulseaudio,
 #idle_inhibitor,
 #power-profiles-daemon,
 #tray {
-    padding: 3px 8px;
+    padding: 6px 6px;
     color: #ffffff;
 }
 
@@ -123,6 +124,7 @@ button:hover {
     margin: 0px 4px;
 }
 
+#scratchpad,
 #memory,
 #cpu,
 #temperature,
@@ -141,6 +143,7 @@ button:hover {
     background-color: #434444;
 }
 
+#scratchpad,
 #custom-menu,
 #memory,
 #pulseaudio,
