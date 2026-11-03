@@ -74,8 +74,8 @@
     bindsym $mod+m exec confm
 
     # Show menus
-    bindsym $mod+Backslash exec pkill fuzzel || $menu
-    bindsym $mod+x exec pkill fuzzel || powercenter
+    bindsym $mod+Backslash exec pkill $MENU || $MENU
+    bindsym $mod+x exec pkill $MENU || powercenter
 
     # Toggle waybar & taskbar
     bindsym $mod+Return exec pkill waybar || waybar

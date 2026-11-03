@@ -25,6 +25,7 @@ export TERMINAL=foot
 export KALK=galculator
 export FILEMGR=nemo
 export EDITOR=vim
+export MENU=fuzzel
 export GTK_THEME=Adwaita:dark
 export ADW_DISABLE_PORTAL=1
 export ADW_DEBUG_COLOR_SCHEME=prefer-dark

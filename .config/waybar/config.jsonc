@@ -64,8 +64,7 @@
 
     "memory": {
         "format": " Menu  RAM   {}% ",
-        "on-click": "pkill fuzzel || fuzzel --config ~/.config/fuzzel/menu.ini",
-        "on-click-right": "wlogout -b 2 -T 10 -L 10 -R 980 -B 525 -s -c 5 -r 5 -l ~/.config/wlogout/menu"
+        "on-click": "pkill $MENU || $MENU --config ~/.config/fuzzel/menu.ini",
     },
 
     "cpu": {
