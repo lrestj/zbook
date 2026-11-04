@@ -15,7 +15,6 @@
           gparted
           jq
           mako
-          mint-y-icons
           nemo
           networkmanagerapplet
           nwg-look
@@ -27,6 +26,15 @@
           udiskie
           wl-clipboard
           wlsunset
+          grim
+          swaybg
+          swaylock
+          swayidle
+          sway-contrib.grimshot
+          wlprop
+          wl-color-picker
+          waybar
+          waypaper
        ])
 
         ++
@@ -40,17 +48,6 @@
               enable = true;
               wrapperFeatures.gtk = true;
               xwayland.enable = true;
-              extraPackages = with pkgs; [
-                  grim
-                  swaybg
-                  swaylock
-                  swayidle
-                  sway-contrib.grimshot
-                  wlprop
-                  wl-color-picker
-                  waybar
-                  waypaper
-              ];
       };
   };
 
