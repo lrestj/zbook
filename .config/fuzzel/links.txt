@@ -1,5 +1,13 @@
-📥 Sdilej.cz,https://www.sdilej.cz
-📥 Prehraj.to,https://www.prehraj.to
-📥 Github Zbook,https://github.com/lrestj/zbook
-📥 Mail,https://gmail.com
+➕  Add new link...,$TERMINAL --app-id links bash -c "sleep 0.1; exec vim ~/.config/fuzzel/links.txt"
+
+📥  Sdilej.cz,https://www.sdilej.cz
+📥  Prehraj.to,https://www.prehraj.to
+📥  Github Zbook,https://github.com/lrestj/zbook
+📥  Mail,https://gmail.com
+📥  Nixos pkg,https://search.nixos.org/packages
+
+
+
+
+
 
