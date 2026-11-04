@@ -81,10 +81,11 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0px 5px;
+    padding: 5px 5px;
     background-color: transparent;
     color: #000000;
-    margin-top: 1px;
+    margin-top: 2px;
+    margin-bottom: 4px;
     border-radius: 5px 5px 0px 8px;
 }
 
