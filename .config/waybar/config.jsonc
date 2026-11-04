@@ -5,7 +5,7 @@
 [{
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 40, // Waybar height (to be removed for auto height)
+    "height": 39, // Waybar height (to be removed for auto height)
     "autohide": true,
     "autohide-blocked": false,
     "margin-top": 3,
@@ -13,7 +13,6 @@
     "margin-right": 8,
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
     "modules-left": [
         "sway/workspaces",
         "sway/scratchpad",
@@ -119,26 +118,27 @@
         "format":"      ",
         "tooltip-format": "Internet",
         "on-click":"$BROWSER"
-    },
-    "wlr/taskbar": {
+   },
+
+   "wlr/taskbar": {
         "format": "{icon}",
         "icon-size": 23,
         "tooltip": true,
         "tooltip-format": "{app_id}",
         "on-click": "activate",
         "on-click-right": "close"
-    },
+   },
 
-    "idle_inhibitor": {
+   "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
             "activated": "  ",
             "deactivated": "  "
         },
         "on-click-right": "waybar --config ~/.config/waybar/config-taskbar"
-    },
+   },
 
-    "pulseaudio": {
+   "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "󰕾 {volume}%  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
@@ -156,30 +156,30 @@
             "default": ["", "", ""]
         },
         "on-click": "pkill pavucontrol || pavucontrol"
-    },
+   },
 
-    "backlight": {
+   "backlight": {
         // "device": "acpi_video1",
         "format": " 󰃟  {percent}%  ",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "on-click-right": "pkill foot || foot",
         "on-click": "pkill btop || foot -T btop -e btop"
-    },
+   },
 
-    "tray": {
+   "tray": {
         // "icon-size": 21,
         "spacing": 10
-    },
+   },
 
-    "clock": {
+   "clock": {
         "timezone": "Europe/Prague",
         "locale": "cs_CZ.UTF-8",
         "format": "  {:%H:%M }",
         "tooltip-format": "<big>{:L%e L%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:L%A %d.%m.%Y}"
-    },
+   },
 
-    "battery": {
+   "battery": {
         "states": {
             // "good": 95,
             "warning": 30,
@@ -193,9 +193,9 @@
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
-    },
+   },
 
-    "power-profiles-daemon": {
+   "power-profiles-daemon": {
         "format": "{icon}",
         "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
         "tooltip": true,
@@ -205,12 +205,12 @@
             "balanced": " ",
             "power-saver": " "
         }
-    },
-    "custom/power": {
+   },
+   "custom/power": {
         "format" : "  ",
         "tooltip-format": "",
         "on-click": "power"
-    }
+   }
 }] 
 
 
