@@ -27,6 +27,7 @@ export FILEMGR=nemo
 export EDITOR=vim
 export MENU=fuzzel
 export GTK_THEME=Adwaita:dark
+export GTK_CSD=1
 export ADW_DISABLE_PORTAL=1
 export ADW_DEBUG_COLOR_SCHEME=prefer-dark
 export QT_QPA_PLATFORMTHEME=qt6ct
