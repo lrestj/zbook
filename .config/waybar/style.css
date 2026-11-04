@@ -316,8 +316,8 @@ label:focus {
 
 #custom-power {
     padding-left: 15px;
-    margin-left: 12px;
-    font-size: 15px;
+    margin-left: 4px;
+    font-size: 17px;
     background-image: url('/home/libor/.local/share/icons/power.png');
     background-position: center;
     background-repeat: no-repeat;
