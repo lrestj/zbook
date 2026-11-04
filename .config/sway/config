@@ -172,6 +172,7 @@
     bindsym XF86MonBrightnessDown exec brightnessdown
 
 ### Windows rules
+    for_window [class=".*"] border csd
     for_window [class=".*"] move left
     for_window [app_id="galculator"] floating enable,resize set 850 475
     for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, resize set 630 400, move position 700 3
