@@ -1,7 +1,7 @@
 ##### SWAY CONFIG #####
 
 ### Monitor settings
-    output * bg /home/libor/.dotfiles/wallpapers/hypr3.jpg fill
+    output * bg /home/libor/.dotfiles/wallpapers/Sway.png fill
 
 ### Input configuration
     input 2:7:SynPS/2_Synaptics_TouchPad {
