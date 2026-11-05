@@ -34,7 +34,6 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export QT_QPA_PLATFORM=wayland
 export GSK_RENDERER=ngl  # Mesa errors workaround
 export MOZ_ENABLE_WAYLAND=1
-export XDG_CURRENT_DESKTOP=sway
 
 
 if [ "$(tty)" = "/dev/tty1" ]; then
