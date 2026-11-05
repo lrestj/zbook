@@ -3,6 +3,9 @@
 ### Monitor settings
     output * bg /home/libor/.dotfiles/wallpapers/nixos.png fill
 
+### Cursor theme
+    seat seat0 xcursor_theme Bibata-Modern-Classic 28
+
 ### Input configuration
     input 2:7:SynPS/2_Synaptics_TouchPad {
         dwt enabled
@@ -20,9 +23,6 @@
     # Focus
     for_window [urgent="latest"] focus
     focus_follows_mouse no
-
-### Cursor theme
-    seat seat0 xcursor_theme Bibata-Modern-Classic 28
 
 ### Status Bar:
     bar {
