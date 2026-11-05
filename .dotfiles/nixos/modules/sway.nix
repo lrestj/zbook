@@ -15,6 +15,7 @@
           gparted
           jq
           mako
+          mpv
           nemo
           networkmanagerapplet
           nwg-look
@@ -26,7 +27,6 @@
           udiskie
           wl-clipboard
           wlsunset
-          grim
           swaybg
           swaylock
           swayidle
@@ -34,7 +34,6 @@
           wlprop
           wl-color-picker
           waybar
-          waypaper
        ])
 
         ++
