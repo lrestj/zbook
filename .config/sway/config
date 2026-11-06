@@ -63,7 +63,6 @@
     bindsym $mod+n exec $FILEMGR
     bindsym $mod+p exec mpv --player-operation-mode=pseudo-gui
     bindsym Alt+k exec pkill $KALK || $KALK
-    bindsym $mod+w exec waypaper
     bindsym $mod+i exec links
     bindsym $mod+m exec confm
     bindsym $mod+u exec vupdnx
