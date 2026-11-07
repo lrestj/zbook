@@ -127,9 +127,12 @@ button:hover {
     margin-right: 7px;
 }
 
-#window,
 #workspaces {
-    margin: 0px 14px;
+    margin: 0px 7px;
+}
+
+#window {
+    margin: 0px 20px;
 }
 
 #scratchpad,
