@@ -36,6 +36,7 @@
             kdePackages.qtsvg
             libnotify
             libreoffice
+            mango
             pdfarranger
             rclone
             ripgrep

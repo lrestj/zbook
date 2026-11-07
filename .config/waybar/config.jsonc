@@ -27,7 +27,7 @@
         "custom/browser"
     ],
     "modules-center": [
-        // "niri/window"
+        "sway/window",
         "wlr/taskbar"
     ],
     "modules-right": [
@@ -119,6 +119,13 @@
         "tooltip-format": "Internet",
         "on-click":"$BROWSER"
    },
+
+   "sway/window": {
+        "format": "{}",
+        "max-length": 30,
+        "icon": false,
+        "icon-size": 16
+    },
 
    "wlr/taskbar": {
         "format": "{icon}",
