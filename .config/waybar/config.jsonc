@@ -122,7 +122,7 @@
 
    "sway/window": {
         "format": "{}",
-        "max-length": 30,
+        "max-length": 40,
         "icon": false,
         "icon-size": 16
     },
