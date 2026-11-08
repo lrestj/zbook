@@ -22,12 +22,12 @@
     environment.systemPackages =
         (with pkgs; [
             baobab
-            brave-origin
             btop
             fastfetch
             file-roller
             fish
             font-manager
+            firefox
             fzf
             galculator
             gcolor3
@@ -36,6 +36,7 @@
             kdePackages.qtsvg
             libnotify
             libreoffice
+            librewolf
             mango
             pdfarranger
             rclone

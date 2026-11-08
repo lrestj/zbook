@@ -171,16 +171,6 @@
               support32Bit = true;
               };
           pulse.enable = true;
-          jack.enable = true;
-          extraConfig.jack = {
-              "10-clock-rate" = {
-                  "jack.properties" = {
-                      "node.latency" = "256/48000";
-                      "node.rate" = "1/48000";
-                      "node.lock-quantum" = true;
-                  };
-              };
-          };
       };
 
       printing = {
