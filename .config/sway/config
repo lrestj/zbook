@@ -1,9 +1,7 @@
 ##### SWAY CONFIG #####
 
-### Monitor settings
+### Wallpaper & cursor theme
     output * bg /home/libor/.dotfiles/wallpapers/nixos.png fill
-
-### Cursor theme
     seat seat0 xcursor_theme Bibata-Modern-Classic 28
 
 ### Input configuration
@@ -37,6 +35,9 @@
     set $ma Mod4+Alt
     set $ms Mod4+Shift
 
+### Reload the configuration file
+    bindsym $ms+c reload
+
 ### Apps at startup
     exec mako &
     exec nm-applet --indicator &
@@ -66,6 +67,7 @@
     bindsym $mod+i exec links
     bindsym $mod+m exec confm
     bindsym $mod+u exec vupdnx
+    bindsym $mod+Insert exec screenshot
 
     # Show menus
     bindsym $mod+Backslash exec pkill $MENU || $MENU
@@ -82,13 +84,8 @@
     bindsym $cs+p opacity plus 0.05
     bindsym $cs+o opacity minus 0.05
 
-    # Reload the configuration file
-    bindsym $ms+c reload
-
-    # Kill focused window
-    bindsym $mod+q kill
-
     # Move your focus around
+    bindsym $mod+q kill
     bindsym $mod+Left focus left
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
@@ -152,9 +149,6 @@
     # Move window to the scratchpad and show
     bindsym $ma+s move scratchpad 
     bindsym $mod+s scratchpad show
-
-    # Screenshot with grimshot
-    bindsym $mod+Insert exec screenshot
 
     # Laptop multimedia keys for volume and LCD brightness
     bindsym XF86AudioRaiseVolume exec volumeup
