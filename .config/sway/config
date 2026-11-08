@@ -5,27 +5,17 @@
     seat seat0 xcursor_theme Bibata-Modern-Classic 28
 
 ### Input configuration
-    input 2:7:SynPS/2_Synaptics_TouchPad {
-        dwt enabled
+    focus_follows_mouse no
+    input type:touchpad {
         tap enabled
+        dwt enabled
         natural_scroll disabled
-        middle_emulation enabled
         pointer_accel 0.3
     }
     input type:keyboard {
         xkb_layout "cz"
         xkb_options caps:swapescape
         xkb_numlock enabled
-    }
-
-    # Focus
-    for_window [urgent="latest"] focus
-    focus_follows_mouse no
-
-### Status Bar:
-    bar {
-        swaybar_command waybar
-        position top
     }
 
 ### Borders and tabline look
@@ -43,6 +33,7 @@
     set $ms Mod4+Shift
 
 ### Autostart
+    exec waybar
     exec mako &
     exec nm-applet --indicator &
     exec --no-startup-id swidle
@@ -110,7 +101,6 @@
     bindsym Alt+KP_2 workspace 2
     bindsym Alt+KP_3 workspace 3
     bindsym Alt+KP_4 workspace 4
-    bindsym $mod+Tab exec nextws
     bindsym Alt+space workspace back_and_forth
     bindsym Alt+right exec nextws
     bindsym Alt+left exec prevws
@@ -159,6 +149,7 @@
 
 ### Windows rules
     for_window [class=".*"] move left
+    for_window [urgent="latest"] focus
     for_window [app_id="galculator"] floating enable,resize set 850 475
     for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, resize set 630 400, move position 700 3
     for_window [app_id="script"] floating enable, resize set 400 100
