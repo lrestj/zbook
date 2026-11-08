@@ -111,8 +111,10 @@
     bindsym Alt+KP_2 workspace 2
     bindsym Alt+KP_3 workspace 3
     bindsym Alt+KP_4 workspace 4
-    bindsym $mod+Tab workspace next
+    bindsym $mod+Tab exec nextws
     bindsym Alt+space workspace back_and_forth
+    bindsym Alt+right exec nextws
+    bindsym Alt+left exec prevws
 
     # Move focused container to workspace
     bindsym Shift+KP_1 move container to workspace 1
