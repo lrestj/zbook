@@ -45,6 +45,7 @@
 ### Reload the configuration file
     bindsym $ms+c reload
 
+### Autostart
     exec mako &
     exec nm-applet --indicator &
     exec --no-startup-id swidle
@@ -135,11 +136,9 @@
     bindsym $mod+KP_4 floating enable, resize set 50ppt 50ppt, move position 0 50ppt 
     bindsym $mod+KP_5 floating enable, resize set 50ppt 50ppt, move position 50ppt 50ppt 
 
-    # Layout toggle
+    # Layout toggle & fullscreen
     bindsym $cs+w layout toggle split
     bindsym $mod+f layout toggle tabbed split
-
-    # Make the current focus fullscreen
     bindsym $ma+f fullscreen
 
     # Toggle between tiling and floating mode
