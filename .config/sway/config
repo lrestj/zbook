@@ -42,9 +42,6 @@
     set $ma Mod4+Alt
     set $ms Mod4+Shift
 
-### Reload the configuration file
-    bindsym $ms+c reload
-
 ### Autostart
     exec mako &
     exec nm-applet --indicator &
@@ -57,6 +54,7 @@
     exec_always battery-check
 
 ### Keybindings
+    bindsym $ms+c reload
     bindsym $mod+a exec $TERMINAL
     bindsym $mod+y exec $TERMINAL --app-id yazi -e yazi
     bindsym Alt+b exec $TERMINAL --app-id btop -e btop
