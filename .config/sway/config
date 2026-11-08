@@ -28,6 +28,13 @@
         position top
     }
 
+### Borders and tabline look
+    default_border pixel 4
+    default_floating_border pixel 4
+    client.focused #8000FF #8000FF #8000FF
+    font none 0.1
+    titlebar_padding 3
+
 ### Variables
     set $mod Mod4
     set $cs Ctrl+Shift
@@ -38,22 +45,15 @@
 ### Reload the configuration file
     bindsym $ms+c reload
 
-### Apps at startup
     exec mako &
     exec nm-applet --indicator &
     exec --no-startup-id swidle
     exec --no-startup-id /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
+    exec firefox
     exec wl-paste --watch cliphist store
     exec wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000 # Screen blue light settings
     exec udiskie -t
     exec_always battery-check
-
-### Borders and tabline look
-    default_border pixel 4
-    default_floating_border pixel 4
-    client.focused #8000FF #8000FF #8000FF
-    font none 0.1
-    titlebar_padding 3
 
 ### Keybindings
     bindsym $mod+a exec $TERMINAL
@@ -105,8 +105,8 @@
     bindsym $ms+Right resize grow width 10px
 
     # Switch to workspace
-    bindgesture swipe:down workspace next
-    bindgesture swipe:up workspace prev
+    bindgesture swipe:down exec nextws
+    bindgesture swipe:up exec prevws
     bindsym Alt+KP_1 workspace 1
     bindsym Alt+KP_2 workspace 2
     bindsym Alt+KP_3 workspace 3

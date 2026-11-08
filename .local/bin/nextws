@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Příkladová logika ve skriptu:
+CUR_WORKSPACE=$(swaymsg -t get_workspaces | jq '.[] | select(.focused==true).num')
+TO_WORKSPACE=$((CUR_WORKSPACE + 1))
+swaymsg workspace number $TO_WORKSPACE
+

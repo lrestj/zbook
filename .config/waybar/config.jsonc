@@ -43,6 +43,11 @@
     ],
 
     "sway/workspaces": {
+        "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": []
+        },
         "format": "{value}",
         "format-icons": {
             "default": "",
@@ -51,6 +56,11 @@
     },
 
     "sway/scratchpad": {
+        "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": []
+        },
         "format": "{icon} {count}",
         "show-empty": false,
         "tooltip": true,

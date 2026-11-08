@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Získání čísla aktuálně aktivní plochy
+current_workspace=$(swaymsg -t get_workspaces | jq '.[] | select(.focused==true).num')
+
+# Pokud je plocha větší než 1, přepni na předchozí
+if [ "$current_workspace" -gt 1 ]; then
+    prev_workspace=$((current_workspace - 1))
+    swaymsg workspace "$prev_workspace"
+fi
+
