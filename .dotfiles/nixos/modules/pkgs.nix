@@ -42,6 +42,7 @@
             rclone
             ripgrep
             simple-scan
+            vivaldi
             wmctrl
             xdotool
             xournalpp
