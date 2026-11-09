@@ -22,6 +22,7 @@
     environment.systemPackages =
         (with pkgs; [
             baobab
+            # brave-origin
             btop
             fastfetch
             file-roller
