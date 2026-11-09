@@ -13,7 +13,7 @@ abbr yay "sudo apt update && sudo apt upgrade"
 abbr ls "ls --color=auto"
 abbr grep "grep --color=auto"
 abbr yup "ya pack -u"
-abbr clean "sudo apt autoremove"
+abbr cla "sudo apt autoremove"
 abbr reb "reboot"
 
 abbr cfg "git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME"
