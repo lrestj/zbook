@@ -35,7 +35,7 @@ $e$ei\n\
 $d$di\n\
 $f$fi\n\
 $j$ji\
-" | fuzzel --lines 14 -d )
+" | rofi -dmenu -i -show-icons -auto-select )
 
 case $selected in
     "$a")
