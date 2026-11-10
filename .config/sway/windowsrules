@@ -1,0 +1,17 @@
+#### SWAY WINDOWS RULES ####
+
+    for_window [class=".*"] move left
+    for_window [urgent="latest"] focus
+    for_window [app_id="galculator"] floating enable,resize set 850 475
+    for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, resize set 630 400, move position 700 3
+    for_window [app_id="script"] floating enable, resize set 400 100
+    for_window [title="Authentication Required"] floating enable
+    for_window [title="xeyes"] floating enable, move position 880 5
+    for_window [title="Rozbalení"] floating enable
+    for_window [app_id="btop"] floating enable, resize set 1654  999 
+    for_window [app_id="links"] floating enable, resize set 800  600
+    for_window [app_id="update"] floating enable, resize set 900  600 
+    for_window [class="Vlc"] floating enable
+    for_window [app_id="mpv"] floating enable
+
+#### END OF FILE ####
