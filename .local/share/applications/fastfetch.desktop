@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Fastfetch
 Comment=System Information Tool
-Exec=bash -c "fastfetch; read"
+Exec=bash -c "sleep 0.2; fastfetch; read"
 Icon=utilities-terminal
 Terminal=true
 Type=Application

@@ -115,3 +115,4 @@ probook/
 .sudo_as_admin_successful
 debian/
 install/
+.config/pavucontrol.ini
