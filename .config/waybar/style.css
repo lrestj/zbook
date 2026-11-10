@@ -114,13 +114,7 @@ button:hover {
 #clock,
 #battery,
 #power-profiles-daemon {
-    padding: 0px 9px;
-    padding-bottom: 2px;
-}
-
-#pulseaudio,
-#backlight {
-    padding-bottom: 3px;
+    padding: 0px 7px;
 }
 
 #idle_inhibitor {

@@ -13,7 +13,7 @@ j="Add new script"
 k="Keybindings"
 l="Windowsrules"
 ai="\0icon\x1fvim"
-bi="\0icon\x1fniri"
+bi="\0icon\x1fsweethome3d"
 ci="\0icon\x1fwayland"
 di="\0icon\x1fnotion"
 ei="\0icon\x1fwayland"
@@ -22,10 +22,21 @@ gi="\0icon\x1fpreferences-system-services"
 hi="\0icon\x1fpreferences-system-services"
 ii="\0icon\x1fpreferences-system-services"
 ji="\0icon\x1fadd"
-ki="\0icon\x1fniri"
-li="\0icon\x1fniri"
+ki="\0icon\x1fsweethome3d"
+li="\0icon\x1fsweethome3d"
 
-selected=$(echo -e "$b$bi\n$k$ki\n$l$li\n$g$gi\n$h$hi\n$i$ii\n$a$ai\n$c$ci\n$e$ei\n$d$di\n$f$fi\n$j$ji" | fuzzel --auto-select --lines 14 -d )
+selected=$(echo -e "\
+$b$bi\n\
+$k$ki\n\
+$l$li\n\
+$a$ai\n\
+$c$ci\n\
+$e$ei\n\
+$d$di\n\
+$f$fi\n\
+$j$ji\
+" | fuzzel --lines 14 -d )
+
 case $selected in
     "$a")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;

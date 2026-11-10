@@ -1,6 +1,5 @@
-[general]
-
 [window]
+dimensions = { columns = 120, lines = 35 }
 padding = { x = 8, y = 8 }
 dynamic_padding = true
 opacity = 0.77
@@ -9,7 +8,7 @@ opacity = 0.77
 size=14
 
 [font.normal]
-family = "HackNerdFont"
+family = "JetBrains Mono"
 
 [colors.primary]
 background = "#000f0f"

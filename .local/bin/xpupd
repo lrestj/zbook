@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# 1. Fetch the latest info from the remote without merging
+cd $HOME/.local/src/xfce-polkit
+git fetch origin
+
+# 2. Get the commit hashes for the local branch and its remote tracking branch
+LOCAL_HASH=$(git rev-parse HEAD)
+REMOTE_HASH=$(git rev-parse @{u}) # @{u} is shorthand for the upstream branch
+
+# 3. Compare the hashes
+if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
+    echo "Aktualizace k dispozici, provádím..."
+    git pull
+    mkdir - p build
+    cd build
+    meson setup --prefix=/usr ..
+    ninja
+    sudo ninja install
+    echo "Aktualizace xfce-polkit kompletní."
+  else
+    echo "Žádné dostupné xfce-polkit aktualizace."
+fi
+

@@ -5,7 +5,7 @@ echo " ##############################"
 echo " #                            #"
 echo " #  HOLA, VYBER SEZENÍ:       #"
 echo " #                            #"
-echo " #  s) SPUSTIT NIXOS          #"
+echo " #  s) SPUSTIT DEBIAN         #"
 echo " #  r) RESTARTOVAT            #"
 echo " #  x) VYPNOUT                #"
 echo " #                            #"
@@ -15,24 +15,24 @@ while true; do
     case $wm_choice in
     "")
     echo
-    echo "Spouštím Nixos..."
+    echo "Spouštím Debian..."
     exec sway-run
-    ;;
+    break;;
     s)
     echo
-    echo "Spouštím Nixos..."
+    echo "Spouštím Debian..."
     exec sway-run
-    ;;
+    break;;
     [xv])
     echo "Vypínání..."
     exec systemctl poweroff
     sleep 1
-    ;;
+    break;;
     r)
     echo "Restart..."
     sleep 1
     exec systemctl reboot
-    ;;
+    break;;
     *)
     echo "Zvolte jednu z možností"
     ;;

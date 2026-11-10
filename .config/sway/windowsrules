@@ -5,7 +5,7 @@
     for_window [app_id="galculator"] floating enable,resize set 850 475
     for_window [app_id="org.pulseaudio.pavucontrol"] floating enable, resize set 630 400, move position 700 3
     for_window [app_id="script"] floating enable, resize set 400 100
-    for_window [title="Authentication Required"] floating enable
+    for_window [app_id="xfce-polkit"] floating enable
     for_window [title="xeyes"] floating enable, move position 880 5
     for_window [title="Rozbalení"] floating enable
     for_window [app_id="btop"] floating enable, resize set 1654  999 

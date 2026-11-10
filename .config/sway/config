@@ -30,7 +30,7 @@
     exec mako &
     exec nm-applet --indicator &
     exec --no-startup-id swidle
-    exec --no-startup-id /run/current-system/sw/libexec/polkit-gnome-authentication-agent-1
+    exec --no-startup-id /usr/libexec/xfce-polkit
     exec $BROWSER
     exec wl-paste --watch cliphist store
     exec wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000 # Screen blue light settings

@@ -1,0 +1,5 @@
+
+# NFS Synology shares
+192.168.77.18:/volume1/Rodinas   /nfs/Nas  nfs   users,x-systemd.automount,x-systemd.device-timeout=5s,x-systemd.idle-timeout=8min,hard  0 0
+192.168.77.18:/volume1/Filmy   /nfs/FilmyNas  nfs   users,x-systemd.automount,x-systemd.device-timeout=5s,x-systemd.idle-timeout=8min,hard  0 0
+192.168.77.18:/volume1/Hudba   /nfs/HudbaNas  nfs   users,x-systemd.automount,x-systemd.device-timeout=5s,x-systemd.idle-timeout=8min,hard  0 0

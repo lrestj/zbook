@@ -112,3 +112,6 @@ zbook/
 .icons/
 .config/xviewer/
 probook/
+.sudo_as_admin_successful
+debian/
+install/
