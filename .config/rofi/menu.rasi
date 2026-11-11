@@ -33,8 +33,10 @@
     active-background:           @background;
     selected-active-background:  rgba ( 129, 91, 164, 33 % );
 }
+
 configuration {
     font: "JetBrains Mono 14";
+    auto-select: true;
 }
 
 window {
@@ -70,7 +72,7 @@ element {
 }
 element-icon {
     size: 1.7em;
-    margin: 0 17px 0  0;
+    margin: 0 11px 0  0;
 }
 element-text {
     vertical-align: 0.5;
