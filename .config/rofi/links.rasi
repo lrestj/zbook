@@ -37,6 +37,7 @@
 configuration {
     font: "JetBrains Mono 14";
     auto-select: true;
+    case-sensitive: false;
 }
 
 window {

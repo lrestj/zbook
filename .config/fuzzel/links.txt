@@ -3,7 +3,7 @@
 📥  1 Sdilej.cz,https://www.sdilej.cz
 📥  2 Prehraj.to,https://www.prehraj.to
 📥  3 Github Zbook,https://github.com/lrestj/zbook
-📥  4 Mail,https://gmail.com
+📥  4 E-mail,https://gmail.com
 📥  5 Nixos pkgs,https://search.nixos.org/packages
 
 
