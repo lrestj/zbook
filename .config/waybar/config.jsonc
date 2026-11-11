@@ -226,7 +226,7 @@
    "custom/power": {
         "format" : "  ",
         "tooltip-format": "",
-        "on-click": "power"
+        "on-click": "pkill rofi || power"
    }
 }] 
 

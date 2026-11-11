@@ -34,7 +34,7 @@
     selected-active-background:  rgba ( 129, 91, 164, 33 % );
 }
 window {
-    height: 566 px;
+    height: 555 px;
     width: 455px;
     background-color: @background;
     border:           2;

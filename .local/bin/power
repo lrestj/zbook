@@ -9,7 +9,7 @@ bi="\0icon\x1fsystem-log-out"
 ci="\0icon\x1fsystem-reboot"
 di="\0icon\x1fsystem-shutdown"
 
-selected=$(echo -e "$a$ai\n$b$bi\n$c$ci\n$d$di" | fuzzel --config ~/.config/fuzzel/power.ini -d )
+selected=$(echo -e "$a$ai\n$b$bi\n$c$ci\n$d$di" | rofi -config ~/.config/rofi/power.rasi -dmenu -theme-str 'inputbar { enabled: false; }')
 case $selected in
     "$a")
         lockscreen;;

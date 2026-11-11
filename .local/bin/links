@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Cesta k vašemu seznamu odkazů a skriptů
-LIST_FILE="$HOME/.config/fuzzel/links.txt"
+LIST_FILE="$HOME/.config/rofi/links.txt"
 
 # 1. Vytažení názvů a zobrazení v Rofi
 CHOSEN=$(cut -d',' -f1 "$LIST_FILE" | rofi -config ~/.config/rofi/links.rasi -theme-str 'inputbar { enabled: false; }' -dmenu -p "Vyber odkaz: "
