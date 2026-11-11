@@ -174,4 +174,4 @@ configuration {
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 }
 
- @theme "./links.rasi"
+ @theme "./libor.rasi"
