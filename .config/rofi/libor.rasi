@@ -7,38 +7,37 @@
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
     foreground:                  rgba ( 180, 180, 180, 100 % );
     normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 46, 52, 64, 63 % );
+    alternate-normal-background: @background;
     red:                         rgba ( 220, 50, 47, 100 % );
     selected-urgent-foreground:  rgba ( 239, 97, 85, 100 % );
     blue:                        rgba ( 38, 139, 210, 100 % );
     urgent-foreground:           rgba ( 239, 97, 85, 100 % );
-    alternate-urgent-background: rgba ( 46, 52, 64, 18 % );
+    alternate-urgent-background: @background;
     active-foreground:           rgba ( 129, 91, 164, 100 % );
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 129, 91, 164, 100 % );
-    alternate-active-background: rgba ( 46, 52, 64, 18 % );
+    alternate-active-background: @background;
     background:                  rgba ( 46, 52, 64, 94 % );
-    bordercolor:                 rgba ( 239, 97, 85, 21 % );
+    border-color:                 rgba ( 128, 0, 255, 100 % );
     alternate-normal-foreground: @foreground;
-    normal-background:           rgba ( 46, 52, 64, 63 % );
+    normal-background:           @background;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 129, 91, 164, 33 % );
-    border-color:                @foreground;
+    selected-normal-background:  rgba ( 129, 91, 164, 100 % );
     spacing:                     2;
     separatorcolor:              rgba ( 239, 97, 85, 18 % );
-    urgent-background:           rgba ( 46, 52, 64, 15 % );
+    urgent-background:           @background;
     selected-urgent-background:  rgba ( 129, 91, 164, 33 % );
     alternate-urgent-foreground: @urgent-foreground;
     background-color:            rgba ( 0, 0, 0, 0 % );
     alternate-active-foreground: @active-foreground;
-    active-background:           rgba ( 46, 52, 64, 15 % );
+    active-background:           @background;
     selected-active-background:  rgba ( 129, 91, 164, 33 % );
 }
 window {
     height: 210px;
-    width: 200px;
+    width: 240px;
     background-color: @background;
-    border:           0;
+    border:           2;
     padding:          5;
 }
 mainbox {
@@ -55,7 +54,7 @@ textbox {
 }
 listview {
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    border:       0px dash 0px 0px ;
     border-color: @separatorcolor;
     spacing:      7px ;
     scrollbar:    true;
@@ -67,7 +66,7 @@ element {
 }
 element-icon {
     size: 1.7em;
-    margin: 0  7px 0  0;
+    margin: 0 17px 0  0;
 }
 element-text {
     vertical-align: 0.5;
