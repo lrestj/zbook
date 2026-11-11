@@ -17,7 +17,7 @@
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 129, 91, 164, 100 % );
     alternate-active-background: @background;
-    background:                  rgba ( 46, 52, 64, 94 % );
+    background:                  rgba ( 46, 52, 64, 96 % );
     border-color:                 rgba ( 128, 0, 255, 100 % );
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
@@ -34,8 +34,8 @@
     selected-active-background:  rgba ( 129, 91, 164, 33 % );
 }
 window {
-    height: 210px;
-    width: 240px;
+    height: 566 px;
+    width: 355px;
     background-color: @background;
     border:           2;
     padding:          5;
@@ -74,11 +74,11 @@ element-text {
     text-color:       inherit;
 }
 element.normal.normal {
-    background-color: @normal-background;
+    background-color: transparent;
     text-color:       @normal-foreground;
 }
 element.normal.urgent {
-    background-color: @urgent-background;
+    background-color: @background;
     text-color:       @urgent-foreground;
 }
 element.normal.active {
@@ -98,7 +98,7 @@ element.selected.active {
     text-color:       @selected-active-foreground;
 }
 element.alternate.normal {
-    background-color: @alternate-normal-background;
+    background-color: transparent;
     text-color:       @alternate-normal-foreground;
 }
 element.alternate.urgent {
