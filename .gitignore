@@ -116,3 +116,4 @@ probook/
 debian/
 install/
 .config/pavucontrol.ini
+.config/geany/geany_socket_debian_wayland-1
