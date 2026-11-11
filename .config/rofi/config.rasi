@@ -6,6 +6,7 @@ configuration {
     tokenize: false;
     sorting-method: "fzf";
     case-sensitive: false;
+    show-icons: true;
     drun {
         display-name: "Aplikace";
     }

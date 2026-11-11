@@ -23,7 +23,7 @@
     bindsym $mod+Insert exec screenshot
 
     # Show menus
-    bindsym $mod+Backslash exec pkill $MENU || $MENU
+    bindsym $mod+Backslash exec pkill $MENU || rofi -show drun
     bindsym $mod+x exec pkill $MENU || powercenter
 
     # Toggle waybar & taskbar

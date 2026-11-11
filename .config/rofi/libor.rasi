@@ -35,7 +35,7 @@
 }
 window {
     height: 566 px;
-    width: 355px;
+    width: 455px;
     background-color: @background;
     border:           2;
     padding:          5;
@@ -57,7 +57,7 @@ listview {
     border:       0px dash 0px 0px ;
     border-color: @separatorcolor;
     spacing:      7px ;
-    scrollbar:    true;
+    scrollbar:    false;
     padding:      5px 5px 5px ;
 }
 element {

@@ -73,7 +73,7 @@
 
     "memory": {
         "format": " Menu  RAM   {}% ",
-        "on-click": "pkill $MENU || $MENU --config ~/.config/fuzzel/menu.ini"
+        "on-click": "pkill $MENU || rofi -show drun"
     },
 
     "cpu": {
