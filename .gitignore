@@ -116,3 +116,5 @@ local/bin/etc/
 probook/
 voidsway/
 zbook/
+.bash_logout
+.config/btop/btop.log

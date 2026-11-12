@@ -12,6 +12,7 @@ i="Pkgs"
 j="Add new script"
 k="Keybindings"
 l="Windowsrules"
+m="Odpojit USB..."
 z="Upravit menu..."
 ai="\0icon\x1fvim"
 bi="\0icon\x1fsweethome3d"
@@ -25,6 +26,7 @@ ii="\0icon\x1fpreferences-system-services"
 ji="\0icon\x1fadd"
 ki="\0icon\x1fsweethome3d"
 li="\0icon\x1fsweethome3d"
+mi="\0icon\x1fudiskie-unmount"
 zi="\0icon\x1fedile"
 
 selected=$(echo -e "\
@@ -37,6 +39,7 @@ $e$ei\n\
 $d$di\n\
 $f$fi\n\
 $j$ji\n\
+$m$mi\n\
 $z$zi\
 " | rofi -dmenu -i -show-icons -auto-select -p "Vyber" )
 
@@ -61,6 +64,8 @@ case $selected in
         $TERMINAL -e vim ~/.dotfiles/nixos/modules/pkgs.nix;;
     "$j")
         addnew;;
+    "$m")
+        rofi-umount;;
     "$k")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/sway/keybindings";;
     "$l")
