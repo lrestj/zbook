@@ -47,7 +47,7 @@ window {
     x-offset: -10px;
     y-offset: 45px;
     height: 205px;
-    width: 220px;
+    width: 200px;
     background-color: @background;
     border:           2;
     padding:          5;
