@@ -1,9 +1,4 @@
 [[plugin.deps]]
-use = "dedukun/bookmarks"
-rev = "9ef1254"
-hash = "92fbb5483657fa7976cdf4e0104e18e0"
-
-[[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
 rev = "1ef5fe0"
 hash = "7a4b4237223aaa94e589d1c01a23542a"
@@ -22,6 +17,11 @@ hash = "868db729374b97871bc30b96d0e9061f"
 use = "yazi-rs/plugins:mount"
 rev = "1ef5fe0"
 hash = "f0dcc0ea71d5c59ce0d527f4b8a3937b"
+
+[[plugin.deps]]
+use = "stelcodes/bunny"
+rev = "8f3f84e"
+hash = "18a2829738214fe9bca99a2fef19113d"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-frappe"
