@@ -20,7 +20,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export BROWSER=brave-browser
+export BROWSER=brave-origin
 export TERMINAL=foot
 export KALK=galculator
 export FILEMGR=nemo
