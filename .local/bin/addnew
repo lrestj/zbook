@@ -5,7 +5,7 @@ file=~/.local/bin/$sel
 
 case $sel in
     "")
-        notify-send -i im-kick-user "Nezadali jste jméno" "Konec bez vytvoření souboru"
+        notify-send -i im-kick-user -t 1000 "Nezadali jste jméno" "Konec bez vytvoření souboru"
     ;;
     *)
         touch $file
