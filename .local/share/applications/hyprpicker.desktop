@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=foot --app-id hyprpicker bash -c "echo 'Vyber barvu a pak mě zavři'; hyprpicker | wl-copy; read"
+Name=Color picker
+Icon=colorpicker
+Keywords=application-launcher;window-switcher;

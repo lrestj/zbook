@@ -180,7 +180,7 @@
         "format": " 󰃟  {percent}%  ",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "on-click-right": "pkill foot || foot",
-        "on-click": "pkill btop || foot -T btop -e btop"
+        "on-click": "pkill foot || colorpicker"
    },
 
    "tray": {

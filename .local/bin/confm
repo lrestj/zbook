@@ -3,7 +3,7 @@
 a=" Vimrc"
 b="Sway conf"
 c="Waybar config"
-d="Mako config"
+d="Color picker"
 e="Waybar css"
 f="Stuff2remember"
 g="Configuration.nix"
@@ -15,7 +15,7 @@ l="Windowsrules"
 ai="\0icon\x1fvim"
 bi="\0icon\x1fsweethome3d"
 ci="\0icon\x1fwayland"
-di="\0icon\x1fnotion"
+di="\0icon\x1fcolorpicker"
 ei="\0icon\x1fwayland"
 fi="\0icon\x1fnotepad"
 gi="\0icon\x1fpreferences-system-services"
@@ -35,7 +35,7 @@ $e$ei\n\
 $d$di\n\
 $f$fi\n\
 $j$ji\
-" | rofi -dmenu -i -show-icons -auto-select )
+" | rofi -dmenu -i -show-icons -auto-select -p "Vyber" )
 
 case $selected in
     "$a")
@@ -45,7 +45,7 @@ case $selected in
     "$c")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/config.jsonc";;
     "$d")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/mako/config";;
+        foot --app-id hyprpicker bash -c "hyprpicker | wl-copy; read";;
     "$e")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/style.css";;
     "$f")

@@ -7,6 +7,9 @@ configuration {
     sorting-method: "fzf";
     case-sensitive: false;
     show-icons: true;
+    dmenu {
+        exit-if-empty: false;
+    }
     drun {
         display-name: "Aplikace";
     }

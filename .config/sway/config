@@ -1,7 +1,7 @@
 #### SWAY CONFIG ####
 
 ### Wallpaper & cursor theme
-    output * bg /home/libor/.dotfiles/wallpapers/debian.png fill
+    output * bg /home/libor/.dotfiles/wallpapers/debian.svg fill
     seat seat0 xcursor_theme Bibata-Modern-Classic 28
 
 ### Input configuration
