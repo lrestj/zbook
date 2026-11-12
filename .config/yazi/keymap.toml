@@ -46,19 +46,23 @@ run = "plugin mount"
 [[mgr.prepend_keymap]]
 on = [ "g", "h" ]       
 run = "cd ~"          
-desc = "Go to the home directory" 
+desc = "Home" 
 [[mgr.prepend_keymap]]
 on = [ "g", "c" ]
 run = "cd ~/.config"    
-desc = "Go to the config directory" 
+desc = ".config" 
+[[mgr.prepend_keymap]]
+on = [ "g", "b" ]      
+run = "cd ~/.local/bin"
+desc = "bin" 
 [[mgr.prepend_keymap]]
 on = [ "g", "d" ]      
 run = "cd ~/.dotfiles"
-desc = "Go to the dotfiles directory" 
+desc = " .dotfiles" 
 [[mgr.prepend_keymap]]
 on = [ "g", "s" ]
 run = "cd ~/Stažené"
-desc = "Go to the downloads directory" 
+desc = "Stažené" 
 [[mgr.prepend_keymap]]
 on = [ "g", "<Space>" ]
 run = "cd --interactive"
@@ -66,6 +70,6 @@ desc = "Go to a directory interactively"
 [[mgr.prepend_keymap]]
 on = [ "g", "n" ]
 run = "cd /nfs"
-desc = "Go to NAS" 
+desc = "NAS" 
 
 ### END OF FILE ###
