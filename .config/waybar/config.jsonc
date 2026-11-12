@@ -33,7 +33,6 @@
     "modules-right": [
         "idle_inhibitor",
         "tray",
-        "mpd",
         "pulseaudio",
         "backlight",
         "clock",

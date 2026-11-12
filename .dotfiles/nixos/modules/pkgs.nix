@@ -37,13 +37,10 @@
             kdePackages.qtsvg
             libnotify
             libreoffice
-            librewolf
-            mango
             pdfarranger
             rclone
             ripgrep
             simple-scan
-            vivaldi
             wmctrl
             xdotool
             xournalpp

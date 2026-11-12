@@ -6,20 +6,15 @@
   inputs = {
       nixpkgs.url = "nixpkgs/nixos-unstable"; 
       nixpkgs-stable.url = "nixpkgs/nixos-26.05"; 
-      brave = {
-          url = "git+https://codeberg.org/buckley310/brave-browser-nix?ref=main";
-          inputs.nixpkgs.follows = "nixpkgs";
-      };
   };
 
 
-  outputs = { self, nixpkgs, brave, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: {
       nixosConfigurations = {
           zbook = nixpkgs.lib.nixosSystem {
               system = "x86_64-linux";
               specialArgs = { inherit inputs; };
               modules = [
-                  brave.nixosModules.default
                   ./hosts/zbook/configuration.nix
               ];
           };
