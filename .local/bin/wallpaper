@@ -13,12 +13,12 @@ CLIP="${CLIP/#\~/$HOME}"
 
 # Verify the file exists and is an image
 if [ ! -f "$CLIP" ]; then
-    notify-send "Wallpaper Error" "File not found: $CLIP" 2>/dev/null
+    notify-send "Chyba!!!" "Soubor nenalezen: $CLIP" 2>/dev/null
     exit 1
 fi
 
 if ! file --mime-type -b "$CLIP" | grep -q "^image/"; then
-    notify-send "Wallpaper Error" "Clipboard path is not an image." 2>/dev/null
+    notify-send "Chyba!!!" "Soubor není obrázek." 2>/dev/null
     exit 1
 fi
 
