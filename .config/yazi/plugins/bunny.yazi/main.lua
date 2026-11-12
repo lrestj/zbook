@@ -112,7 +112,7 @@ local create_special_hops = function(config)
   local hops = {}
   local desc_strategy, tabs, ephemeral = config.desc_strategy, config.tabs, config.ephemeral
   if ephemeral then
-    table.insert(hops, { key = '<Enter>', desc = 'Create hop', path = '__MARK__' })
+    table.insert(hops, { key = '<Enter>', desc = 'Přidat záložku', path = '__MARK__' })
   end
   table.insert(hops, { key = '<Space>', desc = 'Fuzzy search', path = '__FUZZY__' })
   local tabhist = get_state('tabhist')
