@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+CONFIG="$HOME/.config/sway/config"
+
+# Read the path from clipboard and trim whitespace
+CLIP=$(wl-paste -n | xargs)
+
+# Strip file:// prefix if copied from a GUI file manager
+CLIP="${CLIP#file://}"
+
+# Expand ~ to $HOME if present
+CLIP="${CLIP/#\~/$HOME}"
+
+# Verify the file exists and is an image
+if [ ! -f "$CLIP" ]; then
+    notify-send "Wallpaper Error" "File not found: $CLIP" 2>/dev/null
+    exit 1
+fi
+
+if ! file --mime-type -b "$CLIP" | grep -q "^image/"; then
+    notify-send "Wallpaper Error" "Clipboard path is not an image." 2>/dev/null
+    exit 1
+fi
+
+# Get the full absolute path
+FULL_PATH=$(realpath "$CLIP")
+
+# Replace the existing 'output * bg ...' line in Sway config
+if grep -qE '^[[:space:]]*output \* bg ' "$CONFIG"; then
+    sed -i "s|^[[:space:]]*output \* bg .*|output * bg \"$FULL_PATH\" fill|" "$CONFIG"
+else
+    # Append it if the line doesn't exist yet
+    echo "output * bg \"$FULL_PATH\" fill" >> "$CONFIG"
+fi
+
+# Reload Sway to apply the updated configuration
+swaymsg reload
+
+notify-send "Wallpaper nastaven" "$(basename "$FULL_PATH")" 2>/dev/null
+

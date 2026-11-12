@@ -21,6 +21,7 @@
     bindsym $mod+m exec confm
     bindsym $mod+u exec vupdnx
     bindsym $mod+Insert exec screenshot
+    bindsym $ca+W exec wallpaper
 
     # Show menus
     bindsym $mod+Backslash exec pkill $MENU || rofi -show drun
