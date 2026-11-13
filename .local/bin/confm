@@ -3,7 +3,7 @@
 a=" Vimrc"
 b="Sway conf"
 c="Waybar config"
-d="Mako config"
+d="Tiskárna web"
 e="Waybar css"
 f="Stuff2remember"
 g="Configuration.nix"
@@ -12,10 +12,11 @@ i="Pkgs"
 j="Add new script"
 k="Keybindings"
 l="Windowsrules"
+m="Upravit nabídku ..."
 ai="\0icon\x1fvim"
 bi="\0icon\x1fniri"
 ci="\0icon\x1fwayland"
-di="\0icon\x1fnotion"
+di="\0icon\x1fprinter"
 ei="\0icon\x1fwayland"
 fi="\0icon\x1fnotepad"
 gi="\0icon\x1fpreferences-system-services"
@@ -24,8 +25,23 @@ ii="\0icon\x1fpreferences-system-services"
 ji="\0icon\x1fadd"
 ki="\0icon\x1fniri"
 li="\0icon\x1fniri"
+mi="\0icon\x1fpreferences-system"
 
-selected=$(echo -e "$b$bi\n$k$ki\n$l$li\n$g$gi\n$h$hi\n$i$ii\n$a$ai\n$c$ci\n$e$ei\n$d$di\n$f$fi\n$j$ji" | fuzzel --auto-select --lines 14 -d )
+selected=$(echo -e "\
+$b$bi\n\
+$k$ki\n\
+$l$li\n\
+$g$gi\n\
+$h$hi\n\
+$i$ii\n\
+$a$ai\n\
+$c$ci\n\
+$e$ei\n\
+$d$di\n\
+$f$fi\n\
+$j$ji\n\
+$m$mi\
+" | fuzzel --auto-select --lines 14 -d )
 case $selected in
     "$a")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
@@ -34,7 +50,7 @@ case $selected in
     "$c")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/config.jsonc";;
     "$d")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/mako/config";;
+        $BROWSER http://192.168.77.5;;
     "$e")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/style.css";;
     "$f")
@@ -51,6 +67,9 @@ case $selected in
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/sway/keybindings";;
     "$l")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/sway/windowsrules";;
+
+    "$m")
+        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.local/bin/confm";;
 
 esac
 

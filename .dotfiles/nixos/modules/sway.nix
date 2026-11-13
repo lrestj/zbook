@@ -13,6 +13,7 @@
           geany
           gnome-themes-extra
           gparted
+          hyprpicker
           jq
           mako
           mpv
