@@ -21,7 +21,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export BROWSER=brave-browser
-export TERMINAL=foot
+export TERMINAL=alacritty
 export KALK=galculator
 export FILEMGR=nemo
 export EDITOR=vim

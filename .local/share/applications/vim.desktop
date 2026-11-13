@@ -116,8 +116,8 @@ Comment[vi]=Soạn thảo tập tin văn bản
 Comment[wa]=Asspougnî des fitchîs tecses
 Comment[zh_TW]=編輯文字檔
 TryExec=vim
-Exec=vim %F
-Terminal=true
+Exec=alacritty --class vim -e bash -c "sleep 0.1; exec vim %F"
+Terminal=false
 Type=Application
 # Translators: Search terms to find this application. Do NOT change the semicolons! The list MUST also end with a semicolon!
 Keywords[ca]=Text;editor;
