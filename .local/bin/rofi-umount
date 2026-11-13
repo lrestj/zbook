@@ -4,9 +4,9 @@ directory="/media/${USER}/"
 removable="$(ls "$directory")"
 lines="$(ls "$directory" | wc -l)"
 
-[ "$lines" = "0" ] && notify-send "No removable drives mounted." && exit 1
+[ "$lines" = "0" ] && notify-send "⚠️  Není co odpojit." && exit 1
 
-selection="$(echo 💾 "$removable" | rofi -dmenu -p "Odpojit? " -lines "$lines" -no-auto-select)"
+selection="$(echo "$removable" | rofi -dmenu -p "💾 Odpojit? " -lines "$lines" -no-auto-select)"
 
 [ -z "$selection" ] && exit 1
 
