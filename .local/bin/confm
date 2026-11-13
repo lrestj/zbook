@@ -12,7 +12,8 @@ i="Pkgs"
 j="Add new script"
 k="Keybindings"
 l="Windowsrules"
-m="Upravit nabídku ..."
+m="Odpojit USB"
+z="Upravit nabídku ..."
 ai="\0icon\x1fvim"
 bi="\0icon\x1fniri"
 ci="\0icon\x1fwayland"
@@ -25,12 +26,14 @@ ii="\0icon\x1fpreferences-system-services"
 ji="\0icon\x1fadd"
 ki="\0icon\x1fniri"
 li="\0icon\x1fniri"
-mi="\0icon\x1fpreferences-system"
+mi="\0icon\x1fudiskie-unmount"
+zi="\0icon\x1fpreferences-system"
 
 selected=$(echo -e "\
 $b$bi\n\
 $k$ki\n\
 $l$li\n\
+$m$mi\n\
 $g$gi\n\
 $h$hi\n\
 $i$ii\n\
@@ -40,7 +43,7 @@ $e$ei\n\
 $d$di\n\
 $f$fi\n\
 $j$ji\n\
-$m$mi\
+$z$zi\
 " | fuzzel --auto-select --lines 14 -d )
 case $selected in
     "$a")
@@ -67,8 +70,10 @@ case $selected in
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/sway/keybindings";;
     "$l")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/sway/windowsrules";;
-
     "$m")
+        fuzzel-umount;;
+
+    "$z")
         foot --app-id vim bash -c "sleep 0.1; exec vim ~/.local/bin/confm";;
 
 esac
