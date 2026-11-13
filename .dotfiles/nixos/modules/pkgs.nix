@@ -41,6 +41,7 @@
             rclone
             ripgrep
             simple-scan
+            system-config-printer
             wmctrl
             xdotool
             xournalpp
