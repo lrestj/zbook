@@ -6,30 +6,30 @@ configuration {
 }
 
 * {
-    foreground:                  rgba ( 180, 180, 180, 100 % );
-    background:                  rgba ( 46, 52, 64, 96 % );
-    border-color:                 rgba ( 128, 0, 255, 100 % );
+    foreground:     rgba ( 180, 180, 180, 100 % );
+    background:     rgba ( 46, 52, 64, 96 % );
+    border-color:   rgba ( 128, 0, 255, 100 % );
 }
 
 window {
-    height: 60px;
     width: 350px;
-    border:           3;
-    padding:          8;
+    border: 3;
+    padding: 8;
 }
 listview {
-    border:       0px dash 0px 0px ;
-    scrollbar:    false;
+    border: 0px dash 0px 0px ;
+    lines: 0;
+    scrollbar: false;
 }
 inputbar {
-    spacing:    0;
-    padding:    1px ;
+    spacing: 0;
+    padding: 1px ;
 }
 entry {
     placeholder: "";
 }
 inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry ];
+    children: [ prompt,textbox-prompt-colon,entry ];
 }
 
 // END OF FILE //
