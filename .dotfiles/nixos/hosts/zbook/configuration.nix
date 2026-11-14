@@ -22,6 +22,8 @@
       config.common = {
          default = [ "gtk" ]; 
          "org.freedesktop.impl.portal.FileChooser"= [ "gtk" ];
+         "org.freedesktop.impl.portal.ScreenCast"= [ "wlr" ];
+         "org.freedesktop.impl.portal.Screenshot"= [ "wlr" ];
       };
   };
   documentation.man.cache.enable = false;

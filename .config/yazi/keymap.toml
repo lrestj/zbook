@@ -1,4 +1,9 @@
 [[mgr.prepend_keymap]]
+desc = "Start bunny.yazi"
+on = "b"
+run = "plugin bunny"
+
+[[mgr.prepend_keymap]]
 on   = "F"
 run  = "plugin jump-to-char"
 desc = "Jump to char"
@@ -17,26 +22,6 @@ desc = "Passw zip"
 on   = "<Enter>"
 run  = "plugin smart-enter"
 desc = "Enter the child directory, or open the file"
-
-[[mgr.prepend_keymap]]
-on = [ "Z" ]
-run = "plugin bookmarks save"
-desc = "Uložit jako záložku"
-
-[[mgr.prepend_keymap]]
-on = [ "b" ]
-run = "plugin bookmarks jump"
-desc = "Jít na záložku"
-
-[[mgr.prepend_keymap]]
-on = [ "B", "d" ]
-run = "plugin bookmarks delete"
-desc = "Smazat záložku"
-
-[[mgr.prepend_keymap]]
-on = [ "B", "D" ]
-run = "plugin bookmarks delete_all"
-desc = "Smazat všechny záložky"
 
 [[mgr.prepend_keymap]]
 on  = "M"
