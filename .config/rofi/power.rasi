@@ -20,7 +20,7 @@
     alternate-normal-foreground: @foreground;
     normal-background:           @background;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 129, 91, 164, 100 % );
+    selected-normal-background:  rgba ( 68, 68, 67, 100 % );
     spacing:                     2;
     separatorcolor:              rgba ( 239, 97, 85, 18 % );
     urgent-background:           @background;
