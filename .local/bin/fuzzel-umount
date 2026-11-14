@@ -6,7 +6,7 @@ lines="$(ls "$directory" | wc -l)"
 
 [ "$lines" = "0" ] && notify-send "⚠️  Není co odpojit." && exit 1
 
-selection="$(echo "$removable" | fuzzel --dmenu -l "$lines" -p "💾  Odpojit?")"
+selection="$(echo "$removable" | fuzzel --dmenu -l "$lines" -p "💾  Odpojit? ")"
 
 [ -z "$selection" ] && exit 1
 
