@@ -38,3 +38,4 @@ swaymsg reload
 
 notify-send "Wallpaper nastaven" "$(basename "$FULL_PATH")" 2>/dev/null
 
+#### END OF FILE ####

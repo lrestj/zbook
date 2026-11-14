@@ -2,3 +2,5 @@
 
 pamixer --toggle-mute && notify-send -c center "hlasitost" -h string:x-canonical-private-synchronous:progress \
 -h int:value:$(( (( $([ "$(pamixer --get-mute)" = "true" ] && echo 0 || pamixer --get-volume) - 1 )) % 100 + 1 ))
+
+#### END OF FILE ####

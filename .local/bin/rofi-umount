@@ -11,3 +11,5 @@ selection="$(echo "$removable" | rofi -dmenu -p "💾 Odpojit? " -lines "$lines"
 [ -z "$selection" ] && exit 1
 
 udiskie-umount "${directory}/${selection}"
+
+#### END OF FILE ####

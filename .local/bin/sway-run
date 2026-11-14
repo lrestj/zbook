@@ -13,3 +13,5 @@ if command -v dbus-update-activation-environment >/dev/null; then
 fi
 
 sway --unsupported-gpu
+
+#### END OF FILE ####

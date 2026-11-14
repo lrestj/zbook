@@ -11,4 +11,4 @@ sudo apt install -y linux-headers-amd64 nvidia-driver nvidia-smi
 echo "options nvidia-drm modeset=1" | sudo tee /etc/modprobe.d/nvidia-drm-modeset.conf
 sudo update-initramfs -u
 
-###  END OF FILE  ###
+#### END OF FILE ####

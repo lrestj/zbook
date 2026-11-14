@@ -22,3 +22,4 @@ if [ "$LOCAL_HASH" != "$REMOTE_HASH" ]; then
     echo "Žádné dostupné xfce-polkit aktualizace."
 fi
 
+#### END OF FILE ####

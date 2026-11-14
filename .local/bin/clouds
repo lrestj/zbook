@@ -25,3 +25,5 @@ case $selected in
     notify-send -i im-kick-user "Zrušeno uživatelem"
     ;;
 esac
+
+#### END OF FILE ####

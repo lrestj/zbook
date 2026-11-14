@@ -10,3 +10,5 @@ cd build
 meson --prefix=/usr ..
 ninja
 sudo ninja install
+
+#### END OF FILE ####

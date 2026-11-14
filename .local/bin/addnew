@@ -14,3 +14,5 @@ case $sel in
         $TERMINAL -e vim $file
     ;;
 esac
+
+#### END OF FILE ####
