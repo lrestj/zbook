@@ -70,7 +70,7 @@ case $selected in
     "$m")
         rofi-umount;;
     "$n")
-        $TERMINAL --class gparted -e gp;;
+        $TERMINAL -e gp;;
     "$k")
         $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/sway/keybindings";;
     "$l")

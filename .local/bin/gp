@@ -2,5 +2,7 @@
 
 $TERMINAL --class gparted -e sudo -E sh -c "gparted &"
 sleep 0.3; pkill $TERMINAL
+sleep 1.5
+exec swaymsg '[app_id="gparted"] fullscreen enable'
 
 #### END OF FILE ####
