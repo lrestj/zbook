@@ -12,7 +12,7 @@
     for_window [app_id="links"] floating enable, resize set 800  600
     for_window [app_id="update"] floating enable, resize set 900  600 
     for_window [class="Vlc"] floating enable
-    for_window [app_id="hyprpicker"] floating enable
+    for_window [app_id="hyprpicker"] floating enable, resize set 315 100
     for_window [app_id="mpv"] floating enable
 
 #### END OF FILE ####
