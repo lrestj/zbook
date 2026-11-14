@@ -1,5 +1,5 @@
 configuration {
-    font: "jetBrains mono 13";
+    font: "JetBrains Mono 13";
     dmenu {
         exit-if-empty: false;
     }

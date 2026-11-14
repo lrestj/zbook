@@ -2,7 +2,7 @@
 dimensions = { columns = 120, lines = 35 }
 padding = { x = 8, y = 8 }
 dynamic_padding = true
-opacity = 0.70
+opacity = 0.65
 
 [font]
 size=14
@@ -12,7 +12,6 @@ family = "JetBrains Mono"
 
 [colors.primary]
 background = "#000f0f"
-#background = "#000000"
 
 [colors.cursor]
 text   = '#111111'
