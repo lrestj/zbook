@@ -13,6 +13,7 @@ j="Add new script"
 k="Keybindings"
 l="Windowsrules"
 m="Odpojit USB..."
+n="GParted"
 z="Upravit menu..."
 ai="\0icon\x1fvim"
 bi="\0icon\x1fsweethome3d"
@@ -27,6 +28,7 @@ ji="\0icon\x1fadd"
 ki="\0icon\x1fsweethome3d"
 li="\0icon\x1fsweethome3d"
 mi="\0icon\x1fudiskie-unmount"
+ni="\0icon\x1fgparted"
 zi="\0icon\x1fedile"
 
 selected=$(echo -e "\
@@ -34,6 +36,7 @@ $b$bi\n\
 $k$ki\n\
 $l$li\n\
 $a$ai\n\
+$n$ni\n\
 $c$ci\n\
 $e$ei\n\
 $d$di\n\
@@ -66,6 +69,8 @@ case $selected in
         addnew;;
     "$m")
         rofi-umount;;
+    "$n")
+        $TERMINAL --class gparted -e gp;;
     "$k")
         $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/sway/keybindings";;
     "$l")

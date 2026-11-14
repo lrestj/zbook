@@ -1,6 +1,5 @@
 configuration {
     font: "JetBrains Mono 14";
-    modes: "drun,run,ssh";
     auto-select: true;
     matching: "prefix";
     tokenize: false;

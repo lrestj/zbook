@@ -14,5 +14,6 @@
     for_window [class="Vlc"] floating enable
     for_window [app_id="hyprpicker"] floating enable, resize set 315 100
     for_window [app_id="mpv"] floating enable
+    for_window [app_id="gparted"] floating enable, resize set 500 200
 
 #### END OF FILE ####

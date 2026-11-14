@@ -1,0 +1,6 @@
+#!/bin/bash
+
+$TERMINAL --class gparted -e sudo -E sh -c "gparted &"
+sleep 0.3; pkill $TERMINAL
+
+#### END OF FILE ####
