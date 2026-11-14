@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sel=$(rofi -dmenu -config ~/.config/rofi/dmenu.rasi -lines 0 -height 50 -p "Jméno souboru" < /dev/null)
+sel=$(rofi -dmenu -config ~/.config/rofi/dmenu.rasi -p "Jméno souboru" < /dev/null)
 file=~/.local/bin/$sel
 
 case $sel in
