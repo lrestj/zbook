@@ -8,7 +8,6 @@
           brightnessctl
           cliphist
           evince
-          foot
           fuzzel
           geany
           gnome-themes-extra
