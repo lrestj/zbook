@@ -26,6 +26,7 @@
             brave-origin
             btop
             fastfetch
+            file
             file-roller
             fish
             font-manager

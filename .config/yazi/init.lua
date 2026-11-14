@@ -5,8 +5,9 @@ require("bunny"):setup({
     { key = "i",          path = "/usr/share/icons/Papirus-Dark", desc = "Icons" },
     { key = "y",          path = "/home/libor/.config/yazi/", desc = "Yazi" },
     { key = "m",          path = "~/.dotfiles/nixos/modules/", desc = "Nixos modules" },
+    { key = "w",          path = "~/.dotfiles/wallpapers/", desc = "Wallpapers" },
     { key = { "l", "s" }, path = "~/.local/share", desc = "Local share"  },
-    { key = { "l", "b" }, path = "~/.local/bin",   desc = "Local bin"    },
+    { key = "b",          path = "~/.local/bin",   desc = "Local bin"    },
     -- key and path attributes are required, desc is optional
   },
   desc_strategy = "path", -- If desc isn't present, use "path" or "filename", default is "path"
