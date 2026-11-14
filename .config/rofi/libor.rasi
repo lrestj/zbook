@@ -1,7 +1,5 @@
 /******************************************************************************
- * ROFI Color theme
- * User: Rasi
- * Copyright: Rasmus Steinke
+ * ROFI Libor Color theme
  ******************************************************************************/
 * {
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
