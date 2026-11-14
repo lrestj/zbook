@@ -9,3 +9,4 @@ if [ "$current_workspace" -gt 1 ]; then
     swaymsg workspace "$prev_workspace"
 fi
 
+#### END OF FILE ####

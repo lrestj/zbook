@@ -20,3 +20,5 @@ case $selected in
     "$d")
         sleep 0.5; systemctl poweroff;;
 esac
+
+#### END OF FILE ####

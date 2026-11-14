@@ -1,21 +1,21 @@
 #!/bin/bash
 
-a=" Vimrc"
-b="Sway conf"
-c="Waybar config"
-d="Tiskárna web"
-e="Waybar css"
-f="Stuff2remember"
-g="Configuration.nix"
-h="Flake.nix"
-i="Pkgs"
-j="Add new script"
-k="Keybindings"
-l="Windowsrules"
-m="Odpojit USB"
-z="Upravit ..."
+a="  Vimrc"
+b=" Sway conf"
+c=" Waybar config"
+d=" Tiskárna web"
+e=" Waybar css"
+f=" Stuff2remember"
+g=" Configuration.nix"
+h=" Flake.nix"
+i=" Pkgs"
+j=" Add new script"
+k=" Keybindings"
+l=" Windowsrules"
+m=" Odpojit USB"
+z=" Upravit ..."
 ai="\0icon\x1fvim"
-bi="\0icon\x1fniri"
+bi="\0icon\x1fsway"
 ci="\0icon\x1fwayland"
 di="\0icon\x1fprinter"
 ei="\0icon\x1fwayland"
@@ -24,9 +24,9 @@ gi="\0icon\x1fpreferences-system-services"
 hi="\0icon\x1fpreferences-system-services"
 ii="\0icon\x1fpreferences-system-services"
 ji="\0icon\x1fadd"
-ki="\0icon\x1fniri"
-li="\0icon\x1fniri"
-mi="\0icon\x1fudiskie-unmount"
+ki="\0icon\x1fsway"
+li="\0icon\x1fsway"
+mi="\0icon\x1fusb"
 zi="\0icon\x1fpreferences-system"
 
 selected=$(echo -e "\
@@ -44,7 +44,7 @@ $d$di\n\
 $f$fi\n\
 $j$ji\n\
 $z$zi\
-" | fuzzel --auto-select --lines 14 -d )
+" | fuzzel --auto-select --lines 16 -d -p "Vyber: ")
 case $selected in
     "$a")
         $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
@@ -78,3 +78,4 @@ case $selected in
 
 esac
 
+#### END OF FILE ####

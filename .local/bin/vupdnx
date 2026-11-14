@@ -3,3 +3,5 @@
 sed -i -e 's/hash.*/hash = "";/g' /home/libor/.dotfiles/nixos/modules/vimoverlay.nix
 $TERMINAL -e vim /home/libor/.dotfiles/nixos/modules/vimoverlay.nix +12 &
 $TERMINAL
+
+#### END OF FILE ####

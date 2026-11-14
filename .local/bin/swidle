@@ -6,4 +6,4 @@
        timeout 580 'notify-send -i video-display "Displej se za okamžik vypne"' \
        timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
 
-
+#### END OF FILE ####

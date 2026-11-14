@@ -28,5 +28,4 @@ Y=$(( (SCREEN_H - TARGET_H) / 2 ))
 # Formát: gravitace, X, Y, šířka, výška
 wmctrl -r :ACTIVE: -e 0,$X,$Y,$TARGET_W,$TARGET_H
 
-
-###  END OF FILE  ###
+#### END OF FILE ####

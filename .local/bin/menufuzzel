@@ -17,3 +17,5 @@ SELECTION=$(printf '%s\n' "${!OPTION[@]}" | fuzzel --dmenu --match-mode=exact --
 if [[ -n $SELECTION ]]; then
     ${OPTION[$SELECTION]}
 fi
+
+#### END OF FILE ####

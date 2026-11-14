@@ -55,3 +55,5 @@ find "$thumbnail_dir" -type f | while IFS= read -r thumbnail_file; do
     rm "$thumbnail_file"
   fi
 done
+
+#### END OF FILE ####

@@ -6,3 +6,5 @@ title="❌ Odpojeno"
 umount /home/libor/Public/Onedrive &&
 notify-send -t 2000 -c min -i $icon "$title" ||
 notify-send -t 3000 -i dialog-warning "Něco se pokazilo..."
+
+#### END OF FILE ####
