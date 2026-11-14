@@ -1,11 +1,5 @@
 configuration {
     font: "jetBrains mono 13";
-    auto-select: true;
-    matching: "prefix";
-    tokenize: false;
-    sorting-method: "fzf";
-    case-sensitive: false;
-    show-icons: false;
     dmenu {
         exit-if-empty: false;
     }
@@ -37,3 +31,5 @@ entry {
 inputbar {
     children:   [ prompt,textbox-prompt-colon,entry ];
 }
+
+// END OF FILE //
