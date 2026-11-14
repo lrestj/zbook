@@ -58,7 +58,7 @@ case $selected in
     "$e")
         $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/waybar/style.css";;
     "$f")
-        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.dotfiles/other/stuff2remember.txt";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.dotfiles/install/stuff2remember.txt";;
     "$g")
         $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.dotfiles/nixos/hosts/zbook/configuration.nix";;
     "$h")
