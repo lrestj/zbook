@@ -47,34 +47,34 @@ $z$zi\
 " | fuzzel --auto-select --lines 14 -d )
 case $selected in
     "$a")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
     "$b")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/sway/config";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/sway/config";;
     "$c")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/config.jsonc";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/waybar/config.jsonc";;
     "$d")
         $BROWSER http://192.168.77.5;;
     "$e")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/style.css";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/waybar/style.css";;
     "$f")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.dotfiles/other/stuff2remember.txt";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.dotfiles/other/stuff2remember.txt";;
     "$g")
-        $TERMINAL -e vim ~/.dotfiles/nixos/hosts/zbook/configuration.nix;;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.dotfiles/nixos/hosts/zbook/configuration.nix";;
     "$h")
-        $TERMINAL -e vim ~/.dotfiles/nixos/flake.nix;;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.dotfiles/nixos/flake.nix";;
     "$i")
-        $TERMINAL -e vim ~/.dotfiles/nixos/modules/pkgs.nix;;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.dotfiles/nixos/modules/pkgs.nix";;
     "$j")
         addnew;;
     "$k")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/sway/keybindings";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/sway/keybindings";;
     "$l")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/sway/windowsrules";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.config/sway/windowsrules";;
     "$m")
         fuzzel-umount;;
 
     "$z")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.local/bin/confm";;
+        $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.local/bin/confm";;
 
 esac
 
