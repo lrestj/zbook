@@ -1,63 +1,39 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# Menu
-a=" Vimrc"
-b="Niri conf"
-c="Waybar config"
-d="Fish config"
-e="Fastfetch"
-f="Stuff2remember"
-g="Add new script"
-h="QuickMarks"
-k="Odpojit..."
-l="Update Vim"
+# Pomocná funkce pro otevření souboru ve Vimu
+edit() {
+  "$TERMINAL" --class vim -e bash -c "sleep 0.1; exec vim $1" &
+}
 
-# Ikony
-ai="\0icon\x1fvim"
-bi="\0icon\x1fniri"
-ci="\0icon\x1fwayland"
-di="\0icon\x1ffish"
-ei="\0icon\x1fdesktop-effects"
-fi="\0icon\x1fnotepad"
-gi="\0icon\x1ftext-x-script"
-hi="\0icon\x1fbookmarks"
-ki="\0icon\x1funity-fallback-mount-helper"
+# Definice položek: "Název|ikona|příkaz"
+items=(
+" Niri config|niri|edit ~/.config/niri/config.kdl"
+" Odpojit USB|usb|rofi-umount"
+" Vimrc|vim|edit ~/.config/vim/vimrc"
+" Waybar config|wayland|edit ~/.config/waybar/config.jsonc"
+" Waybar css|wayland|edit ~/.config/waybar/style.css"
+" Clouds|icloud|clouds"
+" Tiskárna web|printer|$BROWSER http://192.168.77.5 &"
+" Stuff2remember|notepad|edit ~/.dotfiles/other/stuff2remember.txt"
+" Add new script|add|addnew"
+" Upravit ...|preferences-system-services|edit ~/.local/bin/confm"
+
+)
+
+# Jeden cyklus for pro přípravu menu i uložení příkazů
+declare -A cmds
+menu=""
+
+for item in "${items[@]}"; do
+  IFS='|' read -r label icon cmd <<< "$item"
+  menu+="${label}\0icon\x1f${icon}\n"
+  cmds["$label"]="$cmd"
+done
+
+# Výběr a přímé spuštění bez druhého cyklu
+selected=$(echo -en "$menu" | rofi -i -dmenu -p "Vyber")
+
+[[ -n "$selected" ]] && eval "${cmds[$selected]}" || notify-send -t 1200 -i dialog-information "Přerušeno uživatelem."
 
 
-selected=$(echo -e "\
-n\t$b$bi\n\
-v\t$a$ai\n\
-o\t$k$ki\n\
-ff\t$e$ei\n\
-w\t$c$ci\n\
-fi\t$d$di\n\
-s\t$f$fi\n\
-a\t$g$gi\n\
-q\t$h$hi\n\
-u\t$l$ai\
-" | fuzzel --lines 16 --with-nth 2 --accept-nth 2 --match-nth 1 --auto-select -d )
-
-case $selected in
-    "$a")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/vim/vimrc";;
-    "$b")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/niri/config.kdl";;
-    "$c")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/waybar/config.jsonc";;
-    "$d")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/fish/config.fish";;
-    "$e")
-        foot --app-id fastfetch bash -c "fastfetch; read";;
-    "$f")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.dotfiles/install/stuff2remember.txt";;
-    "$g")
-        addnew;;
-    "$k")
-        fuzzel-umount;;
-    "$h")
-        foot --app-id vim bash -c "sleep 0.1; exec vim ~/.config/qutebrowser/quickmarks";;
-    "$l")
-        foot vimbuild;;
-    *)
-        notify-send "Nic k provedení";;
-esac
+#### END OF FILE ####

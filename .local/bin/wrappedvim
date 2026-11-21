@@ -1,2 +1,2 @@
 #!/bin/bash
-foot --app-id vim bash -c "sleep 0.1; exec vim"
+$TERMINAL --class vim -e bash -c "sleep 0.1; exec vim"

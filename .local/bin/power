@@ -9,12 +9,12 @@ bi="\0icon\x1fsystem-log-out"
 ci="\0icon\x1fsystem-reboot"
 di="\0icon\x1fsystem-shutdown"
 
-selected=$(echo -e "$a$ai\n$b$bi\n$c$ci\n$d$di" | fuzzel --config ~/.config/fuzzel/power.ini -d )
+selected=$(echo -e "$b$bi\n$a$ai\n$c$ci\n$d$di" | fuzzel --config ~/.config/fuzzel/powercenter.ini --auto-select -d )
 case $selected in
     "$a")
         lockscreen;;
     "$b")
-        sleep 0.5; swaymsg exit;;
+        sleep 0.5; niri msg action quit --skip-confirmation;;
     "$c")
         sleep 0.5; loginctl reboot;;
     "$d")

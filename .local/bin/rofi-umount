@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+dir="/run/media/$USER"
+disks=$(ls -1 "$dir" 2>/dev/null)
+
+[ -z "$disks" ] && notify-send -i dialog-error "Není co odpojit." && exit 0
+
+selection=$(printf "%s\n" "$disks" | rofi -dmenu -theme-str 'window { height: 160px; }' -p "💾 Odpojit?" -no-auto-select)
+
+[ -n "$selection" ] && udiskie-umount "$dir/$selection"
+
+#### END OF FILE ####

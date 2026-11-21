@@ -98,3 +98,4 @@ Templates/
 .dotfiles/install/
 .inputrc
 .cargo/
+zbook/

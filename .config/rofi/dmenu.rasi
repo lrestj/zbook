@@ -1,0 +1,35 @@
+* {
+    foreground:     rgba ( 180, 180, 180, 100 % );
+    background:     rgba ( 46, 52, 64, 96 % );
+    border-color:   rgba ( 128, 0, 255, 100 % );
+}
+
+configuration {
+    font: "JetBrains Mono 13";
+    dmenu {
+        exit-if-empty: false;
+    }
+}
+
+window {
+    width: 350px;
+    border: 3;
+    padding: 8;
+}
+listview {
+    border: 0px dash 0px 0px ;
+    lines: 0;
+    scrollbar: false;
+}
+inputbar {
+    spacing: 0;
+    padding: 1px ;
+}
+entry {
+    placeholder: "";
+}
+inputbar {
+    children: [ prompt,textbox-prompt-colon,entry ];
+}
+
+// END OF FILE //

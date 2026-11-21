@@ -1,6 +1,6 @@
 include "mouse.kdl"
 workspace "Void"
-// prefer-no-csd
+prefer-no-csd
 screenshot-path "~/Screenshot %Y-%m-%d %H-%M-%S.png"
 
 hotkey-overlay { 
@@ -64,7 +64,8 @@ spawn-sh-at-startup "wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000"
 
 // Window rules
 window-rule {
-    match app-id="foot"
+    match app-id="Alacritty"
+    match app-id="$TERMINAL"
     match app-id="vim"
     match app-id="yazi"
     match app-id="fastfetch"
@@ -110,24 +111,21 @@ window-rule {
 
 binds {
     Mod+Shift+comma { show-hotkey-overlay; }
-    Mod+U hotkey-overlay-title="Update vim" { spawn-sh "foot --app-id update vimbuild"; }
-    Alt+B hotkey-overlay-title="Btop" { spawn-sh "foot --app-id btop btop"; }
-    Mod+X hotkey-overlay-title="PowerMenu" { spawn "powercenterniri"; }
+    Mod+U hotkey-overlay-title="Update vim" { spawn-sh "$TERMINAL --class update -e vimbuild"; }
+    Alt+B hotkey-overlay-title="Btop" { spawn-sh "$TERMINAL --class btop -e btop"; }
+    Mod+X hotkey-overlay-title="PowerMenu" { spawn "power"; }
     Mod+M hotkey-overlay-title="Config menu" { spawn "confm"; }
-    Mod+I hotkey-overlay-title="Config menu" { spawn "webm"; }
+    Mod+I hotkey-overlay-title="Config menu" { spawn-sh "pkill rofi || weblinks"; }
     Mod+S hotkey-overlay-title="Open a FileMgr" { spawn "nemo"; }
     Mod+K hotkey-overlay-title="Open a Galculator" { spawn-sh "galculator"; }
-    Mod+A hotkey-overlay-title="Open a Terminal" { spawn "foot"; }
-    Mod+Backslash hotkey-overlay-title="Run a menu" { spawn-sh "pkill fuzzel || exec fuzzel"; }
+    Mod+A hotkey-overlay-title="Open a Terminal" { spawn-sh "$TERMINAL"; }
+    Mod+Backslash hotkey-overlay-title="Run a menu" { spawn-sh "pkill rofi || exec rofi -show drun"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Super+B hotkey-overlay-title="Brave browser" { spawn-sh "brave-origin"; }
-    Super+V hotkey-overlay-title="Qutebrowser" { spawn-sh "qutebrowser"; }
-    Super+G hotkey-overlay-title="Gmail" { spawn-sh "$BROWSER www.gmail.com"; }
     Super+E hotkey-overlay-title="Vim" { spawn-sh "wrappedvim"; }
-    Mod+Y hotkey-overlay-title="Open a Yazi" { spawn-sh "foot --app-id yazi -e yazi"; }
-    Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "pkill fuzzel || cliphist-fuzzel-img"; }
+    Mod+Y hotkey-overlay-title="Open a Yazi" { spawn-sh "$TERMINAL --class yazi -e yazi"; }
+    Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "clipboard"; }
     Mod+Return hotkey-overlay-title="Waybar toggle" { spawn-sh "pkill waybar || waybar"; }
-    Mod+Alt+Return hotkey-overlay-title="Taskbar toggle" { spawn-sh "pkill waybar && waybar --config ~/.config/waybar/config-taskbar"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "volumeup"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "volumedown"; }
@@ -152,33 +150,22 @@ binds {
     Mod+Shift+J  { move-window-down; }
     Mod+Shift+K  { move-window-up; }
     Mod+Shift+L  { move-column-right; }
-    Mod+Home { focus-column-first; }
-    Mod+End  { focus-column-last; }
-    Mod+Ctrl+Home { move-column-to-first; }
-    Mod+Ctrl+End  { move-column-to-last; }
-
-    // Scratschpad
-    // Mod+S { spawn-sh "niri msg workspaces | grep \"\\*.*Void\" && niri msg action focus-workspace-previous || niri msg action focus-workspace Void"; }
 
     // Workspaces:
-    Alt+down { focus-workspace-down; }
-    Alt+up { focus-workspace-up; }
-    Alt+Page_Down      { focus-workspace-down; }
-    Alt+Page_Up        { focus-workspace-up; }
-    Mod+Alt+Page_Down { move-column-to-workspace-down; }
-    Mod+Alt+Page_Up   { move-column-to-workspace-up; }
-    Mod+Shift+Page_Down { move-workspace-down; }
-    Mod+Shift+Page_Up   { move-workspace-up; }
+    Alt+right { focus-workspace-down; }
+    Alt+left { focus-workspace-up; }
+    Mod+Alt+right { move-column-to-workspace-down; }
+    Mod+Alt+left { move-column-to-workspace-up; }
 
     Mod+Alt+S { move-column-to-workspace "Void" focus=false; }
-    Mod+Alt+left { move-column-to-workspace 1; }
-    Mod+Alt+right { move-column-to-workspace 2; }
-    Mod+Alt+down { move-column-to-workspace 3; }
-    Mod+Alt+up { move-column-to-workspace 4; }
-    Alt+Shift+left { move-column-to-workspace 1 focus=false; }
-    Alt+Shift+right { move-column-to-workspace 2 focus=false; }
-    Alt+Shift+down { move-column-to-workspace 3 focus=false; }
-    Alt+Shift+up { move-column-to-workspace 4 focus=false; }
+    Mod+Alt+KP_End { move-column-to-workspace 1; }
+    Mod+Alt+KP_Down { move-column-to-workspace 2; }
+    Mod+Alt+KP_Page_Down { move-column-to-workspace 3; }
+    Mod+Alt+KP_Left { move-column-to-workspace 4; }
+    Shift+KP_End { move-column-to-workspace 1 focus=false; }
+    Shift+KP_Down { move-column-to-workspace 2 focus=false; }
+    Shift+KP_Page_Down { move-column-to-workspace 3 focus=false; }
+    Shift+KP_Left { move-column-to-workspace 4 focus=false; }
 
     // Move the focused window in and out of a column.
     Mod+Comma  { consume-window-into-column; }
@@ -187,15 +174,10 @@ binds {
     Mod+Ctrl+right { consume-or-expel-window-right; }
 
     // Column preset and size:
-    Mod+R { switch-preset-column-width; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Alt+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }
     Mod+KP_Insert { center-column; }
-    Mod+Ctrl+C { center-visible-columns; }
-    Mod+Shift+KP_Insert { center-visible-columns; }
     Mod+Shift+left { set-column-width "-5%"; }
     Mod+Shift+right { set-column-width "+5%"; }
     Mod+Shift+up { set-window-height "-5%"; }

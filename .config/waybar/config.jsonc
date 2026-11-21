@@ -1,6 +1,6 @@
 [{
     "layer": "top",
-    "height": 35,
+    "height": 40,
     "autohide": true,
     "autohide-blocked": false,
     "margin-top": 3,
@@ -23,13 +23,12 @@
     "modules-right": [
         "idle_inhibitor",
         "tray",
-        "mpd",
         "pulseaudio",
+        "power-profiles-daemon",
         "backlight",
         "clock",
-        "battery",
-        "power-profiles-daemon",
-        "custom/power"
+        "battery"
+        // "custom/power"
     ],
 
     "niri/workspaces": {
@@ -41,12 +40,12 @@
     },
 
     "memory": {
-        "format": "  Menu  RAM   {}% ",
+        "format": "     {}% ",
         "on-click": "pkill fuzzel || fuzzel --config ~/.config/fuzzel/menu.ini"
     },
 
     "cpu": {
-        "format": "CPU   {usage}%",
+        "format": "  {usage}%",
         "tooltip": false,
         "on-click": "pkill $TERMINAL || $TERMINAL"
     },
@@ -146,7 +145,7 @@
    "clock": {
        "timezone": "Europe/Prague",
        "locale": "cs_CZ.UTF-8",
-       "format": "  {:%H:%M }",
+       "format": " {:%H:%M }",
        "tooltip-format": "<big>{:L%e L%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
        "format-alt": "{:L%A %d.%m.%Y}"
    },
@@ -156,12 +155,13 @@
            "warning": 30,
            "critical": 15
        },
-       "format": "{capacity}% {icon} ",
-       "format-full": "{capacity}% {icon} ",
-       "format-charging": "{capacity}% ",
-       "format-plugged": "{capacity}% ",
-       "format-alt": "{time} {icon}",
-       "format-icons": ["", "", "", "", ""]
+       "format": "{icon} {capacity}%  ❌",
+       "format-full": "{icon} {capacity}%  ❌",
+       "format-charging": "{capacity}%  ❌",
+       "format-plugged": " {capacity}%  ❌",
+       "format-alt": "{icon} {time}  ❌",
+       "format-icons": ["", "", "", "", ""],
+       "on-click": "pkill fuzzel || powerniri"
    },
 
    "power-profiles-daemon": {

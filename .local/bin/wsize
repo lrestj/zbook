@@ -1,3 +1,0 @@
-#!/bin/bash
-
- swaymsg -t get_tree | jq -r '..|try select(.type=="floating_con") | [.id, .name, .rect.width, .rect.height] | @csv'
