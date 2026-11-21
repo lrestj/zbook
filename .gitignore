@@ -99,3 +99,4 @@ Templates/
 .inputrc
 .cargo/
 zbook/
+.config/vim/autoload/plug.vim
