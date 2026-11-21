@@ -8,6 +8,8 @@ edit() {
 # Definice položek: "Název|ikona|příkaz"
 items=(
 " Niri config|niri|edit ~/.config/niri/config.kdl"
+" Keybinds|niri|edit ~/.config/niri/keybinds.kdl"
+" Windows Rules|niri|edit ~/.config/niri/windowsrules.kdl"
 " Odpojit USB|usb|rofi-umount"
 " Vimrc|vim|edit ~/.config/vim/vimrc"
 " Waybar config|wayland|edit ~/.config/waybar/config.jsonc"
