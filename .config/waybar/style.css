@@ -95,7 +95,10 @@ button:hover {
     margin-right: 7px;
 }
 
-#window,
+#window {
+    margin: 0px 20px;
+}
+
 #workspaces {
     margin: 0px 4px;
 }

@@ -50,7 +50,7 @@ layout {
 }
 
 // Startup list:
-spawn-at-startup "swaybg" "-i" "/home/libor/.dotfiles/wallpapers/wallpaper4.jpg" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/libor/.dotfiles/wallpapers/void.png" "-m" "fill"
 spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "nirileft"
 spawn-sh-at-startup "niri_tile.py"
