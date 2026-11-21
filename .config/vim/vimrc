@@ -43,6 +43,7 @@ colorscheme wildcharm
 syntax on
 filetype plugin indent on
 set mouse=a
+set ttymouse=sgr
 set nu cul autoread hidden lz
 set title titlestring=%F
 set ruler rulerformat=%43(\ \ %v\ \ \ %l/%L\ \ %p%%%=\ \%)
