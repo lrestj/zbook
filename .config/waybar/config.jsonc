@@ -19,7 +19,10 @@
         "custom/fm",
         "custom/browser"
     ],
-    "modules-center": [ "wlr/taskbar" ],
+    "modules-center": [ 
+        "niri/window",
+        "wlr/taskbar" 
+    ],
     "modules-right": [
         "idle_inhibitor",
         "tray",
@@ -94,6 +97,14 @@
         "tooltip-format": "Internet",
         "on-click": "$BROWSER"
     },
+
+
+    "niri/window": {
+        "format": "{title}",
+        "icon": false,
+        "icon-size": 18,
+        "separate-outputs": false
+   },
 
    "wlr/taskbar": {
        "format": "{icon}",
