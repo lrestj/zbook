@@ -1,0 +1,42 @@
+#### SWAY CONFIG ####
+
+### Wallpaper & cursor theme
+output * bg "/home/libor/.dotfiles/wallpapers/nixos.png" fill
+    seat seat0 xcursor_theme Bibata-Modern-Classic 28
+
+### Input configuration
+    focus_follows_mouse no
+    input type:touchpad {
+        tap enabled
+        dwt enabled
+        natural_scroll disabled
+        pointer_accel 0.3
+    }
+    input type:keyboard {
+        xkb_layout "cz"
+        xkb_options caps:swapescape
+        xkb_numlock enabled
+    }
+
+### Borders and tabline look
+    default_border pixel 4
+    default_floating_border pixel 4
+    client.focused #8000FF #8000FF #8000FF
+    font none 0.1
+    titlebar_padding 3
+
+### Autostart
+    exec waybar
+    exec mako &
+    exec nm-applet --indicator &
+    exec --no-startup-id swidle
+    exec wl-paste --watch cliphist store
+    exec wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000 # Screen blue light settings
+    exec udiskie -t
+
+### Important for Xdg Portals to work!!!
+    include ./keybindings
+    include ./windowsrules
+    include /etc/sway/config.d/*
+
+#### END OF FILE #####

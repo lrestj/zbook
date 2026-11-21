@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+# Pomocná funkce pro otevření souboru ve Vimu
+edit() {
+  "$TERMINAL" --class vim -e bash -c "sleep 0.1; exec vim $1" &
+}
+
+# Definice položek: "Název|ikona|příkaz"
+items=(
+" Sway conf|sway|edit ~/.config/sway/config"
+" Keybindings|sway|edit ~/.config/sway/keybindings"
+" Windowsrules|sway|edit ~/.config/sway/windowsrules"
+" Odpojit USB|usb|rofi-umount"
+" Configuration.nix|nix-snowflake|edit ~/.dotfiles/nixos/hosts/zbook/configuration.nix"
+" Flake.nix|nix-snowflake|edit ~/.dotfiles/nixos/flake.nix"
+" Pkgs|nix-snowflake|edit ~/.dotfiles/nixos/modules/pkgs.nix"
+" Vimrc|vim|edit ~/.config/vim/vimrc"
+" Waybar config|wayland|edit ~/.config/waybar/config.jsonc"
+" Waybar css|wayland|edit ~/.config/waybar/style.css"
+" Clouds|icloud|clouds"
+" Tiskárna web|printer|$BROWSER http://192.168.77.5 &"
+" Stuff2remember|notepad|edit ~/.dotfiles/other/stuff2remember.txt"
+" Add new script|add|addnew"
+" Upravit ...|preferences-system-services|edit ~/.local/bin/confm"
+
+)
+
+# Jeden cyklus for pro přípravu menu i uložení příkazů
+declare -A cmds
+menu=""
+
+for item in "${items[@]}"; do
+  IFS='|' read -r label icon cmd <<< "$item"
+  menu+="${label}\0icon\x1f${icon}\n"
+  cmds["$label"]="$cmd"
+done
+
+# Výběr a přímé spuštění bez druhého cyklu
+selected=$(echo -en "$menu" | rofi -i -dmenu -p "Vyber")
+
+[[ -n "$selected" ]] && eval "${cmds[$selected]}" || notify-send -t 1200 -i dialog-information "Přerušeno uživatelem."
+
+
+#### END OF FILE ####

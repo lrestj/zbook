@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=XnView MP
+Comment=View and manage images
+Exec=/run/current-system/sw/bin/xnviewmp
+Icon=/home/libor/.dotfiles/icons/xnviewmp.svg
+Terminal=false
+Type=Application
+Categories=Graphics;Photography;Viewer;
+MimeType=image/jpeg;image/png;image/gif;...;  # Add all supported MIME types
+

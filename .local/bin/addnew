@@ -1,0 +1,18 @@
+#!/bin/bash
+
+sel=$(rofi -dmenu -config ~/.config/rofi/dmenu.rasi -p "Jméno souboru" < /dev/null)
+file=~/.local/bin/$sel
+
+case $sel in
+    "")
+        notify-send -i dialog-information -t 1200 "Nezadali jste jméno" "Konec bez vytvoření souboru"
+    ;;
+    *)
+        touch $file
+        chmod +x $file
+        echo "#!/bin/bash" > $file
+        $TERMINAL -e vim $file
+    ;;
+esac
+
+#### END OF FILE ####

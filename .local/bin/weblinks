@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+# Položky ve formátu "Název|URL" (v přesném pořadí)
+items=(
+    " Sdilej.cz|https://sdilej.cz"
+    " Prehraj.to|https://prehraj.to"
+    " Github Zbook|https://github.com"
+    " E-mail|https://gmail.com"
+    " Nixos pkgs|https://nixos.org"
+    " Nerd Font|https://nerdfonts.com"
+)
+
+edit_label=" Upravit ..."
+
+# Sestavení menu a přímé odeslání do fuzzelu
+selected=$(
+    {
+        for item in "${items[@]}"; do
+            printf "%s\0icon\x1fbrave\n" "${item%%|*}"
+        done
+        printf "%s\0icon\x1fpreferences-system-services\n" "$edit_label"
+    } | rofi -config /home/libor/.config/rofi/weblinks.rasi -i -dmenu -theme-str 'inputbar { enabled: false; }'
+)
+
+# Vyhodnocení přerušení (Esc / zavření bez výběru)
+if [[ -z "$selected" ]]; then
+    notify-send -t 1200 -i dialog-information "Přerušeno uživatelem."
+    exit 0
+fi
+
+# Otevření editoru
+if [[ "$selected" == "$edit_label" ]]; then
+    $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.local/bin/weblinks"
+    exit 0
+fi
+
+# Otevření vybraného odkazu
+for item in "${items[@]}"; do
+    if [[ "${item%%|*}" == "$selected" ]]; then
+        $BROWSER "${item#*|}"
+        break
+    fi
+done
+
+#### END OF FILE ####

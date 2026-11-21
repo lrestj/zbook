@@ -1,0 +1,141 @@
+* {
+foreground:                  rgba ( 180, 180, 180, 100 % );
+selected-normal-foreground:  rgba ( 14 , 28, 150, 100 % );
+active-foreground:           rgba ( 129, 91, 164, 100 % );
+urgent-foreground:           rgba ( 239, 97, 85, 100 % );
+
+background:                  rgba ( 46, 52, 64, 96 % );
+background-color:            @background;
+selected-normal-background:  rgba ( 100, 114, 125, 100 % );
+selected-active-background:  rgba ( 129, 91, 164, 33 % );
+
+border-color:                rgba ( 128, 0, 255, 100 % );
+separatorcolor:              rgba ( 239, 97, 85, 18 % );
+}
+
+configuration {
+    font: "Inter 14";
+    auto-select: true;
+    case-sensitive: false;
+    show-icons: true;
+}
+
+window {
+    height: 355px;
+    width: 300px;
+    background-color: @background;
+    border:           2;
+    padding:          5;
+}
+mainbox {
+    border:  0;
+    padding: 0;
+}
+message {
+    border:       1px dash 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
+}
+textbox {
+    text-color: @foreground;
+}
+listview {
+    fixed-height: 0;
+    border:       0px dash 0px 0px ;
+    border-color: @separatorcolor;
+    spacing:      7px ;
+    scrollbar:    false;
+    padding:      5px 5px 5px ;
+}
+element {
+    border:  0;
+    padding: 1px ;
+}
+element-icon {
+    size: 1.7em;
+    margin: 0 2px 0  0;
+}
+element-text {
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color:       inherit;
+}
+element.normal.normal {
+    background-color: transparent;
+    text-color:       @foreground;
+}
+element.normal.urgent {
+    background-color: @background;
+    text-color:       @urgent-foreground;
+}
+element.normal.active {
+    background-color: @background;
+    text-color:       @active-foreground;
+}
+element.selected.normal {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+element.selected.urgent {
+    background-color: @selected-active-background;
+    text-color:       @urgent-foreground;
+}
+element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @active-foreground;
+}
+element.alternate.normal {
+    background-color: transparent;
+    text-color:       @foreground;
+}
+element.alternate.urgent {
+    background-color: @background;
+    text-color:       @urgent-foreground;
+}
+element.alternate.active {
+    background-color: @background;
+    text-color:       @active-foreground;
+}
+scrollbar {
+    width:        4px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+mode-switcher {
+    border:       0px dash 0px 0px ;
+    border-color: @separatorcolor;
+}
+button.selected {
+    background-color: @selected-normal-background;
+    text-color:       @foreground;
+}
+inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+}
+case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+entry {
+    placeholder: "";
+    spacing:    0;
+    text-color: @foreground;
+}
+prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+}
+
+// END OF FILE //

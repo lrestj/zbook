@@ -1,0 +1,5 @@
+#!/bin/bash
+
+swaymsg -t get_tree | jq -r '.. | select(.pid? and .visible?) | select(.name? != null and .pid? != null) | "\(.app_id)  \(.name) [Rozměry: \(.rect.width)x\(.rect.height)  Pozice: x=\(.rect.x), y=\(.rect.y)]"'
+
+#### END OF FILE ####

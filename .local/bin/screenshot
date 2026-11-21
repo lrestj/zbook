@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Definice možností v pořadí: "Popisek|Ikona|Příkaz_pro_grimshot"
+options=(
+    "Okno nebo výběr|gnome-screenshot|anything"
+    "Celá plocha|emblem-photos|output"
+)
+
+menu=""
+for item in "${options[@]}"; do
+    IFS="|" read -r label icon _ <<< "$item"
+    menu+="${label}\0icon\x1f${icon}\n"
+done
+
+selected=$(echo -en "$menu" | rofi -dmenu -i -p "Snímek obrazovky" -config ~/.config/rofi/clouds.rasi -theme-str 'window { height: 150px; }')
+sleep 0.2
+
+for item in "${options[@]}"; do
+    IFS="|" read -r label _ target <<< "$item"
+    if [[ "$selected" == "$label" ]]; then
+        grimshot --notify save "$target"
+        exit 0
+    fi
+done
+
+notify-send -t 1200 -i dialog-information "Přerušeno uživatelem"
+
+#### END OF FILE ####

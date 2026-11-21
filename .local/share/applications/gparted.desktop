@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name[cs]=GParted
+GenericName[cs]=Editor oddílů
+Comment[cs]=Vytvářejte, přeuspořádávejte a odstraňujte diskové oddíly
+Exec=sudo -E sh -c "gparted &"
+Icon=gparted
+Terminal=true
+Type=Application
+Categories=GNOME;System;Filesystem;
+Keywords[cs]=oddíl;disk;
+StartupNotify=true

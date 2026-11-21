@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Fastfetch
+Comment=System Information Tool
+Exec=bash -c "fastfetch; read"
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=System;Information;

@@ -1,0 +1,19 @@
+// -*- mode: jsonc -*-
+
+{
+    "layer": "top", // Waybar at top layer
+    "position": "right", 
+    //"height": 30,
+    // "width": 1280,
+    "spacing": 4,
+    // Choose the order of the modules
+    "modules-center": ["wlr/taskbar"],
+    // Modules configuration
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 38,
+        "tooltip-format": "{title} | {app_id}",
+        "on-click": "activate",
+        "on-click-right": "close"
+    }
+}

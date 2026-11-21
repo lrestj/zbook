@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# --- NASTAVENÍ CEST A RCLONE REMOTES ---
+ONEDRIVE_DIR="$HOME/Public/OneDrive"
+GDRIVE_DIR="$HOME/Public/GoogleDrive"
+
+ONEDRIVE_REMOTE="Onedrive:"
+GDRIVE_REMOTE="GoogleDrive:"
+
+# --- POMOCNÁ FUNKCE PRO ODPOJENÍ ---
+unmount_dir() {
+    local dir="$1"
+    if command -v fusermount3 >/dev/null 2>&1; then
+        fusermount3 -u "$dir"
+    elif command -v fusermount >/dev/null 2>&1; then
+        fusermount -u "$dir"
+    else
+        umount "$dir"
+    fi
+}
+
+# --- SESTAVENÍ MENU PODLE STAVU PŘIPOJENÍ ---
+items=()
+
+if mountpoint -q "$ONEDRIVE_DIR" 2>/dev/null; then
+    items+=("Odpojit OneDrive|ms-onedrive|umonedrive")
+else
+    items+=("Připojit OneDrive|ms-onedrive|onedrive")
+fi
+
+if mountpoint -q "$GDRIVE_DIR" 2>/dev/null; then
+    items+=("Odpojit Google Disk|google-drive|umgoogledrive")
+else
+    items+=("Připojit Google Disk|google-drive|googledrive")
+fi
+
+# --- ZOBRAZENÍ ROFI MENU ---
+selected=$(
+    for item in "${items[@]}"; do
+        IFS="|" read -r label icon _ <<< "$item"
+        printf "%s\0icon\x1f%s\n" "$label" "$icon"
+    done | rofi -dmenu -config /home/libor/.config/rofi/clouds.rasi -theme-str 'inputbar { enabled: false; }' -p "Úložiště: " || true
+)
+
+if [[ -z "$selected" ]]; then
+    notify-send -t 1200 -i dialog-information "Úložiště" "Zrušeno uživatelem"
+    exit 0
+fi
+
+# --- ZPRACOVÁNÍ VÝBĚRU ---
+action=""
+for item in "${items[@]}"; do
+    IFS="|" read -r label _ act <<< "$item"
+    if [[ "$label" == "$selected" ]]; then
+        action="$act"
+        break
+    fi
+done
+
+case "$action" in
+    onedrive)
+        mkdir -p "$ONEDRIVE_DIR"
+        rclone mount "$ONEDRIVE_REMOTE" "$ONEDRIVE_DIR" --vfs-cache-mode writes --daemon
+        notify-send -i ms-onedrive "Úložiště" "OneDrive byl připojen"
+        ;;
+    umonedrive)
+        unmount_dir "$ONEDRIVE_DIR"
+        notify-send -i ms-onedrive "Úložiště" "OneDrive byl odpojen"
+        ;;
+    googledrive)
+        mkdir -p "$GDRIVE_DIR"
+        rclone mount "$GDRIVE_REMOTE" "$GDRIVE_DIR" --vfs-cache-mode writes --daemon
+        notify-send -i google-drive "Úložiště" "Google Disk byl připojen"
+        ;;
+    umgoogledrive)
+        unmount_dir "$GDRIVE_DIR"
+        notify-send -i google-drive "Úložiště" "Google Disk byl odpojen"
+        ;;
+    *)
+        notify-send -i dialog-error "Úložiště" "Neznámá volba: $selected"
+        exit 1
+        ;;
+esac
+
+#### END OF FILE ####
