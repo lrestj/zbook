@@ -1,0 +1,88 @@
+// Niri Key Bindings //
+
+binds {
+    Mod+Shift+comma { show-hotkey-overlay; }
+    Mod+U hotkey-overlay-title="Update vim" { spawn-sh "$TERMINAL --class update -e vimbuild"; }
+    Alt+B hotkey-overlay-title="Btop" { spawn-sh "$TERMINAL --class btop -e btop"; }
+    Mod+X hotkey-overlay-title="PowerMenu" { spawn "power"; }
+    Mod+M hotkey-overlay-title="Config menu" { spawn "confm"; }
+    Mod+I hotkey-overlay-title="Config menu" { spawn-sh "pkill rofi || weblinks"; }
+    Mod+S hotkey-overlay-title="Open a FileMgr" { spawn "nemo"; }
+    Mod+K hotkey-overlay-title="Open a Galculator" { spawn-sh "galculator"; }
+    Mod+A hotkey-overlay-title="Open a Terminal" { spawn-sh "$TERMINAL"; }
+    Mod+Backslash hotkey-overlay-title="Run a menu" { spawn-sh "pkill rofi || exec rofi -show drun"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+B hotkey-overlay-title="Brave browser" { spawn-sh "brave-origin"; }
+    Super+E hotkey-overlay-title="Vim" { spawn-sh "wrappedvim"; }
+    Mod+Y hotkey-overlay-title="Open a Yazi" { spawn-sh "$TERMINAL --class yazi -e yazi"; }
+    Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "clipboard"; }
+    Mod+Return hotkey-overlay-title="Waybar toggle" { spawn-sh "pkill waybar || waybar"; }
+
+    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "volumeup"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "volumedown"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "mute"; }
+    XF86AudioMicMute     allow-when-locked=true { spawn-sh "micmute"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessup"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessdown"; }
+    
+    // Overview, tabbed & floating mode and closing window:
+    Mod+O repeat=false { toggle-overview; }
+    Mod+W { toggle-column-tabbed-display; }
+    Mod+Shift+f    { toggle-window-floating; }
+    Mod+space { switch-focus-between-floating-and-tiling; }
+    Mod+Q repeat=false { close-window; }
+
+    // Column focus and movement:
+    Mod+Left { focus-column-left; }
+    Mod+Down { focus-window-down; }
+    Mod+Up   { focus-window-up; }
+    Mod+Right { focus-column-right; }
+    Mod+Shift+H  { move-column-left; }
+    Mod+Shift+J  { move-window-down; }
+    Mod+Shift+K  { move-window-up; }
+    Mod+Shift+L  { move-column-right; }
+
+    // Workspaces:
+    Alt+right { focus-workspace-down; }
+    Alt+left { focus-workspace-up; }
+    Mod+Alt+right { move-column-to-workspace-down; }
+    Mod+Alt+left { move-column-to-workspace-up; }
+
+    Mod+Alt+S { move-column-to-workspace "Void" focus=false; }
+    Mod+Alt+KP_End { move-column-to-workspace 1; }
+    Mod+Alt+KP_Down { move-column-to-workspace 2; }
+    Mod+Alt+KP_Page_Down { move-column-to-workspace 3; }
+    Mod+Alt+KP_Left { move-column-to-workspace 4; }
+    Shift+KP_End { move-column-to-workspace 1 focus=false; }
+    Shift+KP_Down { move-column-to-workspace 2 focus=false; }
+    Shift+KP_Page_Down { move-column-to-workspace 3 focus=false; }
+    Shift+KP_Left { move-column-to-workspace 4 focus=false; }
+
+    // Move the focused window in and out of a column.
+    Mod+Comma  { consume-window-into-column; }
+    Mod+Period { expel-window-from-column; }
+    Mod+Ctrl+left  { consume-or-expel-window-left; }
+    Mod+Ctrl+right { consume-or-expel-window-right; }
+
+    // Column preset and size:
+    Mod+F { maximize-column; }
+    Mod+Alt+F { fullscreen-window; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+    Mod+KP_Insert { center-column; }
+    Mod+Shift+left { set-column-width "-5%"; }
+    Mod+Shift+right { set-column-width "+5%"; }
+    Mod+Shift+up { set-window-height "-5%"; }
+    Mod+Shift+down { set-window-height "+5%"; }
+
+    // Screenshot:
+    Ctrl+Insert { screenshot; }
+    Alt+Insert { screenshot-screen; }
+    Mod+Insert { screenshot-window; }
+
+    // The quit actions:
+    Ctrl+Alt+Delete { quit; }
+    Mod+Shift+P { power-off-monitors; }
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+}
+
+// END OF FILE //

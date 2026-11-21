@@ -6,6 +6,10 @@ nnoremap Q ZQ
 noremap <leader><leader> :set relativenumber!<CR>
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
+"Line Up nad Down
+nnoremap <A-up> :m .-2<CR>==
+nnoremap <A-down> :m .+1<CR>==
+
 "Window next, buffer next, delete and vsplit
 noremap <leader>n <C-w>w
 noremap <leader>b :bn<CR>
@@ -38,7 +42,7 @@ set background=dark
 colorscheme wildcharm
 syntax on
 filetype plugin indent on
-set nu cul autoread hidden
+set nu cul autoread hidden lz
 set title titlestring=%F
 set ruler rulerformat=%43(\ \ %v\ \ \ %l/%L\ \ %p%%%=\ \%)
 set directory=$HOME
@@ -55,7 +59,7 @@ hi LineNr ctermbg=234
 hi cursorline ctermbg=235   
 
 "Plugins
-call plug#begin()
+call plug#begin('/home/libor/.config/vim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'Konfekt/filepicker.vim'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -63,6 +67,15 @@ call plug#begin()
     Plug 'junegunn/vim-peekaboo'
 call plug#end()
 
-let g:peekaboo_window='vertical botright 40new'
+let g:peekaboo_window='botright vertical 40new'
+
+" Alacritty Alt fix
+    let c='a'
+    while c <= 'z'
+      exec "set <A-".c.">=\e".c
+      exec "imap \e".c." <A-".c.">"
+      let c = nr2char(1+char2nr(c))
+    endw
+    set timeout ttimeoutlen=50
 
 """"" END OF FILE """""
