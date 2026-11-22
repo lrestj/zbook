@@ -2,8 +2,8 @@
 
 binds {
     Mod+Shift+comma { show-hotkey-overlay; }
-    Mod+U hotkey-overlay-title="Update vim" { spawn-sh "$TERMINAL --class update -e vimbuild"; }
-    Alt+B hotkey-overlay-title="Btop" { spawn-sh "$TERMINAL --class btop -e btop"; }
+    Mod+U hotkey-overlay-title="Update vim" { spawn-sh "$TERMINAL --app-id update -e vimbuild"; }
+    Alt+B hotkey-overlay-title="Btop" { spawn-sh "$TERMINAL --app-id btop -e btop"; }
     Mod+X hotkey-overlay-title="PowerMenu" { spawn "power"; }
     Mod+M hotkey-overlay-title="Config menu" { spawn "confm"; }
     Mod+I hotkey-overlay-title="Config menu" { spawn-sh "pkill rofi || weblinks"; }
@@ -14,7 +14,7 @@ binds {
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Super+B hotkey-overlay-title="Brave browser" { spawn-sh "$BROWSER"; }
     Super+E hotkey-overlay-title="Vim" { spawn-sh "wrappedvim"; }
-    Mod+Y hotkey-overlay-title="Open a Yazi" { spawn-sh "$TERMINAL --class yazi -e yazi"; }
+    Mod+Y hotkey-overlay-title="Open a Yazi" { spawn-sh "$TERMINAL --app-id yazi -e yazi"; }
     Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "clipboard"; }
     Mod+Return hotkey-overlay-title="Waybar toggle" { spawn-sh "pkill waybar || waybar"; }
 

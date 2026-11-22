@@ -4,7 +4,7 @@
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
 export BROWSER=brave-browser
-export TERMINAL=alacritty
+export TERMINAL=foot
 export kalk=galculator
 export EDITOR=vim
 export GTK_THEME=Adwaita:dark

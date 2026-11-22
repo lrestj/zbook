@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Fastfetch
 Comment=System Information Tool
-Exec=alacritty --class fastfetch -e bash -c "fastfetch; read"
+Exec=foot --app-id fastfetch -e bash -c "fastfetch; read"
 Icon=utilities-terminal
 Terminal=false
 Type=Application

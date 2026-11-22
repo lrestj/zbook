@@ -5,7 +5,7 @@ include "keybinds.kdl"
 include "windowsrules.kdl"
 
 prefer-no-csd
-screenshot-path "~/Screenshot %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/ %Y-%m-%d %H-%M-%S.png"
 
 hotkey-overlay { 
     skip-at-startup
@@ -36,16 +36,8 @@ cursor {
 
 layout {
     gaps 4
-    center-focused-column "never"
-    preset-column-widths {
-        proportion 0.333
-        proportion 0.5
-        proportion 1.0
-    }
     focus-ring {
-        width 4
         active-color "#8000ff"
-        inactive-color "#505050"
     }
 }
 
