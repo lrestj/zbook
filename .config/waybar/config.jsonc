@@ -43,7 +43,7 @@
 
     "memory": {
         "format": "    {}% ",
-        "on-click": "pkill fuzzel || fuzzel --config ~/.config/fuzzel/menu.ini"
+        "on-click": "pkill rofi || rofi -show drun -config ~/.config/rofi/menu.rasi"
     },
 
     "cpu": {
