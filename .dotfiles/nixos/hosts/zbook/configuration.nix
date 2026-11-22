@@ -33,7 +33,7 @@
       variables = {
           EDITOR = "vim";
           BROWSER = "brave";
-          TERMINAL = "alacritty";
+          TERMINAL = "foot";
       };
       sessionVariables = {
           # QT_QPA_PLATFORMTHEME= "qt6ct";

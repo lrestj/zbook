@@ -2,7 +2,7 @@
 
 # Pomocná funkce pro otevření souboru ve Vimu
 edit() {
-  "$TERMINAL" --class vim -e bash -c "sleep 0.1; exec vim $1" &
+  "$TERMINAL" --app-id vim -e bash -c "sleep 0.1; exec vim $1" &
 }
 
 # Definice položek: "Název|ikona|příkaz"

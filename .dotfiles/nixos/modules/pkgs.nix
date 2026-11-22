@@ -22,7 +22,6 @@
   
     environment.systemPackages =
         (with pkgs; [
-            alacritty ueberzugpp
             baobab
             brave-origin
             btop
