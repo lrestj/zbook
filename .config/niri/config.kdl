@@ -30,6 +30,6 @@ spawn-sh-at-startup "nm-applet --indicator"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
 spawn-sh-at-startup "udiskie -t"
 spawn-sh-at-startup "wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000"
-spawn-sh-at-startup "sleep 2; nfsmount"
+spawn-sh-at-startup "sleep 4; nfsmount"
 
 // END OF FILE //

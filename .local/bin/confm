@@ -11,6 +11,7 @@ items=(
 " Keybinds|niri|edit ~/.config/niri/keybinds.kdl"
 " Windows Rules|niri|edit ~/.config/niri/windowsrules.kdl"
 " Odpojit USB|usb|rofi-umount"
+" Připojit NAS|synology-drive|nfsmount"
 " Vimrc|vim|edit ~/.config/vim/vimrc"
 " Waybar config|wayland|edit ~/.config/waybar/config.jsonc"
 " Waybar css|wayland|edit ~/.config/waybar/style.css"

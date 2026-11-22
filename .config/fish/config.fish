@@ -14,6 +14,7 @@ end
 # Set up fzf key bindings
 fzf --fish | source
 
+abbr vsv "sudo vsv"
 abbr pc "niri msg pick-color"
 abbr pw "niri msg pick-window"
 abbr !! --position anywhere --function last_history_item
