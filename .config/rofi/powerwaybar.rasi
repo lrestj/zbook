@@ -24,10 +24,8 @@ configuration {
 window {
     location: north east;
     anchor: north east;
-    x-offset: 3px;
-    y-offset: 2px;
     height: 195px;
-    width: 200px;
+    width: 190px;
     background-color: @background;
     border:           2;
     padding:          5;
