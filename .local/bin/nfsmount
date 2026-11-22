@@ -1,6 +1,11 @@
 #!/bin/bash
 
 sleep 3
-mount /nfs/Nas && mount /nfs/FilmyNas && mount /nfs/HudbaNas &&
-notify-send -i dialog-information "Nas připojení O.K." ||
-notify-send -i dialog-warning "Chyba Nas připojení"
+
+if mount /nfs/Nas && mount /nfs/FilmyNas && mount /nfs/HudbaNas; then
+    notify-send -i dialog-information "Nas" "Připojení O.K."
+else
+    notify-send -i dialog-warning "Chyba" "Nas připojení selhalo"
+fi
+
+# #### END OF FILE ####
