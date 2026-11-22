@@ -1,51 +1,27 @@
 // Niri config //
 
-include "mouse.kdl"
-include "keybinds.kdl"
-include "windowsrules.kdl"
+include "mouse.kdl"; include "keybinds.kdl"; include "windowsrules.kdl"
 
-prefer-no-csd
+cursor { xcursor-theme "Bibata-Modern-Classic"; xcursor-size 28; }
 screenshot-path "~/ %Y-%m-%d %H-%M-%S.png"
-
-hotkey-overlay { 
-    skip-at-startup
-}
-
-animations {
-    off 
-}
+hotkey-overlay { skip-at-startup; }
+animations { off; }; prefer-no-csd
 
 input {
     keyboard {
-        xkb {
-             layout "cz"
-             options "caps:swapescape"
-        }
+        xkb { layout "cz"; options "caps:swapescape"; }
         numlock
     }
-    touchpad {
-        tap
-        accel-speed 0.3
-    }
-}
-
-cursor {
-    xcursor-theme "Bibata-Modern-Classic"
-    xcursor-size 28
+    touchpad { tap; accel-speed 0.3; }
 }
 
 layout {
-    gaps 4
-    focus-ring {
-        active-color "#8000ff"
-    }
+    gaps 4; focus-ring { active-color "#8000ff";}
 }
 
-// Startup list:
-spawn-at-startup "swaybg" "-i" "/home/libor/.dotfiles/wallpapers/void.png" "-m" "fill"
+spawn-sh-at-startup "swaybg -i /home/libor/.dotfiles/wallpapers/void.png -m fill"
 spawn-sh-at-startup "waybar"
-spawn-sh-at-startup "nirileft"
-spawn-sh-at-startup "niri_tile.py"
+spawn-sh-at-startup "nirileft & niri_tile.py"
 spawn-sh-at-startup "brightnessctl s 80%"
 spawn-sh-at-startup "pipewire &"
 spawn-sh-at-startup "/usr/libexec/xfce-polkit"
