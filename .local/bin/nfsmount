@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sleep 3
-
 if mount /nfs/Nas && mount /nfs/FilmyNas && mount /nfs/HudbaNas; then
     notify-send -i dialog-information "Nas" "Připojení O.K."
 else
