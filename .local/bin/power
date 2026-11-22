@@ -4,7 +4,7 @@
 items=(
 " Odhlásit|system-log-out|nfsumount && niri msg action quit --skip-confirmation"
 " Zamknout|system-lock-screen|lockscreen"
-" Restart|system-reboot|edit ~/nfsumount && loginctl reboot"
+" Restart|system-reboot|nfsumount && loginctl reboot"
 " Vypnout|system-shutdown|nfsumount && loginctl poweroff"
 )
 
