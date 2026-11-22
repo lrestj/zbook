@@ -10,7 +10,7 @@
 ### Apps & scripts
     bindsym $ms+c reload
     bindsym $mod+a exec $TERMINAL
-    bindsym $mod+y exec $TERMINAL --class yazi -e yazi
+    bindsym $mod+y exec $TERMINAL --app-id yazi -e fish -ic 'y; exec fish'
     bindsym Alt+b exec $TERMINAL --class btop -e btop
     bindsym $mod+e exec $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim"
     bindsym $mod+b exec $BROWSER
