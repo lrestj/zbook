@@ -14,9 +14,9 @@ case $selected in
     "$a")
         lockscreen;;
     "$b")
-        sleep 0.5; niri msg action quit --skip-confirmation;;
+        sleep 0.5; nfsumount && niri msg action quit --skip-confirmation;;
     "$c")
-        sleep 0.5; loginctl reboot;;
+        sleep 0.5; nfsumount && loginctl reboot;;
     "$d")
-        sleep 0.5; loginctl poweroff;;
+        sleep 0.5; nfsumount && loginctl poweroff;;
 esac

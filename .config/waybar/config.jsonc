@@ -171,7 +171,7 @@
        "format-plugged": " {capacity}%  ❌",
        "format-alt": "{icon} {time}  ❌",
        "format-icons": ["", "", "", "", ""],
-       "on-click": "pkill fuzzel || powerniri"
+       "on-click": "pkill rofi || powerwaybar"
    },
 
    "power-profiles-daemon": {
