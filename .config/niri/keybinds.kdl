@@ -12,7 +12,7 @@ binds {
     Mod+A hotkey-overlay-title="Open a Terminal" { spawn-sh "$TERMINAL"; }
     Mod+Backslash hotkey-overlay-title="Run a menu" { spawn-sh "pkill rofi || exec rofi -show drun"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Super+B hotkey-overlay-title="Brave browser" { spawn-sh "brave-origin"; }
+    Super+B hotkey-overlay-title="Brave browser" { spawn-sh "$BROWSER"; }
     Super+E hotkey-overlay-title="Vim" { spawn-sh "wrappedvim"; }
     Mod+Y hotkey-overlay-title="Open a Yazi" { spawn-sh "$TERMINAL --class yazi -e yazi"; }
     Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "clipboard"; }

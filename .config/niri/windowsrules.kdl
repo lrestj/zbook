@@ -13,6 +13,7 @@ window-rule {
     match app-id="update"
     match app-id="xfce-polkit"
     match app-id="galculator"
+    match app-id="hyprpicker"
     open-floating true
 }
 window-rule {

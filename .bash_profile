@@ -3,7 +3,7 @@
 # Get the aliases and functions
 [ -f $HOME/.bashrc ] && . $HOME/.bashrc
 
-export BROWSER=brave-origin
+export BROWSER=brave-browser
 export TERMINAL=alacritty
 export kalk=galculator
 export EDITOR=vim

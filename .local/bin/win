@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+WINDOWS=$(niri msg --json windows)
+WORKSPACES=$(niri msg --json workspaces)
+OUTPUTS=$(niri msg --json outputs)
+
+jq -n \
+  --argjson wins "$WINDOWS" \
+  --argjson ws "$WORKSPACES" \
+  --argjson outs "$OUTPUTS" '
+  ($ws | map({(.id | tostring): .}) | add) as $ws_map |
+  
+  $wins[] |
+  ($ws_map[.workspace_id | tostring]) as $w_space |
+  ($outs[$w_space.output]) as $out |
+  
+  (.layout.tile_size) as $size |
+  (.layout.tile_pos_in_workspace_view) as $pos |
+  (.layout.pos_in_scrolling_layout) as $grid |
+  
+  {
+    id: .id,
+    app_id: .app_id,
+    title: .title,
+    type: (if .is_floating then "floating" else "tiled" end),
+    workspace: ($w_space.name // $w_space.idx),
+    output: $w_space.output,
+    size: "\($size[0])x\($size[1])",
+    # Pro plovoucí okna vrátí pixely [x, y], pro dlaždicová pozici [sloupec, řádek]
+    position: (
+      if $pos != null then 
+        { x: $pos[0], y: $pos[1] }
+      elif $grid != null then 
+        { column: $grid[0], row: $grid[1] }
+      else 
+        null 
+      end
+    )
+  }
+'
+
