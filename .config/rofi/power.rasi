@@ -14,7 +14,7 @@ separatorcolor:              rgba ( 239, 97, 85, 18 % );
 }
 
 configuration {
-    font: "Inter 14";
+    font: "Inter 15";
     auto-select: true;
     matching: "prefix";
     tokenize: false;
@@ -28,7 +28,7 @@ configuration {
 }
 
 window {
-    height: 198px;
+    height: 210px;
     width: 250px;
     background-color: @background;
     border:           3;
