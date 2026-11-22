@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 
-# Pomocná funkce pro otevření souboru ve Vimu
-edit() {
-  "$TERMINAL" --class vim -e bash -c "sleep 0.1; exec vim $1" &
-}
-
 # Definice položek: "Název|ikona|příkaz"
 items=(
 " Zamknout|system-lock-screen|lockscreen"
-" Odhlásit|system-log-out|sleep 0.5; swaymsg exit"
-" Restart|system-reboot|edit ~/sleep 0.5; systemctl reboot"
-" Vypnout|system-shutdown|systemctl poweroff"
+" Odhlásit|system-log-out|nfsumount && niri msg action quit --skip-confirmation"
+" Restart|system-reboot|nfsumount && loginctl reboot"
+" Vypnout|system-shutdown|nfsumount && loginctl poweroff"
 )
 
 # Jeden cyklus for pro přípravu menu i uložení příkazů
@@ -27,6 +22,5 @@ done
 selected=$(echo -en "$menu" | rofi -i -config ~/.config/rofi/powerwaybar.rasi -dmenu -theme-str 'inputbar { enabled: false; }' )
 
 [[ -n "$selected" ]] && eval "${cmds[$selected]}" || notify-send -t 1200 -i dialog-information "Přerušeno uživatelem."
-
 
 #### END OF FILE ####

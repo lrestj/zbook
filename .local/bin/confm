@@ -8,6 +8,7 @@ edit() {
 # Definice položek: "Název|ikona|příkaz"
 items=(
 " Sway conf|sway|edit ~/.config/sway/config"
+" Niri conf|niri|edit ~/.config/niri/config.kdl"
 " Keybindings|sway|edit ~/.config/sway/keybindings"
 " Windowsrules|sway|edit ~/.config/sway/windowsrules"
 " Odpojit USB|usb|rofi-umount"

@@ -22,6 +22,7 @@
   
     environment.systemPackages =
         (with pkgs; [
+            python3
             baobab
             brave-origin
             btop
@@ -53,6 +54,7 @@
         ]);
   
   programs = {
+      niri.enable = true;
       dconf.enable = true;  
       nh = {
           enable = true;

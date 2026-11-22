@@ -1,0 +1,34 @@
+// Niri config //
+
+include "mouse.kdl"; include "keybinds.kdl"; include "windowsrules.kdl"
+
+cursor { xcursor-theme "Bibata-Modern-Classic"; xcursor-size 28; }
+screenshot-path "~/ %Y-%m-%d %H-%M-%S.png"
+hotkey-overlay { skip-at-startup; }
+animations { off; }; prefer-no-csd
+
+input {
+    keyboard {
+        xkb { layout "cz"; options "caps:swapescape"; }
+        numlock
+    }
+    touchpad { tap; accel-speed 0.3; }
+}
+
+layout {
+    gaps 4; focus-ring { active-color "#8000ff";}
+}
+
+spawn-sh-at-startup "swaybg -i /home/libor/.dotfiles/wallpapers/nixos.png -m fill"
+spawn-sh-at-startup "waybar"
+spawn-sh-at-startup "nirileft & niri_tile.py"
+spawn-sh-at-startup "brightnessctl s 80%"
+spawn-sh-at-startup "/usr/libexec/xfce-polkit"
+spawn-sh-at-startup "swayidle -w"
+spawn-sh-at-startup "nm-applet --indicator"
+spawn-sh-at-startup "wl-paste --watch cliphist store"
+spawn-sh-at-startup "udiskie -t"
+spawn-sh-at-startup "wlsunset -l 50.1 -L 16.2 -t 4700 -T 5000"
+spawn-sh-at-startup "sleep 4; nfsmount"
+
+// END OF FILE //

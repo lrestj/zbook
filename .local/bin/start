@@ -5,7 +5,8 @@ echo " ##############################"
 echo " #                            #"
 echo " #  HOLA, VYBER SEZENÍ:       #"
 echo " #                            #"
-echo " #  s) SPUSTIT NIXOS          #"
+echo " #  enter) SPUSTIT            #"
+echo " #  n) NIRI                   #"
 echo " #  r) RESTARTOVAT            #"
 echo " #  x) VYPNOUT                #"
 echo " #                            #"
@@ -16,12 +17,12 @@ while true; do
     "")
     echo
     echo "Spouštím Nixos..."
-    exec sway-run
+    exec niri --session
     ;;
-    s)
+    n)
     echo
     echo "Spouštím Nixos..."
-    exec sway-run
+    exec niri --session
     ;;
     [xv])
     echo "Vypínání..."

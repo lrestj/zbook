@@ -2,9 +2,9 @@
 
 # Definice položek: "Název|ikona|příkaz"
 items=(
-" Odhlásit|system-log-out|sleep 0.5; swaymsg exit"
+" Odhlásit|system-log-out|niri msg action quit --skip-confirmation"
 " Zamknout|system-lock-screen|lockscreen"
-" Restart|system-reboot|edit ~/sleep 0.5; systemctl reboot"
+" Restart|system-reboot|systemctl reboot"
 " Vypnout|system-shutdown|systemctl poweroff"
 )
 
