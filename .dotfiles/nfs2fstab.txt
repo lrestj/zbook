@@ -1,0 +1,4 @@
+# NFS Synology shares
+192.168.77.18:/volume1/Rodinas   /nfs/Nas  nfs4 users,_netdev
+192.168.77.18:/volume1/Filmy   /nfs/FilmyNas  nfs4 users,_netdev
+192.168.77.18:/volume1/Hudba   /nfs/HudbaNas  nfs4 users,_netdev

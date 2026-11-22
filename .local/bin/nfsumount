@@ -1,0 +1,8 @@
+#!/bin/bash
+
+umount /nfs/* &&
+notify-send -i dialog-information "Nas odpojen" ||
+notify-send -i dialog-warning "Chyba Nas odpojení"
+sleep 1
+
+#### END OF FILE ####
