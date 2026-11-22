@@ -42,7 +42,7 @@
     },
 
     "memory": {
-        "format": "     {}% ",
+        "format": "    {}% ",
         "on-click": "pkill fuzzel || fuzzel --config ~/.config/fuzzel/menu.ini"
     },
 

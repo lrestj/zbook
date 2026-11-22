@@ -1,4 +1,8 @@
 [[mgr.prepend_keymap]]
+desc = "Start bunny.yazi"
+on = "b"
+run = "plugin bunny"
+[[mgr.prepend_keymap]]
 on   = "F"
 run  = "plugin jump-to-char"
 desc = "Jump to char"
