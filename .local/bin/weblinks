@@ -30,7 +30,7 @@ fi
 
 # Otevření editoru
 if [[ "$selected" == "$edit_label" ]]; then
-    $TERMINAL --class vim -e bash -c "sleep 0.1; exec vim ~/.local/bin/weblinks"
+    $TERMINAL --app-id vim -e bash -c "sleep 0.1; exec vim ~/.local/bin/weblinks"
     exit 0
 fi
 

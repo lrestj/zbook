@@ -2,7 +2,7 @@
 
 # Pomocná funkce pro otevření souboru ve Vimu
 edit() {
-  "$TERMINAL" --class vim -e bash -c "sleep 0.1; exec vim $1" &
+  "$TERMINAL" --app-id vim -e bash -c "sleep 0.1; exec vim $1" &
 }
 
 # Definice položek: "Název|ikona|příkaz"
@@ -16,7 +16,7 @@ items=(
 " Waybar css|wayland|edit ~/.config/waybar/style.css"
 " Clouds|icloud|clouds"
 " Tiskárna web|printer|$BROWSER http://192.168.77.5 &"
-" Stuff2remember|notepad|edit ~/.dotfiles/other/stuff2remember.txt"
+" Stuff2remember|notepad|edit ~/.dotfiles/install/stuff2remember.txt"
 " Add new script|add|addnew"
 " Upravit ...|preferences-system-services|edit ~/.local/bin/confm"
 
