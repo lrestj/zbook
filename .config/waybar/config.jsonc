@@ -14,7 +14,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": [
-        "sway/workspaces",
+        "niri/workspaces",
         "sway/scratchpad",
         "memory",
         "cpu",
@@ -27,7 +27,7 @@
         "custom/browser"
     ],
     "modules-center": [
-        "sway/window",
+        "niri/window",
         "wlr/taskbar"
     ],
     "modules-right": [
@@ -40,7 +40,7 @@
         "battery"
     ],
 
-    "sway/workspaces": {
+    "niri/workspaces": {
         "persistent-workspaces": {
         "1": [],
         "2": [],
