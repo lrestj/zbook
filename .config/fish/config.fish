@@ -6,15 +6,6 @@ if status is-interactive
 
 fzf --fish | source
 
-function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	command yazi $argv --cwd-file="$tmp"
-	if read -z cwd < "$tmp"; and [ "$cwd" != "$PWD" ]; and test -d "$cwd"
-		builtin cd -- "$cwd"
-	end
-	command rm -f -- "$tmp"
-end
-
 abbr mkusb --set-cursor -- "sudo dd if=% of=/dev/sdb bs=4M status=progress conv=fsync"
 abbr !! --position anywhere --function last_history_item
 abbr sudo "sudo"
@@ -29,17 +20,12 @@ abbr nxs "nix-shell -p"
 abbr nrs "nh os switch -H zbook"
 abbr nrb "nh os boot -H zbook"
 abbr nrt "nh os test"
-abbr nco "$EDITOR ~/.dotfiles/nixos/hosts/zbook/configuration.nix"
-abbr npk "$EDITOR ~/.dotfiles/nixos/modules/pkgs.nix"
-abbr nfl "$EDITOR ~/.dotfiles/nixos/flake.nix"
 
 abbr lspkg "nix-store --query --requisites /run/current-system | cut -c 45-77 | sort | less"
 abbr lsgen "nh os info"
 abbr lsdel ".dotfiles/scripts/genlist.sh"
 abbr delgen "sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations"
 abbr makecurrent "sudo /run/current-system/bin/switch-to-configuration boot"
-
-abbr hpp "NIXPKGS_ALLOW_UNFREE=1 nix-shell -p hplipWithPlugin --run 'sudo -E hp-setup'"
 
 abbr cfg "git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME"
 abbr ga "git --git-dir=$HOME/.cfg.git/ --work-tree=$HOME add"
