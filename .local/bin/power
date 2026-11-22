@@ -1,22 +1,26 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-a="Zamknout"
-b="Odhlásit"
-c="Restart"
-d="Vypnout"
-ai="\0icon\x1fsystem-lock-screen"
-bi="\0icon\x1fsystem-log-out"
-ci="\0icon\x1fsystem-reboot"
-di="\0icon\x1fsystem-shutdown"
+# Definice položek: "Název|ikona|příkaz"
+items=(
+" Odhlásit|system-log-out|nfsumount && niri msg action quit --skip-confirmation"
+" Zamknout|system-lock-screen|lockscreen"
+" Restart|system-reboot|edit ~/nfsumount && loginctl reboot"
+" Vypnout|system-shutdown|nfsumount && loginctl poweroff"
+)
 
-selected=$(echo -e "$b$bi\n$a$ai\n$c$ci\n$d$di" | rofi -i -config ~/.config/rofi/power.rasi -dmenu -theme-str 'inputbar { enabled: false; }' )
-case $selected in
-    "$a")
-        lockscreen;;
-    "$b")
-        sleep 0.5; nfsumount && niri msg action quit --skip-confirmation;;
-    "$c")
-        sleep 0.5; nfsumount && loginctl reboot;;
-    "$d")
-        sleep 0.5; nfsumount && loginctl poweroff;;
-esac
+# Jeden cyklus for pro přípravu menu i uložení příkazů
+declare -A cmds
+menu=""
+
+for item in "${items[@]}"; do
+  IFS='|' read -r label icon cmd <<< "$item"
+  menu+="${label}\0icon\x1f${icon}\n"
+  cmds["$label"]="$cmd"
+done
+
+# Výběr a přímé spuštění bez druhého cyklu
+selected=$(echo -en "$menu" | rofi -i -config ~/.config/rofi/power.rasi -dmenu -theme-str 'inputbar { enabled: false; }' )
+
+[[ -n "$selected" ]] && eval "${cmds[$selected]}" || notify-send -t 1200 -i dialog-information "Přerušeno uživatelem."
+
+#### END OF FILE ####
