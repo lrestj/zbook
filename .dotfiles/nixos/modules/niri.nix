@@ -43,23 +43,23 @@
   
   programs.niri.enable = true;
 
-  systemd.user.services = {
-      # waybar = { 
-      #     description = "Waybar"; 
-      #     wantedBy = [ "niri.service" ]; 
-      #     wants = [ "graphical-session.target" ]; 
-      #     after = [ "niri.service" ]; 
-      #     serviceConfig = { 
-      #         Type = "simple"; 
-      #         ExecStart = "${pkgs.waybar}/bin/waybar"; 
-      #         Restart = "on-failure"; 
-      #         RestartSec = 1; 
-      #         TimeoutStopSec = 10;
-      #    };     
-      # }; 
+systemd.user.services = {
+      waybar = { 
+          description = "Waybar"; 
+          wantedBy = [ "default.target" ]; 
+          wants = [ "graphical-session.target" ]; 
+          after = [ "graphical-session.target" ]; 
+          serviceConfig = { 
+              Type = "simple"; 
+              ExecStart = "${pkgs.waybar}/bin/waybar"; 
+              Restart = "on-failure"; 
+              RestartSec = 1; 
+              TimeoutStopSec = 10;
+         };     
+      }; 
       polkit-mate-authentication-agent-1 = { 
           description = "polkit-mate-authentication-agent-1"; 
-          wantedBy = [ "graphical-session.target" ]; 
+          wantedBy = [ "default.target" ]; 
           wants = [ "graphical-session.target" ]; 
           after = [ "graphical-session.target" ]; 
           serviceConfig = { 
@@ -71,7 +71,6 @@
          };     
       }; 
   };
-
 }
 
 #####  END OF FILE  #####
