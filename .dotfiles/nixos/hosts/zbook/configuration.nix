@@ -29,7 +29,7 @@
   documentation.man.cache.enable = false;
   nixpkgs.config.allowUnfree = true;
   environment = {
-      pathsToLink = [ "/libexec" ];
+      pathsToLink = [ "/libexec" "/share/icons" "/share/pixmaps"];
       localBinInPath = true;
       variables = {
           EDITOR = "vim";

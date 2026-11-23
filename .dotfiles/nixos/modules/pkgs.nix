@@ -57,6 +57,7 @@
   
   programs = {
       niri.enable = true;
+      gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
       dconf.enable = true;  
       nh = {
           enable = true;
