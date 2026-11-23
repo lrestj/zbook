@@ -6,10 +6,11 @@
   inputs = {
       nixpkgs.url = "nixpkgs/nixos-unstable"; 
       nixpkgs-stable.url = "nixpkgs/nixos-26.05"; 
+      oniri.url = "github:Antiz96/oniri";
   };
 
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, oniri, ... }@inputs: {
       nixosConfigurations = {
           zbook = nixpkgs.lib.nixosSystem {
               system = "x86_64-linux";

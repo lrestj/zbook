@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, pkgsStable, ... }:
+{ config, pkgs, lib, inputs, pkgsStable, oniri, ... }:
 
 {
 
@@ -56,7 +56,6 @@
         ]);
   
   programs = {
-      niri.enable = true;
       gdk-pixbuf.modulePackages = [ pkgs.librsvg ];
       dconf.enable = true;  
       nh = {

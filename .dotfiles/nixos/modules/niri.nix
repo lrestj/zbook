@@ -6,6 +6,7 @@
 
     environment.systemPackages =
         (with pkgs; [
+          inputs.oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
           bibata-cursors
           brightnessctl
           cliphist
