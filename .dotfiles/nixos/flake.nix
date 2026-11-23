@@ -17,6 +17,11 @@
               specialArgs = { inherit inputs; };
               modules = [
                   ./hosts/zbook/configuration.nix
+                  ({ pkgs, ... }: {
+                    environment.systemPackages = [
+                      oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
+                    ];
+                  })
               ];
           };
           mirantb = nixpkgs.lib.nixosSystem {
