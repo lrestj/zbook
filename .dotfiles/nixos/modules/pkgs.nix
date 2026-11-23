@@ -31,6 +31,7 @@
             file-roller
             fish
             font-manager
+            foot
             fzf
             galculator
             gcolor3
@@ -40,6 +41,7 @@
             rclone
             ripgrep
             simple-scan
+            waybar
             wmctrl
             xdotool
             xournalpp
