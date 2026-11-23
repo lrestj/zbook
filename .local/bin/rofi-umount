@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-dir="/media/$USER"
+dir="/run/media/$USER"
 disks=$(ls -1 "$dir" 2>/dev/null)
 
 [ -z "$disks" ] && notify-send -i dialog-error "Není co odpojit." && exit 0
