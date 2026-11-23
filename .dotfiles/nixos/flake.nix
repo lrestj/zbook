@@ -1,14 +1,11 @@
 {
-
   description = "My NixOS config flake";
-
   
   inputs = {
       nixpkgs.url = "nixpkgs/nixos-unstable"; 
       nixpkgs-stable.url = "nixpkgs/nixos-26.05"; 
       oniri.url = "github:Antiz96/oniri";
   };
-
 
   outputs = { self, nixpkgs, oniri, ... }@inputs: {
       nixosConfigurations = {
