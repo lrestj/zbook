@@ -4,7 +4,6 @@
 
     programs.niri.enable = true;
 
-    environment.pathsToLink = [ "/libexec" ];
     environment.systemPackages =
         (with pkgs; [
           bibata-cursors

@@ -29,6 +29,7 @@
   documentation.man.cache.enable = false;
   nixpkgs.config.allowUnfree = true;
   environment = {
+      pathsToLink = [ "/libexec" ];
       localBinInPath = true;
       variables = {
           EDITOR = "vim";
