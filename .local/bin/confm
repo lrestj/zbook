@@ -7,10 +7,9 @@ edit() {
 
 # Definice položek: "Název|ikona|příkaz"
 items=(
-" Sway conf|sway|edit ~/.config/sway/config"
 " Niri conf|niri|edit ~/.config/niri/config.kdl"
-" Keybindings|sway|edit ~/.config/sway/keybindings"
-" Windowsrules|sway|edit ~/.config/sway/windowsrules"
+" Keybindings|niri|edit ~/.config/niri/keybinds.kdl"
+" Windowsrules|niri|edit ~/.config/niri/windowsrules.kdl"
 " Odpojit USB|usb|rofi-umount"
 " Configuration.nix|nix-snowflake|edit ~/.dotfiles/nixos/hosts/zbook/configuration.nix"
 " Flake.nix|nix-snowflake|edit ~/.dotfiles/nixos/flake.nix"
