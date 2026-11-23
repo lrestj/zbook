@@ -30,6 +30,7 @@
           udiskie
           wl-clipboard
           wlsunset
+          python3
           swaybg
           swaylock
           swayidle

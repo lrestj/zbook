@@ -1,5 +1,6 @@
 hostname,derivation_name,utc_time,build_seconds
 localhost,50-envfs.conf,2026-11-20T13:18:03.638190774Z,0
+localhost,X-Restart-Triggers-dbus-broker,2026-11-23T22:29:32.773630358Z,0
 localhost,X-Restart-Triggers-dbus-broker,2026-11-23T20:37:04.878888138Z,0
 localhost,X-Restart-Triggers-dbus-broker,2026-11-23T19:26:16.976078038Z,0
 localhost,X-Restart-Triggers-dbus-broker,2026-11-23T19:17:18.403646935Z,0
@@ -9,7 +10,7 @@ localhost,X-Restart-Triggers-dbus-broker,2026-11-23T14:10:40.909889563Z,0
 localhost,X-Restart-Triggers-dbus-broker,2026-11-23T13:54:41.968131222Z,0
 localhost,X-Restart-Triggers-dbus-broker,2026-11-23T01:08:00.143849478Z,0
 localhost,X-Restart-Triggers-dbus-broker,2026-11-22T22:17:32.904696813Z,0
-localhost,X-Restart-Triggers-dbus-broker,2026-11-22T21:48:44.078922959Z,0
+localhost,X-Restart-Triggers-polkit,2026-11-23T22:29:32.386511086Z,0
 localhost,X-Restart-Triggers-polkit,2026-11-23T20:37:04.477483786Z,0
 localhost,X-Restart-Triggers-polkit,2026-11-23T19:26:16.587115794Z,0
 localhost,X-Restart-Triggers-polkit,2026-11-23T19:17:18.015060453Z,0
@@ -19,11 +20,11 @@ localhost,X-Restart-Triggers-polkit,2026-11-23T14:10:40.528551778Z,0
 localhost,X-Restart-Triggers-polkit,2026-11-23T13:54:41.473721029Z,0
 localhost,X-Restart-Triggers-polkit,2026-11-23T01:07:59.752149712Z,0
 localhost,X-Restart-Triggers-polkit,2026-11-22T22:17:32.513683969Z,0
-localhost,X-Restart-Triggers-polkit,2026-11-22T21:48:43.692524871Z,0
 localhost,X-Restart-Triggers-systemd-tmpfiles-resetup,2026-11-20T13:18:07.995848067Z,0
 localhost,X-Restart-Triggers-systemd-udevd,2026-11-21T18:44:53.91903855Z,0
 localhost,X-Restart-Triggers-systemd-udevd,2026-11-20T13:18:07.64327705Z,0
 localhost,XnView_MP-1.12.2.glibc2.34-x86_64.AppImage,2026-11-20T18:15:08.287784481Z,16
+localhost,activate,2026-11-23T22:29:35.759986122Z,0
 localhost,activate,2026-11-23T20:37:07.773929156Z,0
 localhost,activate,2026-11-23T19:26:19.921233732Z,0
 localhost,activate,2026-11-23T19:17:21.220613017Z,0
@@ -33,7 +34,6 @@ localhost,activate,2026-11-23T16:47:02.249794924Z,0
 localhost,activate,2026-11-23T16:31:40.551735803Z,0
 localhost,activate,2026-11-23T14:10:43.80748617Z,0
 localhost,activate,2026-11-23T13:54:44.97394066Z,0
-localhost,activate,2026-11-23T10:48:21.950857188Z,0
 localhost,app-xnsoft-360.webp,2026-11-20T18:14:51.743789654Z,0
 localhost,appimage-exec.sh,2026-11-20T18:14:51.176887459Z,0
 localhost,boot.json,2026-11-23T20:37:01.622439181Z,0
@@ -56,6 +56,7 @@ localhost,check-sshd-config,2026-11-22T14:06:32.71966905Z,0
 localhost,check-sshd-config,2026-11-19T23:05:30.160056056Z,0
 localhost,command-not-found,2026-11-21T18:44:50.574105782Z,0
 localhost,command-not-found,2026-11-20T13:18:03.126299988Z,0
+localhost,dbus-1,2026-11-23T22:29:32.562692863Z,0
 localhost,dbus-1,2026-11-23T20:37:04.66003661Z,0
 localhost,dbus-1,2026-11-23T19:26:16.76487268Z,0
 localhost,dbus-1,2026-11-23T19:17:18.1898868Z,0
@@ -65,7 +66,6 @@ localhost,dbus-1,2026-11-23T14:10:40.700573664Z,0
 localhost,dbus-1,2026-11-23T13:54:41.651780835Z,0
 localhost,dbus-1,2026-11-23T01:07:59.929795499Z,0
 localhost,dbus-1,2026-11-22T22:17:32.690219253Z,0
-localhost,dbus-1,2026-11-22T21:48:43.868210475Z,0
 localhost,dry-activate,2026-11-23T20:37:01.636260418Z,0
 localhost,dry-activate,2026-11-23T16:31:34.244948879Z,0
 localhost,dry-activate,2026-11-23T10:24:11.444246196Z,0
@@ -79,6 +79,7 @@ localhost,ensure-wrapper-integrity,2026-11-23T01:07:57.279732662Z,0
 localhost,ensure-wrapper-integrity,2026-11-22T21:48:41.549171967Z,0
 localhost,ensure-wrapper-integrity,2026-11-22T14:06:32.9427523Z,0
 localhost,ensure-wrapper-integrity,2026-11-19T23:05:30.498506979Z,0
+localhost,etc,2026-11-23T22:29:35.518116731Z,0
 localhost,etc,2026-11-23T20:37:07.529282285Z,0
 localhost,etc,2026-11-23T19:26:19.684034965Z,0
 localhost,etc,2026-11-23T19:17:20.982666212Z,0
@@ -88,7 +89,6 @@ localhost,etc,2026-11-23T16:47:02.008733199Z,0
 localhost,etc,2026-11-23T16:31:40.311168944Z,0
 localhost,etc,2026-11-23T14:10:43.56610702Z,0
 localhost,etc,2026-11-23T13:54:44.71730389Z,0
-localhost,etc,2026-11-23T10:48:21.711329724Z,0
 localhost,etc-bashrc,2026-11-21T18:44:50.743620681Z,0
 localhost,etc-bashrc,2026-11-20T13:18:04.129795749Z,0
 localhost,etc-fstab,2026-11-23T16:47:01.179817405Z,0
@@ -172,6 +172,7 @@ localhost,nixos-system-nixos-26.11.20261119.0bb8272,2026-11-20T13:46:44.90431411
 localhost,nixos-system-nixos-26.11.20261119.0bb8272,2026-11-20T13:35:18.005581722Z,0
 localhost,nixos-system-nixos-26.11.20261119.0bb8272,2026-11-20T13:32:01.295645533Z,0
 localhost,nixos-system-nixos-26.11.20261119.0bb8272,2026-11-20T13:18:24.724581569Z,0
+localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T22:29:36.05644843Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T20:37:08.071620089Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T19:26:20.217268398Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T19:17:21.514224286Z,0
@@ -181,7 +182,6 @@ localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T16:47:02.54451417
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T16:31:40.852194773Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T14:10:44.103936335Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T13:54:45.281291569Z,0
-localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T10:48:22.250252316Z,0
 localhost,nixos-version,2026-11-21T18:44:50.610606053Z,0
 localhost,nixos-version,2026-11-20T13:18:03.404563568Z,0
 localhost,nuke-refs,2026-11-20T13:18:04.413451928Z,0
@@ -206,6 +206,7 @@ localhost,sway-1.12,2026-11-21T18:44:53.943092495Z,1
 localhost,system-generators,2026-11-22T21:48:41.468041574Z,0
 localhost,system-generators,2026-11-21T18:44:53.385892049Z,0
 localhost,system-generators,2026-11-20T13:18:07.070110149Z,0
+localhost,system-path,2026-11-23T22:29:32.10139623Z,2
 localhost,system-path,2026-11-23T20:37:04.180659491Z,2
 localhost,system-path,2026-11-23T19:26:16.298026187Z,2
 localhost,system-path,2026-11-23T19:17:17.729462605Z,1
@@ -215,10 +216,10 @@ localhost,system-path,2026-11-23T14:10:39.816785323Z,1
 localhost,system-path,2026-11-23T13:54:41.176301289Z,1
 localhost,system-path,2026-11-23T01:07:59.455371189Z,2
 localhost,system-path,2026-11-22T22:17:32.227358204Z,2
-localhost,system-path,2026-11-22T21:48:43.404610543Z,2
 localhost,system-shutdown,2026-11-22T21:48:41.491391708Z,0
 localhost,system-shutdown,2026-11-21T18:44:53.710714499Z,0
 localhost,system-shutdown,2026-11-20T13:18:07.398532821Z,0
+localhost,system-units,2026-11-23T22:29:34.750571147Z,1
 localhost,system-units,2026-11-23T20:37:06.742668674Z,1
 localhost,system-units,2026-11-23T19:26:18.919212571Z,1
 localhost,system-units,2026-11-23T19:17:20.22181404Z,1
@@ -228,7 +229,6 @@ localhost,system-units,2026-11-23T16:31:39.5254589Z,1
 localhost,system-units,2026-11-23T14:10:42.800333943Z,1
 localhost,system-units,2026-11-23T13:54:43.924712223Z,1
 localhost,system-units,2026-11-23T01:08:02.163135166Z,1
-localhost,system-units,2026-11-22T22:17:34.59787004Z,1
 localhost,systemd-generator-environment.json,2026-11-21T18:44:51.764240867Z,0
 localhost,systemd-generator-environment.json,2026-11-20T13:18:04.724059084Z,0
 localhost,tmpfiles.d,2026-11-20T13:18:07.89792272Z,0
@@ -239,6 +239,8 @@ localhost,unit-console-getty.service-disabled,2026-11-23T16:31:34.381302741Z,0
 localhost,unit-console-getty.service-disabled,2026-11-23T13:54:38.756689533Z,0
 localhost,unit-console-getty.service-disabled,2026-11-22T14:06:32.791510725Z,0
 localhost,unit-console-getty.service-disabled,2026-11-19T23:05:30.356332763Z,0
+localhost,unit-dbus-broker.service,2026-11-23T22:29:33.238649793Z,0
+localhost,unit-dbus-broker.service,2026-11-23T22:29:33.062435939Z,0
 localhost,unit-dbus-broker.service,2026-11-23T20:37:05.486298758Z,0
 localhost,unit-dbus-broker.service,2026-11-23T20:37:05.170130233Z,0
 localhost,unit-dbus-broker.service,2026-11-23T19:26:17.445038482Z,0
@@ -247,8 +249,6 @@ localhost,unit-dbus-broker.service,2026-11-23T19:17:19.006480029Z,0
 localhost,unit-dbus-broker.service,2026-11-23T19:17:18.695847101Z,0
 localhost,unit-dbus-broker.service,2026-11-23T19:12:57.342470792Z,0
 localhost,unit-dbus-broker.service,2026-11-23T19:12:57.151545545Z,0
-localhost,unit-dbus-broker.service,2026-11-23T16:31:38.0986401Z,0
-localhost,unit-dbus-broker.service,2026-11-23T16:31:37.919603615Z,0
 localhost,unit-dbus.service,2026-11-20T13:18:03.661574814Z,0
 localhost,unit-dbus.socket,2026-11-20T13:18:03.670107628Z,0
 localhost,unit-gcr-ssh-agent.service,2026-11-22T21:48:40.603389863Z,0
@@ -294,6 +294,7 @@ localhost,unit-pipewire.socket-disabled,2026-11-23T13:54:38.841258778Z,0
 localhost,unit-pipewire.socket-disabled,2026-11-22T14:06:32.963002032Z,0
 localhost,unit-pipewire.socket-disabled,2026-11-19T23:05:30.618522528Z,0
 localhost,unit-polkit-mate-authentication-agent-1.service,2026-11-23T10:37:25.788964445Z,0
+localhost,unit-polkit.service,2026-11-23T22:29:32.734814997Z,0
 localhost,unit-polkit.service,2026-11-23T20:37:04.837554375Z,0
 localhost,unit-polkit.service,2026-11-23T19:26:16.938339827Z,0
 localhost,unit-polkit.service,2026-11-23T19:17:18.364655202Z,0
@@ -303,7 +304,6 @@ localhost,unit-polkit.service,2026-11-23T14:10:40.87160733Z,0
 localhost,unit-polkit.service,2026-11-23T13:54:41.928654037Z,0
 localhost,unit-polkit.service,2026-11-23T01:08:00.105347643Z,0
 localhost,unit-polkit.service,2026-11-22T22:17:32.866402386Z,0
-localhost,unit-polkit.service,2026-11-22T21:48:44.041131211Z,0
 localhost,unit-script-initrd-find-nixos-closure-start,2026-11-20T13:18:03.926154737Z,0
 localhost,unit-script-initrd-nixos-activation-start,2026-11-20T13:18:04.174167236Z,0
 localhost,unit-script-suid-sgid-wrappers-start,2026-11-23T16:56:08.364929927Z,0
@@ -331,6 +331,7 @@ localhost,unit-xdg-desktop-portal-wlr.service,2026-11-21T18:44:51.136949283Z,0
 localhost,user-generators,2026-11-22T21:48:41.570183612Z,0
 localhost,user-generators,2026-11-21T18:44:53.674255801Z,0
 localhost,user-generators,2026-11-20T13:18:07.429043927Z,0
+localhost,user-units,2026-11-23T22:29:33.619550262Z,0
 localhost,user-units,2026-11-23T20:37:05.978445188Z,0
 localhost,user-units,2026-11-23T19:26:17.724591192Z,0
 localhost,user-units,2026-11-23T19:17:19.490207059Z,0
@@ -340,7 +341,6 @@ localhost,user-units,2026-11-23T14:10:41.652711973Z,0
 localhost,user-units,2026-11-23T13:54:42.736539908Z,0
 localhost,user-units,2026-11-23T10:48:20.950022997Z,0
 localhost,user-units,2026-11-23T10:37:26.332541612Z,0
-localhost,user-units,2026-11-23T10:24:11.738490816Z,0
 localhost,vim-full-master,2026-11-22T14:12:22.702123309Z,82
 localhost,xnviewmp-1.12.2,2026-11-20T18:15:09.76378653Z,0
 localhost,xnviewmp-1.12.2-bwrap,2026-11-20T18:15:09.663864033Z,0
