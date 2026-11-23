@@ -3,23 +3,17 @@
 echo
 echo " ##############################"
 echo " #                            #"
-echo " #  HOLA, VYBER SEZENÍ:       #"
+echo " #        HOLA, VYBER:        #"
 echo " #                            #"
 echo " #  enter) SPUSTIT            #"
-echo " #  n) NIRI                   #"
-echo " #  r) RESTARTOVAT            #"
-echo " #  x) VYPNOUT                #"
+echo " #  r)     RESTARTOVAT        #"
+echo " #  x)     VYPNOUT            #"
 echo " #                            #"
 echo " ##############################"
 while true; do
   read -n 1 -s wm_choice
     case $wm_choice in
     "")
-    echo
-    echo "Spouštím Nixos..."
-    exec niri --session
-    ;;
-    n)
     echo
     echo "Spouštím Nixos..."
     exec niri --session
