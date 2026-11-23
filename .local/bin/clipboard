@@ -1,0 +1,5 @@
+#!/bin/bash
+
+pkill $Menu || cliphist list | rofi -dmenu -i -config /home/libor/.config/rofi/clipboard.rasi -display-columns 2 -p "Schránka"| cliphist decode | wl-copy
+
+#### END OF FILE ####
