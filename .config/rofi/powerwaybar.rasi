@@ -14,7 +14,7 @@ separatorcolor:              rgba ( 239, 97, 85, 18 % );
 }
 
 configuration {
-    font: "Inter 13";
+    font: "Inter Medium 13";
     auto-select: true;
     show-icons: true;
     case-sensitive: false;

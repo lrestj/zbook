@@ -14,7 +14,7 @@ separatorcolor:              rgba ( 239, 97, 85, 18 % );
 }
 
 configuration {
-    font: "Inter 14";
+    font: "Inter Medium 14";
     auto-select: true;
     matching: "prefix";
     tokenize: false;
@@ -35,7 +35,7 @@ configuration {
 
 window {
     height: 0px;
-    width: 995px;
+    width: 1010px;
     background-color: @background;
     border:           3;
     padding:          8;
@@ -54,7 +54,7 @@ textbox {
 }
 listview {
     columns: 2;
-    lines: 10;
+    lines: 12;
     fixed-columns: true;
     fixed-height: 0;
     border:       0px dash 0px 0px ;
