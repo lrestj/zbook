@@ -10,7 +10,7 @@ binds {
     Mod+S hotkey-overlay-title="Open a FileMgr" { spawn "nemo"; }
     Mod+K hotkey-overlay-title="Open a Galculator" { spawn-sh "galculator"; }
     Mod+A hotkey-overlay-title="Open a Terminal" { spawn-sh "$TERMINAL"; }
-    Mod+Backslash hotkey-overlay-title="Run a menu" { spawn-sh "pkill rofi || exec rofi -show drun"; }
+    Alt+Y hotkey-overlay-title="Run a menu" { spawn-sh "pkill rofi || exec rofi -show drun"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Super+B hotkey-overlay-title="Brave browser" { spawn-sh "$BROWSER"; }
     Super+E hotkey-overlay-title="Vim" { spawn-sh "wrappedvim"; }
@@ -41,6 +41,7 @@ binds {
     Mod+Shift+J  { move-window-down; }
     Mod+Shift+K  { move-window-up; }
     Mod+Shift+L  { move-column-right; }
+    Mod+Backslash { focus-window-previous; }
 
     // Workspaces:
     Alt+right { focus-workspace-down; }

@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ "$EUID" -ne 0 ]; then
+  echo "Spusť skript jako root (např. sudo ./install-nvidia580-wayland.sh)"
+  exit 1
+fi
+
+echo "1/5 Synchronizuji repozitáře a instaluji nvidia580..."
+xbps-install -Sy nvidia580
+
+# Pokud potřebuješ 32bitové knihovny (Steam, Wine) na glibc systému, odkomentuj následující řádky:
+# xbps-install -Sy void-repo-multilib void-repo-multilib-nonfree
+# xbps-install -Sy nvidia580-libs-32bit
+
+echo "2/5 Přidávám nvidia-drm.modeset=1 a nvidia-drm.fbdev=1 do GRUBu..."
+if [ -f /etc/default/grub ]; then
+  for param in "nvidia-drm.modeset=1" "nvidia-drm.fbdev=1"; do
+    if ! grep -q "$param" /etc/default/grub; then
+      sed -i "s/\(GRUB_CMDLINE_LINUX_DEFAULT=\"[^\"]*\)\"/\1 $param\"/" /etc/default/grub
+    fi
+  done
+  update-grub
+else
+  echo "Upozornění: /etc/default/grub nenalezen. Přidej nvidia-drm.modeset=1 nvidia-drm.fbdev=1 do svého zavaděče ručně."
+fi
+
+echo "3/5 Nastavuji dracut a přegenerovávám initramfs..."
+mkdir -p /etc/dracut.conf.d
+echo 'add_drivers+=" nvidia nvidia_modeset nvidia_uvm nvidia_drm "' > /etc/dracut.conf.d/nvidia.conf
+dracut --force
+
+echo "4/5 Nastavuji proměnné prostředí pro Wayland (GBM)..."
+cat << 'EOF' > /etc/profile.d/nvidia-wayland.sh
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export LIBVA_DRIVER_NAME=nvidia
+EOF
+
+echo "5/5 Hotovo! Nyní restartuj počítač příkazem: reboot"
+
+#### END OF FILE ####
