@@ -21,7 +21,7 @@ layout {
 
 spawn-sh-at-startup "swaybg -i /home/libor/.dotfiles/wallpapers/void.png -m fill"
 spawn-sh-at-startup "waybar"
-spawn-sh-at-startup "nirileft.py & niri_tile.py"
+spawn-sh-at-startup "nirileft.py & niri_tilemod.py"
 spawn-sh-at-startup "brightnessctl s 80%"
 spawn-sh-at-startup "pipewire &"
 spawn-sh-at-startup "/usr/libexec/xfce-polkit"

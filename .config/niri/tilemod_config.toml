@@ -1,0 +1,10 @@
+[default]
+num_stack = 0
+maximize_solos_on_open = true
+maximize_solos_on_close = true
+collapse_solos_on_open = true
+action_maximize = "MaximizeColumn" # Options: "MaximizeColumn", "MaximizeWindowToEdges", "FullscreenWindow"
+right_to_left = false
+disabled = false
+
+#### END OF FILE ####
