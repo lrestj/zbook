@@ -13,7 +13,7 @@ abbr sudo "sudo"
 abbr ls "ls --color=auto"
 abbr grep "grep --color=auto"
 abbr yup "ya pack -u"
-abbr reb "loginctl reboot"
+abbr reb "nfsumount && loginctl reboot"
 
 abbr yay "sudo xbps-install -Su"
 abbr in "sudo xbps-install -S"
