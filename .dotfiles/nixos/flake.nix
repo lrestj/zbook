@@ -15,9 +15,9 @@
               modules = [
                   ./hosts/zbook/configuration.nix
                   ({ pkgs, ... }: {
-                    environment.systemPackages = [
-                      oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
-                    ];
+                      environment.systemPackages = [
+                          oniri.packages.${pkgs.stdenv.hostPlatform.system}.default
+                      ];
                   })
               ];
           };
