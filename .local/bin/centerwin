@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TARGET_W=1234
-TARGET_H=1000
+TARGET_H=911
 OFFSET_Y=-40 # Záporná hodnota posune okno výš, kladná níž
 
 # Získání informací o aktivním okně
@@ -27,7 +27,7 @@ if [ -f "$STATE_FILE" ]; then
         niri msg action set-window-height "$OLD_H"
         niri msg action move-floating-window -x "$OLD_X" -y "$OLD_Y"
         # Posun plovoucího okna doleva (např. o 200 px)
-        niri msg action move-floating-window -- -x -200
+        niri msg action move-floating-window -x -200
     else
         niri msg action move-window-to-tiling
         niri msg action set-column-width "$OLD_W"
@@ -57,16 +57,23 @@ jq -n \
   --argjson y "$CUR_Y" \
   '{is_floating: $is_floating, width: $width, height: $height, x: $x, y: $y}' > "$STATE_FILE"
 
-# Přepnutí do floating režimu, nastavení cílové velikosti a vystředění
+# Získání logického rozlišení aktivního monitoru
+MONITOR_JSON=$(niri msg --json focused-output)
+MON_W=$(echo "$MONITOR_JSON" | jq -r '.logical.width | floor')
+MON_H=$(echo "$MONITOR_JSON" | jq -r '.logical.height | floor')
+
+# Výpočet přesné cílové pozice včetně OFFSET_Y
+TARGET_X=$(( (MON_W - TARGET_W) / 2 ))
+TARGET_Y=$(( (MON_H - TARGET_H) / 2 + OFFSET_Y ))
+
+# Pojistka proti vyjetí okna mimo horní nebo levý okraj obrazovky
+[ "$TARGET_X" -lt 0 ] && TARGET_X=0
+[ "$TARGET_Y" -lt 0 ] && TARGET_Y=0
+
+# Přepnutí do floating režimu, nastavení velikosti a přesné umístění
 niri msg action move-window-to-floating
 niri msg action set-column-width "$TARGET_W"
 niri msg action set-window-height "$TARGET_H"
-niri msg action center-window
-
-# Volitelný svislý posun
-if [ "$OFFSET_Y" -ne 0 ]; then
-    REL_Y=$(printf "%+d" "$OFFSET_Y")
-    niri msg action move-floating-window -- -y "$REL_Y"
-fi
+niri msg action move-floating-window -x "$TARGET_X" -y "$TARGET_Y"
 
 #### END OF FILE ####
