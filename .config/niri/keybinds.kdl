@@ -2,21 +2,22 @@
 
 binds {
     Mod+Shift+comma { show-hotkey-overlay; }
-    Mod+U hotkey-overlay-title="Update vim" { spawn-sh "$TERMINAL --app-id update -e vimbuild"; }
-    Alt+B hotkey-overlay-title="Btop" { spawn-sh "$TERMINAL --app-id btop -e btop"; }
-    Mod+X hotkey-overlay-title="PowerMenu" { spawn "power"; }
-    Mod+M hotkey-overlay-title="Config menu" { spawn "confm"; }
-    Mod+I hotkey-overlay-title="Config menu" { spawn-sh "pkill rofi || weblinks"; }
-    Mod+S hotkey-overlay-title="Open a FileMgr" { spawn "nemo"; }
-    Mod+K hotkey-overlay-title="Open a Galculator" { spawn-sh "galculator"; }
-    Mod+A hotkey-overlay-title="Open a Terminal" { spawn-sh "$TERMINAL"; }
-    Alt+Y hotkey-overlay-title="Run a menu" { spawn-sh "pkill rofi || exec rofi -show drun"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Super+B hotkey-overlay-title="Brave browser" { spawn-sh "$BROWSER"; }
-    Super+E hotkey-overlay-title="Vim" { spawn-sh "wrappedvim"; }
-    Mod+Y hotkey-overlay-title="Open a Yazi" { spawn-sh "$TERMINAL --app-id yazi -e fish -ic 'y; exec fish'"; }
-    Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "clipboard"; }
-    Mod+Return hotkey-overlay-title="Waybar toggle" { spawn-sh "pkill waybar || waybar"; }
+    Mod+U { spawn-sh "$TERMINAL --app-id update -e vimbuild"; }
+    Alt+B { spawn-sh "$TERMINAL --app-id btop -e btop"; }
+    Mod+X { spawn "power"; }
+    Mod+M { spawn "confm"; }
+    Mod+I { spawn-sh "pkill rofi || weblinks"; }
+    Mod+S { spawn "nemo"; }
+    Mod+K { spawn-sh "galculator"; }
+    Mod+A { spawn-sh "$TERMINAL"; }
+    Alt+Y { spawn-sh "pkill rofi || exec rofi -show drun"; }
+    Super+Alt+L { spawn "swaylock"; }
+    Super+B { spawn-sh "$BROWSER"; }
+    Super+E { spawn-sh "wrappedvim"; }
+    Mod+Y { spawn-sh "$TERMINAL --app-id yazi -e fish -ic 'y; exec fish'"; }
+    Mod+C { spawn-sh "clipboard"; }
+    Mod+Return { spawn-sh "pkill waybar || waybar"; }
+    Mod+KP_Insert { spawn-sh "centerwin"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "volumeup"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "volumedown"; }
@@ -66,10 +67,12 @@ binds {
     Mod+Ctrl+right { consume-or-expel-window-right; }
 
     // Column preset and size:
+    Mod+Shift+R { switch-preset-column-width; }
+    Mod+KP_Down { switch-preset-column-width; }
     Mod+F { maximize-column; }
     Mod+Alt+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }
-    Mod+KP_Insert { center-column; }
+    Mod+Alt+KP_Insert { center-column; }
     Mod+Shift+left { set-column-width "-5%"; }
     Mod+Shift+right { set-column-width "+5%"; }
     Mod+Shift+up { set-window-height "-5%"; }
