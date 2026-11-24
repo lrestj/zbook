@@ -34,9 +34,9 @@
           swaybg
           swaylock
           swayidle
-          sway-contrib.grimshot
           system-config-printer
           xed-editor
+          xwayland-satellite
        ])
 
         ++
