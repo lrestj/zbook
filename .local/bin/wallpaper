@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+CONFIG=$(realpath "$HOME/.config/niri/config.kdl")
+
+# Načtení cesty ze schránky
+CLIP=$(wl-paste -n | head -n 1)
+
+# Odstranění prefixu file:// a dekódování mezer (%20)
+if [[ "$CLIP" == file://* ]]; then
+    CLIP="${CLIP#file://}"
+    CLIP=$(printf '%b' "${CLIP//%/\\x}")
+fi
+
+# Odstranění případných uvozovek a rozbalení ~
+CLIP="${CLIP%\"}"
+CLIP="${CLIP#\"}"
+CLIP="${CLIP/#\~/$HOME}"
+
+# Kontrola existence a typu souboru
+if [ ! -f "$CLIP" ]; then
+    notify-send -i dialog-error "Chyba!!!" "Soubor nenalezen: $CLIP" 2>/dev/null
+    exit 1
+fi
+
+if ! file --mime-type -b "$CLIP" | grep -q "^image/"; then
+    notify-send -i dialog-error "Chyba!!!" "Soubor není obrázek." 2>/dev/null
+    exit 1
+fi
+
+FULL_PATH=$(realpath "$CLIP")
+
+# Úprava řádku v config.kdl pomocí sed
+if grep -qE '^[[:space:]]*spawn-sh-at-startup "swaybg ' "$CONFIG"; then
+    sed -i "s|^[[:space:]]*spawn-sh-at-startup \"swaybg .*|spawn-sh-at-startup \"swaybg -i '$FULL_PATH' -m fill\"|" "$CONFIG"
+else
+    echo "spawn-sh-at-startup \"swaybg -i '$FULL_PATH' -m fill\"" >> "$CONFIG"
+fi
+
+# Okamžitá aplikace tapety
+pkill -x swaybg 2>/dev/null
+nohup swaybg -i "$FULL_PATH" -m fill >/dev/null 2>&1 &
+
+notify-send -i wallpapoz "Wallpaper nastaven" "$(basename "$FULL_PATH")" 2>/dev/null
+
+#### END OF FILE ####

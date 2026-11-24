@@ -16,8 +16,8 @@ input {
 }
 
 layout {
-    gaps 4; focus-ring { active-color "#8000ff";}
-    preset-column-widths { proportion 0.5; proportion 1.0;}
+    gaps 4; focus-ring { active-color "#8000ff"; }
+    preset-column-widths { proportion 0.5; proportion 1.0; }
 }
 
 spawn-sh-at-startup "swaybg -i /home/libor/.dotfiles/wallpapers/void.png -m fill"
