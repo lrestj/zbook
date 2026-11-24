@@ -18,6 +18,7 @@ binds {
     Mod+C { spawn-sh "clipboard"; }
     Mod+Return { spawn-sh "pkill waybar || waybar"; }
     Mod+KP_Insert { spawn-sh "centerwin"; }
+    Ctrl+Shift+W { spawn-sh "wallpaper"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "volumeup"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "volumedown"; }

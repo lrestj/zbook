@@ -20,7 +20,7 @@ layout {
     preset-column-widths { proportion 0.5; proportion 1.0;}
 }
 
-spawn-sh-at-startup "swaybg -i /home/libor/.dotfiles/wallpapers/nixos.png -m fill"
+spawn-sh-at-startup "swaybg -i '/home/libor/.dotfiles/wallpapers/nixos.png' -m fill"
 spawn-at-startup "/run/current-system/sw/libexec/polkit-mate-authentication-agent-1"
 spawn-sh-at-startup "oniri --tiling-layout & nirileft.py"
 spawn-at-startup "waybar"

@@ -1,41 +1,45 @@
 #!/usr/bin/env bash
 
-CONFIG="$HOME/.config/sway/config"
+CONFIG=$(realpath "$HOME/.config/niri/config.kdl")
 
-# Read the path from clipboard and trim whitespace
-CLIP=$(wl-paste -n | xargs)
+# Načtení cesty ze schránky
+CLIP=$(wl-paste -n | head -n 1)
 
-# Strip file:// prefix if copied from a GUI file manager
-CLIP="${CLIP#file://}"
+# Odstranění prefixu file:// a dekódování mezer (%20)
+if [[ "$CLIP" == file://* ]]; then
+    CLIP="${CLIP#file://}"
+    CLIP=$(printf '%b' "${CLIP//%/\\x}")
+fi
 
-# Expand ~ to $HOME if present
+# Odstranění případných uvozovek a rozbalení ~
+CLIP="${CLIP%\"}"
+CLIP="${CLIP#\"}"
 CLIP="${CLIP/#\~/$HOME}"
 
-# Verify the file exists and is an image
+# Kontrola existence a typu souboru
 if [ ! -f "$CLIP" ]; then
-    notify-send "Chyba!!!" "Soubor nenalezen: $CLIP" 2>/dev/null
+    notify-send -i dialog-error "Chyba!!!" "Soubor nenalezen: $CLIP" 2>/dev/null
     exit 1
 fi
 
 if ! file --mime-type -b "$CLIP" | grep -q "^image/"; then
-    notify-send "Chyba!!!" "Soubor není obrázek." 2>/dev/null
+    notify-send -i dialog-error "Chyba!!!" "Soubor není obrázek." 2>/dev/null
     exit 1
 fi
 
-# Get the full absolute path
 FULL_PATH=$(realpath "$CLIP")
 
-# Replace the existing 'output * bg ...' line in Sway config
-if grep -qE '^[[:space:]]*output \* bg ' "$CONFIG"; then
-    sed -i "s|^[[:space:]]*output \* bg .*|output * bg \"$FULL_PATH\" fill|" "$CONFIG"
+# Úprava řádku v config.kdl pomocí sed
+if grep -qE '^[[:space:]]*spawn-sh-at-startup "swaybg ' "$CONFIG"; then
+    sed -i "s|^[[:space:]]*spawn-sh-at-startup \"swaybg .*|spawn-sh-at-startup \"swaybg -i '$FULL_PATH' -m fill\"|" "$CONFIG"
 else
-    # Append it if the line doesn't exist yet
-    echo "output * bg \"$FULL_PATH\" fill" >> "$CONFIG"
+    echo "spawn-sh-at-startup \"swaybg -i '$FULL_PATH' -m fill\"" >> "$CONFIG"
 fi
 
-# Reload Sway to apply the updated configuration
-swaymsg reload
+# Okamžitá aplikace tapety
+pkill -x swaybg 2>/dev/null
+nohup swaybg -i "$FULL_PATH" -m fill >/dev/null 2>&1 &
 
-notify-send "Wallpaper nastaven" "$(basename "$FULL_PATH")" 2>/dev/null
+notify-send -i wallpapoz "Wallpaper nastaven" "$(basename "$FULL_PATH")" 2>/dev/null
 
 #### END OF FILE ####
