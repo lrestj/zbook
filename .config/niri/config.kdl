@@ -20,7 +20,7 @@ layout {
     preset-column-widths { proportion 0.5; proportion 1.0; }
 }
 
-spawn-sh-at-startup "swaybg -i /home/libor/.dotfiles/wallpapers/void.png -m fill"
+spawn-sh-at-startup "swaybg -i '/home/libor/.dotfiles/wallpapers/void.png' -m fill"
 spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "nirileft.py & niri_solo_max.py"
 spawn-sh-at-startup "brightnessctl s 80%"
