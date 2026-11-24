@@ -1,14 +1,14 @@
 #!/bin/bash
 
-echo "##############################"
-echo "#                            #"
-echo "#  HOLA, VYBER SEZENÍ:       #"
-echo "#                            #"
-echo "#  s) SPUSTIT VOID LINUX     #"
-echo "#  r) RESTARTOVAT            #"
-echo "#  x) VYPNOUT                #"
-echo "#                            #"
-echo "##############################"
+echo "#############################"
+echo "#                           #"
+echo "#    HOLA, VYBER SEZENÍ:    #"
+echo "#                           #"
+echo "#  Enter) SPUSTIT           #"
+echo "#      R) RESTARTOVAT       #"
+echo "#      V) VYPNOUT           #"
+echo "#                           #"
+echo "#############################"
 
 while true; do
 read -n 1 -s wm_choice
