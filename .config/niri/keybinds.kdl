@@ -17,6 +17,7 @@ binds {
     Mod+Y hotkey-overlay-title="Open a Yazi" { spawn-sh "$TERMINAL --app-id yazi -e fish -ic 'y; exec fish'"; }
     Mod+C hotkey-overlay-title="Clipboard" { spawn-sh "clipboard"; }
     Mod+Return hotkey-overlay-title="Waybar toggle" { spawn-sh "pkill waybar || waybar"; }
+    Mod+KP_Insert { spawn-sh "centerwin"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "volumeup"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "volumedown"; }
@@ -69,11 +70,12 @@ binds {
     Mod+F { maximize-column; }
     Mod+Alt+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }
-    Mod+KP_Insert { center-column; }
     Mod+Shift+left { set-column-width "-5%"; }
     Mod+Shift+right { set-column-width "+5%"; }
     Mod+Shift+up { set-window-height "-5%"; }
     Mod+Shift+down { set-window-height "+5%"; }
+    Mod+Shift+R { switch-preset-column-width; }
+    Mod+KP_Down { switch-preset-column-width; }
 
     // Screenshot:
     Ctrl+Insert { screenshot; }
