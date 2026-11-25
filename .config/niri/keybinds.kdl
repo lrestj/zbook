@@ -20,11 +20,11 @@ binds {
     Mod+KP_Insert { spawn-sh "centerwin"; }
     Ctrl+Shift+W { spawn-sh "wallpaper"; }
 
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "volumeup"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "volumedown"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "mute"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "micmute"; }
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessup"; }
+    XF86AudioRaiseVolume  allow-when-locked=true { spawn-sh "volumeup"; }
+    XF86AudioLowerVolume  allow-when-locked=true { spawn-sh "volumedown"; }
+    XF86AudioMute         allow-when-locked=true { spawn-sh "mute"; }
+    XF86AudioMicMute      allow-when-locked=true { spawn-sh "micmute"; }
+    XF86MonBrightnessUp   allow-when-locked=true { spawn "brightnessup"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessdown"; }
     
     // Overview, tabbed & floating mode and closing window:
@@ -51,7 +51,6 @@ binds {
     Mod+Alt+right { move-column-to-workspace-down; }
     Mod+Alt+left { move-column-to-workspace-up; }
 
-    Mod+Alt+S { move-column-to-workspace "Void" focus=false; }
     Mod+Alt+KP_End { move-column-to-workspace 1; }
     Mod+Alt+KP_Down { move-column-to-workspace 2; }
     Mod+Alt+KP_Page_Down { move-column-to-workspace 3; }
