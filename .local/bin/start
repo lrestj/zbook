@@ -10,27 +10,28 @@ echo " #        R) RESTARTOVAT      #"
 echo " #        V) VYPNOUT          #"
 echo " #                            #"
 echo " ##############################"
+
 while true; do
-  read -n 1 -s wm_choice
-    case $wm_choice in
-    "")
-    echo
-    echo "Spouštím Nixos..."
-    exec niri --session
-    ;;
-    [xv])
-    echo "Vypínání..."
-    exec systemctl poweroff
-    sleep 1
-    ;;
-    r)
-    echo "Restart..."
-    sleep 1
-    exec systemctl reboot
-    ;;
-    *)
-    echo "Zvolte jednu z možností"
-    ;;
+    read -n 1 -s -r wm_choice
+    case "$wm_choice" in
+        "")
+            echo
+            echo "Spouštím NixOS..."
+            exec niri --session
+            ;;
+        [vVxX])
+            echo "Vypínání..."
+            sleep 1
+            exec systemctl poweroff
+            ;;
+        [rR])
+            echo "Restart..."
+            sleep 1
+            exec systemctl reboot
+            ;;
+        *)
+            echo "Zvolte jednu z možností"
+            ;;
     esac
 done
 

@@ -49,11 +49,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1795425798,
-        "narHash": "sha256-1sK0LOfTCJw6dgYIIIddnGWsjnxYZNWWCRtQvsPp4yI=",
+        "lastModified": 1795594099,
+        "narHash": "sha256-sPEQiuTY9RoSX0paDQxlS0/74Clf4dvZVQWwtaGYBv0=",
         "owner": "Antiz96",
         "repo": "oniri",
-        "rev": "51859ab7aaddfe1c94456e3484886c591e1d21d9",
+        "rev": "a30083da4763f790732d90d4c8aca03f0e2fac0c",
         "type": "github"
       },
       "original": {
