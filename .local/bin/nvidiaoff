@@ -1,0 +1,85 @@
+#!/bin/sh
+
+set -e
+
+if [ "$(id -u)" -ne 0 ]; then
+    echo "Chyba: Tento skript musí být spuštěn jako root (použij sudo)."
+    exit 1
+fi
+
+# === KONTROLA, ZDA JE SKRIPT VŮBEC POTŘEBA ===
+NVIDIA_ACTIVE=0
+for dev in /sys/bus/pci/devices/*; do
+    if [ -f "$dev/vendor" ] && [ "$(cat "$dev/vendor")" = "0x10de" ]; then
+        NVIDIA_ACTIVE=1
+        break
+    fi
+done
+
+if [ "$NVIDIA_ACTIVE" -eq 0 ] && [ -f /etc/modprobe.d/disable-nvidia.conf ] && [ -f /etc/udev/rules.d/50-disable-nvidia.rules ]; then
+    echo "NVIDIA je již odpojena a konfigurace je hotová. Skript se ukončuje."
+    exit 0
+fi
+# =============================================
+
+mkdir -p /etc/udev/rules.d
+
+echo "=== 1. Zablokování jaderných modulů NVIDIA ==="
+cat << 'EOF' > /etc/modprobe.d/disable-nvidia.conf
+blacklist nouveau
+blacklist nvidia
+blacklist nvidia_drm
+blacklist nvidia_modeset
+blacklist nvidia_uvm
+blacklist i2c_nvidia_gpu
+EOF
+echo "Vytvořen /etc/modprobe.d/disable-nvidia.conf"
+
+echo "=== 2. Nastavení udev pravidel pro odebrání z PCIe při bootu ==="
+cat << 'EOF' > /etc/udev/rules.d/50-disable-nvidia.rules
+# Odstranění NVIDIA VGA/3D kontroléru
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", ATTR{remove}="1"
+
+# Odstranění NVIDIA Audio zařízení
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x040300", ATTR{remove}="1"
+
+# Odstranění NVIDIA USB Type-C / UCSI kontrolérů
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0c0330", ATTR{remove}="1"
+ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0c8000", ATTR{remove}="1"
+EOF
+echo "Vytvořen /etc/udev/rules.d/50-disable-nvidia.rules"
+
+echo "=== 3. Odpojení aktuálně běžící karty ==="
+for mod in nvidia_drm nvidia_modeset nvidia_uvm nvidia i2c_nvidia_gpu nouveau; do
+    if lsmod | grep -q "^$mod "; then
+        modprobe -r "$mod" 2>/dev/null || echo "Varování: Modul $mod je používán, projeví se až po restartu."
+    fi
+done
+
+if modprobe acpi_call 2>/dev/null && [ -w /proc/acpi/call ]; then
+    echo "Zkouším ACPI metody pro vypnutí napájení..."
+    for method in '\_SB.PCI0.PEG0.PEGP._OFF' '\_SB.PCI0.RP01.PEGP._OFF' '\_SB.PCI0.PEG1.PEGP._OFF' '\_SB_.PCI0.PEG0.PEGP._OFF'; do
+        echo "$method" > /proc/acpi/call 2>/dev/null || true
+    done
+fi
+
+for dev in /sys/bus/pci/devices/*; do
+    if [ -f "$dev/vendor" ] && [ "$(cat "$dev/vendor")" = "0x10de" ]; then
+        echo "Odebírám zařízení ze sběrnice: $(basename "$dev")"
+        echo 1 > "$dev/remove"
+    fi
+done
+
+echo "=== 4. Aktualizace initramfs (Void Linux) ==="
+xbps-reconfigure -fa
+
+echo "=== HOTOVO ==="
+echo "NVIDIA karta byla odpojena a nastavena pro trvalé vypnutí při startu."
+echo "Doporučuje se restartovat systém pro úplné vyčištění stavu."
+
+#### END OF FILE ####
+
+# Nvidia back on:
+# sudo rm -f /etc/modprobe.d/disable-nvidia.conf /etc/udev/rules.d/50-disable-nvidia.rules
+# sudo xbps-reconfigure -fa
+
