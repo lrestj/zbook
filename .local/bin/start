@@ -1,35 +1,37 @@
 #!/bin/bash
 
-echo "#############################"
-echo "#                           #"
-echo "#    HOLA, VYBER SEZENÍ:    #"
-echo "#                           #"
-echo "#  Enter) SPUSTIT           #"
-echo "#      R) RESTARTOVAT       #"
-echo "#      V) VYPNOUT           #"
-echo "#                           #"
-echo "#############################"
+cat << "EOF"
+#############################
+#                           #
+#    HOLA, VYBER SEZENÍ:    #
+#                           #
+#    Enter) SPUSTIT         #
+#    R)     RESTARTOVAT     #
+#    V)     VYPNOUT         #
+#                           #
+#############################
+EOF
 
 while true; do
-read -n 1 -s wm_choice
-    case $wm_choice in
-    s)
-    exec dbus-run-session /usr/bin/niri --session
-    break;;
-    "")
-    exec dbus-run-session /usr/bin/niri --session
-    break;;
-    x)
-    echo "Vypínání..."
-    sleep 1
-    exec loginctl poweroff
-    break;;
-    r)
-    echo "Restart..."
-    sleep 1
-    exec loginctl reboot
-    break;;
-    *)
-    echo "Vyberte jednu z možností";;
+    read -r -n 1 -s wm_choice
+    case "$wm_choice" in
+        ""|s|S)
+            exec dbus-run-session /usr/bin/niri --session
+            ;;
+        r|R)
+            echo "Restartování..."
+            sleep 1
+            exec loginctl reboot
+            ;;
+        v|V)
+            echo "Vypínání..."
+            sleep 1
+            exec loginctl poweroff
+            ;;
+        *)
+            echo "Neplatná volba. Stiskněte Enter, R nebo V."
+            ;;
     esac
 done
+
+#### END OF FILE ####
