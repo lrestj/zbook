@@ -1,24 +1,69 @@
-#!/bin/bash
+#!/bin/sh
+set -e
 
-sudo cp -r /etc/sv/agetty-tty1 /etc/sv/agetty-autologin-tty1
-echo " EDIT: ...--noclear --autologin libor"
-sleep 5
-vim /etc/sv/agetty-autologin-tty1/conf
-sudo rm /var/service/agetty-tty1
-sudo ln -s /etc/sv/agetty-autologin-tty1 /var/service/
+USER_NAME="libor"
+CONF_DIR="/etc/sv/agetty-tty1"
+CONF_FILE="$CONF_DIR/conf"
 
-echo "####################################"
-echo "#  Restartovat do nového systému?  #"
-echo "####################################"
-while true; do
-    read -r -n 1 -p "Vyberte (A/N): " answer
-    case $answer in
-        [Aa]* ) echo -e "\n Restartuji..."
-                sleep 1
-                sudo reboot; break;;
-        [Nn]* ) exit;;
-        * ) echo -e "\nVyberte A nebo N.";;
-    esac
-done
+# Kontrola oprávnění root
+if [ "$(id -u)" -ne 0 ]; then
+    echo "Chyba: Tento skript musí být spuštěn jako root (použijte sudo nebo doas)." >&2
+    exit 1
+fi
 
-#### END OF FILE #####
+# Ověření, zda uživatel existuje
+if ! id "$USER_NAME" >/dev/null 2>&1; then
+    echo "Chyba: Uživatel '$USER_NAME' v systému neexistuje." >&2
+    exit 1
+fi
+
+# Záloha původní konfigurace, pokud existuje
+if [ -f "$CONF_FILE" ]; then
+    cp "$CONF_FILE" "${CONF_FILE}.bak"
+#!/bin/sh
+set -e
+
+USER_NAME="libor"
+CONF_DIR="/etc/sv/agetty-tty1"
+CONF_FILE="$CONF_DIR/conf"
+
+# Kontrola oprávnění root
+if [ "$(id -u)" -ne 0 ]; then
+    echo "Chyba: Tento skript musí být spuštěn jako root (použijte sudo nebo doas)." >&2
+    exit 1
+fi
+
+# Ověření, zda uživatel existuje
+if ! id "$USER_NAME" >/dev/null 2>&1; then
+    echo "Chyba: Uživatel '$USER_NAME' v systému neexistuje." >&2
+    exit 1
+fi
+
+# Záloha původní konfigurace, pokud existuje
+if [ -f "$CONF_FILE" ]; then
+    cp "$CONF_FILE" "${CONF_FILE}.bak"
+fi
+
+# Zápis nové konfigurace pro agetty
+cat <<EOF > "$CONF_FILE"
+GETTY_ARGS="--noclear -a $USER_NAME"
+BAUD_RATE=38400
+TERM_NAME=linux
+EOF
+
+echo "Autologin pro uživatele '$USER_NAME' na tty1 byl úspěšně nastaven."
+echo "Změna se projeví po restartu systému (příkaz: reboot)."
+fi
+
+# Zápis nové konfigurace pro agetty
+cat <<EOF > "$CONF_FILE"
+GETTY_ARGS="--noclear -a $USER_NAME"
+BAUD_RATE=38400
+TERM_NAME=linux
+EOF
+
+echo "Autologin pro uživatele '$USER_NAME' na tty1 byl úspěšně nastaven."
+echo "Změna se projeví po restartu systému (příkaz: reboot)."
+
+#### END OF FILE ####
+
