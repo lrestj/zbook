@@ -91,7 +91,7 @@
 
   boot = {
       kernelParams = [ "reboot=acpi" ];
-      kernelPackages = pkgs.linuxPackages_latest;
+      kernelPackages = pkgs.linuxPackages;
       kernel.sysctl."vm.swappiness" = 10;
       supportedFilesystems = {
           exfat = true;
