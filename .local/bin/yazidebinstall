@@ -1,0 +1,20 @@
+#!/bin/bash
+cat << "EOF"
+#######################
+# Installing Yazi     #
+#######################
+EOF
+
+curl -fsSL https://yazi-rs.github.io/builds/yazi-keyring.gpg | sudo tee /usr/share/keyrings/yazi-keyring.gpg >/dev/null
+
+cat << "EOF" | sudo tee /etc/apt/sources.list.d/yazi.sources >/dev/null
+Types: deb
+URIs: https://yazi-rs.github.io/builds/
+Suites: stable
+Components: main
+Signed-By: /usr/share/keyrings/yazi-keyring.gpg
+EOF
+
+sudo apt update && sudo apt install -y yazi
+
+#### END OF FILE ####
