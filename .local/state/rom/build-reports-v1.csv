@@ -25,6 +25,7 @@ localhost,X-Restart-Triggers-systemd-tmpfiles-resetup,2026-11-20T13:18:07.995848
 localhost,X-Restart-Triggers-systemd-udevd,2026-11-21T18:44:53.91903855Z,0
 localhost,X-Restart-Triggers-systemd-udevd,2026-11-20T13:18:07.64327705Z,0
 localhost,XnView_MP-1.12.2.glibc2.34-x86_64.AppImage,2026-11-20T18:15:08.287784481Z,16
+localhost,activate,2026-11-27T18:33:05.057821493Z,0
 localhost,activate,2026-11-25T16:34:46.876406395Z,0
 localhost,activate,2026-11-25T16:29:36.490629477Z,0
 localhost,activate,2026-11-24T16:59:00.544944978Z,0
@@ -34,7 +35,6 @@ localhost,activate,2026-11-23T22:29:35.759986122Z,0
 localhost,activate,2026-11-23T20:37:07.773929156Z,0
 localhost,activate,2026-11-23T19:26:19.921233732Z,0
 localhost,activate,2026-11-23T19:17:21.220613017Z,0
-localhost,activate,2026-11-23T19:12:59.603498666Z,0
 localhost,anyhow-1.0.105,2026-11-25T16:33:41.734531787Z,0
 localhost,app-xnsoft-360.webp,2026-11-20T18:14:51.743789654Z,0
 localhost,appimage-exec.sh,2026-11-20T18:14:51.176887459Z,0
@@ -106,6 +106,7 @@ localhost,ensure-wrapper-integrity,2026-11-22T14:06:32.9427523Z,0
 localhost,ensure-wrapper-integrity,2026-11-19T23:05:30.498506979Z,0
 localhost,env_filter-2.1.0,2026-11-25T16:33:42.237560836Z,0
 localhost,env_logger-0.11.12,2026-11-25T16:33:42.238628232Z,0
+localhost,etc,2026-11-27T18:33:04.816083451Z,0
 localhost,etc,2026-11-25T16:34:46.595616779Z,0
 localhost,etc,2026-11-25T16:29:36.16779761Z,0
 localhost,etc,2026-11-24T16:59:00.29198747Z,0
@@ -115,7 +116,6 @@ localhost,etc,2026-11-23T22:29:35.518116731Z,0
 localhost,etc,2026-11-23T20:37:07.529282285Z,0
 localhost,etc,2026-11-23T19:26:19.684034965Z,0
 localhost,etc,2026-11-23T19:17:20.982666212Z,0
-localhost,etc,2026-11-23T19:12:59.367896466Z,0
 localhost,etc-bashrc,2026-11-21T18:44:50.743620681Z,0
 localhost,etc-bashrc,2026-11-20T13:18:04.129795749Z,0
 localhost,etc-fstab,2026-11-23T16:47:01.179817405Z,0
@@ -224,6 +224,7 @@ localhost,nixos-system-nixos-26.11.20261119.0bb8272,2026-11-20T13:46:44.90431411
 localhost,nixos-system-nixos-26.11.20261119.0bb8272,2026-11-20T13:35:18.005581722Z,0
 localhost,nixos-system-nixos-26.11.20261119.0bb8272,2026-11-20T13:32:01.295645533Z,0
 localhost,nixos-system-nixos-26.11.20261119.0bb8272,2026-11-20T13:18:24.724581569Z,0
+localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-27T18:33:05.377625557Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-25T16:34:47.186857089Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-25T16:29:40.254547211Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-24T16:59:00.841510931Z,0
@@ -233,7 +234,6 @@ localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T22:29:36.05644843
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T20:37:08.071620089Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T19:26:20.217268398Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T19:17:21.514224286Z,0
-localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-23T19:12:59.897635315Z,0
 localhost,nixos-version,2026-11-21T18:44:50.610606053Z,0
 localhost,nixos-version,2026-11-20T13:18:03.404563568Z,0
 localhost,normalize-line-endings-0.3.0,2026-11-25T16:33:39.632731092Z,0
@@ -402,6 +402,7 @@ localhost,unit-systemd-tmpfiles-setup.service,2026-11-25T16:29:35.081654956Z,0
 localhost,unit-systemd-tmpfiles-setup.service,2026-11-20T13:18:04.766032331Z,0
 localhost,unit-systemd-udevd.service,2026-11-21T18:44:54.106702675Z,0
 localhost,unit-systemd-udevd.service,2026-11-20T13:18:07.798411927Z,0
+localhost,unit-waybar.service,2026-11-27T18:33:03.51954045Z,0
 localhost,unit-waybar.service,2026-11-23T10:48:20.412283374Z,0
 localhost,unit-wireplumber.service-disabled,2026-11-25T16:33:39.330665745Z,0
 localhost,unit-wireplumber.service-disabled,2026-11-23T20:37:01.879871215Z,0
@@ -413,6 +414,7 @@ localhost,unit-xdg-desktop-portal-wlr.service,2026-11-21T18:44:51.136949283Z,0
 localhost,user-generators,2026-11-22T21:48:41.570183612Z,0
 localhost,user-generators,2026-11-21T18:44:53.674255801Z,0
 localhost,user-generators,2026-11-20T13:18:07.429043927Z,0
+localhost,user-units,2026-11-27T18:33:04.046738121Z,0
 localhost,user-units,2026-11-25T16:34:44.668512416Z,0
 localhost,user-units,2026-11-24T16:58:58.779134688Z,0
 localhost,user-units,2026-11-24T16:50:06.603385517Z,0
@@ -422,7 +424,6 @@ localhost,user-units,2026-11-23T20:37:05.978445188Z,0
 localhost,user-units,2026-11-23T19:26:17.724591192Z,0
 localhost,user-units,2026-11-23T19:17:19.490207059Z,0
 localhost,user-units,2026-11-23T19:12:57.814332258Z,0
-localhost,user-units,2026-11-23T16:31:38.377941338Z,0
 localhost,vim-full-master,2026-11-22T14:12:22.702123309Z,82
 localhost,xnviewmp-1.12.2,2026-11-20T18:15:09.76378653Z,0
 localhost,xnviewmp-1.12.2-bwrap,2026-11-20T18:15:09.663864033Z,0

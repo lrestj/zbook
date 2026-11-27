@@ -17,7 +17,7 @@ while true; do
         "")
             echo
             echo "Spouštím NixOS..."
-            exec niri --session
+            exec niri-session -l
             ;;
         [vVxX])
             echo "Vypínání..."
