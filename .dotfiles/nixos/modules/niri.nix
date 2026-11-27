@@ -47,19 +47,6 @@
 
 
 systemd.user.services = {
-      waybar = { 
-          description = "Waybar"; 
-          wantedBy = [ "graphical-session.target" ]; 
-          wants = [ "graphical-session.target" ]; 
-          after = [ "graphical-session.target" ]; 
-          serviceConfig = { 
-              Type = "simple"; 
-              ExecStart = "${pkgs.waybar}/bin/waybar"; 
-              Restart = "on-failure"; 
-              RestartSec = 1; 
-              TimeoutStopSec = 10;
-         };     
-      }; 
       polkit-mate-authentication-agent-1 = { 
           description = "polkit-mate-authentication-agent-1"; 
           wantedBy = [ "graphical-session.target" ]; 

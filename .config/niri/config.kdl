@@ -23,6 +23,7 @@ layout {
 spawn-sh-at-startup "swaybg -i '/home/libor/.dotfiles/wallpapers/nixos.png' -m fill"
 spawn-sh-at-startup "oniri --tiling-layout & nirileft.py"
 spawn-sh-at-startup "brightnessctl s 80%"
+spawn-at-startup "waybar"
 spawn-sh-at-startup "swayidle -w"
 spawn-sh-at-startup "nm-applet --indicator"
 spawn-sh-at-startup "wl-paste --watch cliphist store"
