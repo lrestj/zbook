@@ -62,7 +62,6 @@ systemd.user.services = {
       }; 
   };
 
-  
 }
 
 #####  END OF FILE  #####
