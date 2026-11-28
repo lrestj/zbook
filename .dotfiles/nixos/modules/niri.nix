@@ -48,9 +48,7 @@
           xed-editor
           xwayland-satellite
        ])
-
         ++
-
         (with pkgsStable; [
             # galculator
         ]);
@@ -58,4 +56,3 @@
 }
 
 #####  END OF FILE  #####
-

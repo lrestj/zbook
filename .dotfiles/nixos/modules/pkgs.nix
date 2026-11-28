@@ -46,9 +46,7 @@
             yazi
             ytdownloader
             ])
-
         ++
-
         (with pkgsStable; [
             # galculator
         ]);

@@ -49,9 +49,7 @@
           waybar
           xed-editor
        ])
-
         ++
-
         (with pkgsStable; [
             # galculator
         ]);
