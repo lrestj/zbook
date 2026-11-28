@@ -11,9 +11,7 @@
 
     xdg.portal = {
         wlr.enable = true;
-        config.sway = {
-           default = [ "wlr" "gtk" ]; 
-        };
+        config.sway.default = [ "wlr" "gtk" ];
     };
 
     environment.systemPackages =

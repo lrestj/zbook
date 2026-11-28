@@ -2,7 +2,7 @@
 
 binds {
     Mod+Shift+comma { show-hotkey-overlay; }
-    Mod+U { spawn-sh "$TERMINAL --app-id update -e vimbuild"; }
+    Mod+U { spawn-sh "$TERMINAL --app-id update -e vupdnx"; }
     Alt+B { spawn-sh "$TERMINAL --app-id btop -e btop"; }
     Mod+X { spawn "power"; }
     Mod+M { spawn "confm"; }

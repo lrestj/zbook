@@ -16,9 +16,7 @@
       enable = true;
       xdgOpenUsePortal=true;
       extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
-      config.common = {
-         default = [ "gtk" ]; 
-      };
+      config.common.default = [ "gtk" ]; 
   };
   documentation.man.cache.enable = false;
   nixpkgs.config.allowUnfree = true;
