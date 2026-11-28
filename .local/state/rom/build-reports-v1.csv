@@ -52,6 +52,7 @@ localhost,X-Restart-Triggers-systemd-udevd,2026-11-21T18:44:53.91903855Z,0
 localhost,X-Restart-Triggers-systemd-udevd,2026-11-20T13:18:07.64327705Z,0
 localhost,X-Restart-Triggers-wpa_supplicant,2026-11-28T10:21:44.87778282Z,0
 localhost,XnView_MP-1.12.2.glibc2.34-x86_64.AppImage,2026-11-20T18:15:08.287784481Z,16
+localhost,activate,2026-11-28T10:52:03.568205771Z,0
 localhost,activate,2026-11-28T10:27:48.31268801Z,0
 localhost,activate,2026-11-28T10:16:27.210153842Z,0
 localhost,activate,2026-11-28T09:58:28.241859463Z,0
@@ -61,7 +62,6 @@ localhost,activate,2026-11-27T20:04:06.568879843Z,0
 localhost,activate,2026-11-27T19:32:03.446025285Z,0
 localhost,activate,2026-11-27T18:33:05.057821493Z,0
 localhost,activate,2026-11-25T16:34:46.876406395Z,0
-localhost,activate,2026-11-25T16:29:36.490629477Z,0
 localhost,andale32.exe,2026-11-28T10:22:18.003247739Z,1
 localhost,anyhow-1.0.105,2026-11-25T16:33:41.734531787Z,0
 localhost,app-xnsoft-360.webp,2026-11-20T18:14:51.743789654Z,0
@@ -175,6 +175,7 @@ localhost,env_filter-2.1.0,2026-11-28T10:22:21.866064495Z,0
 localhost,env_filter-2.1.0,2026-11-25T16:33:42.237560836Z,0
 localhost,env_logger-0.11.12,2026-11-28T10:22:18.88135331Z,0
 localhost,env_logger-0.11.12,2026-11-25T16:33:42.238628232Z,0
+localhost,etc,2026-11-28T10:52:03.323448841Z,0
 localhost,etc,2026-11-28T10:27:48.049500994Z,0
 localhost,etc,2026-11-28T10:16:26.940390242Z,0
 localhost,etc,2026-11-28T09:58:27.996810582Z,0
@@ -184,7 +185,6 @@ localhost,etc,2026-11-27T20:04:06.291845786Z,0
 localhost,etc,2026-11-27T19:32:03.20644414Z,0
 localhost,etc,2026-11-27T18:33:04.816083451Z,0
 localhost,etc,2026-11-25T16:34:46.595616779Z,0
-localhost,etc,2026-11-25T16:29:36.16779761Z,0
 localhost,etc-X11-xorg.conf.d-00-keyboard.conf,2026-11-28T10:21:41.587175378Z,0
 localhost,etc-alsa-conf.d-49-pipewire-modules.conf,2026-11-28T10:25:38.943382189Z,0
 localhost,etc-bash_logout,2026-11-28T10:21:42.030366319Z,0
@@ -216,6 +216,7 @@ localhost,etc-nsswitch.conf,2026-11-28T10:21:42.889572179Z,0
 localhost,etc-os-release,2026-11-28T10:21:43.200967409Z,0
 localhost,etc-os-release,2026-11-21T18:44:50.466139422Z,0
 localhost,etc-os-release,2026-11-20T13:18:02.904176894Z,0
+localhost,etc-pam-environment,2026-11-28T10:52:02.428618124Z,0
 localhost,etc-pam-environment,2026-11-28T10:22:31.152159222Z,0
 localhost,etc-pam-environment,2026-11-28T09:58:26.985049421Z,0
 localhost,etc-pam-environment,2026-11-23T16:31:34.262829578Z,0
@@ -223,6 +224,7 @@ localhost,etc-pam-environment,2026-11-21T18:44:52.832538053Z,0
 localhost,etc-pam-environment,2026-11-20T17:10:07.256992725Z,0
 localhost,etc-pam-environment,2026-11-20T13:18:07.004656996Z,0
 localhost,etc-polkit-1-rules.d-10-nixos.rules,2026-11-28T10:21:43.214307516Z,0
+localhost,etc-profile,2026-11-28T10:52:02.506525865Z,0
 localhost,etc-profile,2026-11-28T10:25:37.313134398Z,0
 localhost,etc-profile,2026-11-28T10:23:00.164941637Z,0
 localhost,etc-profile,2026-11-28T09:58:27.112778645Z,0
@@ -455,6 +457,7 @@ localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-27T18:33:05.37762555
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-25T16:34:47.186857089Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-25T16:29:40.254547211Z,0
 localhost,nixos-system-nixos-26.11.20261121.2786a2a,2026-11-24T16:59:00.841510931Z,0
+localhost,nixos-system-nixos-26.11.20261124.58d0d3e,2026-11-28T10:52:03.886688698Z,0
 localhost,nixos-system-nixos-26.11.20261124.58d0d3e,2026-11-28T10:27:48.614220857Z,0
 localhost,nixos-tmpfiles.d,2026-11-28T10:21:39.349949495Z,0
 localhost,nixos-version,2026-11-28T10:21:39.360722694Z,0
@@ -493,6 +496,7 @@ localhost,rofi-2.1.1,2026-11-28T10:22:18.560621553Z,2
 localhost,rofi-2.1.1,2026-11-21T18:44:53.346643794Z,2
 localhost,sane-config,2026-11-28T10:22:28.678581437Z,8
 localhost,security-wrapper-mount.nfs-x86_64-unknown-linux-musl,2026-11-23T16:56:08.29172795Z,0
+localhost,set-environment,2026-11-28T10:52:02.428628317Z,0
 localhost,set-environment,2026-11-28T10:22:31.191097442Z,0
 localhost,set-environment,2026-11-28T09:58:27.014308636Z,0
 localhost,set-environment,2026-11-23T16:31:34.376681559Z,0
