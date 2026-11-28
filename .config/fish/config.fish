@@ -4,6 +4,7 @@ if status is-interactive
 # Set up fzf key bindings
 fzf --fish | source
 
+abbr nvidiaoff "sudo bash /home/libor/.local/bin/nvidiaoff"
 abbr mkusb --set-cursor -- "sudo dd if=% of=/dev/sdb bs=4M status=progress conv=fsync"
 abbr vsv "sudo vsv"
 abbr pc "niri msg pick-color"
