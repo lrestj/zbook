@@ -31,16 +31,5 @@ EOF
 
 echo "Autologin pro uživatele '$USER_NAME' na tty1 byl úspěšně nastaven."
 echo "Změna se projeví po restartu systému (příkaz: reboot)."
-fi
-
-# Zápis nové konfigurace pro agetty
-cat <<EOF > "$CONF_FILE"
-GETTY_ARGS="--noclear -a $USER_NAME"
-BAUD_RATE=38400
-TERM_NAME=linux
-EOF
-
-echo "Autologin pro uživatele '$USER_NAME' na tty1 byl úspěšně nastaven."
-echo "Změna se projeví po restartu systému (příkaz: reboot)."
 
 #### END OF FILE ####
