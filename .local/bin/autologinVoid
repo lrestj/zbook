@@ -20,28 +20,6 @@ fi
 # Záloha původní konfigurace, pokud existuje
 if [ -f "$CONF_FILE" ]; then
     cp "$CONF_FILE" "${CONF_FILE}.bak"
-#!/bin/sh
-set -e
-
-USER_NAME="libor"
-CONF_DIR="/etc/sv/agetty-tty1"
-CONF_FILE="$CONF_DIR/conf"
-
-# Kontrola oprávnění root
-if [ "$(id -u)" -ne 0 ]; then
-    echo "Chyba: Tento skript musí být spuštěn jako root (použijte sudo nebo doas)." >&2
-    exit 1
-fi
-
-# Ověření, zda uživatel existuje
-if ! id "$USER_NAME" >/dev/null 2>&1; then
-    echo "Chyba: Uživatel '$USER_NAME' v systému neexistuje." >&2
-    exit 1
-fi
-
-# Záloha původní konfigurace, pokud existuje
-if [ -f "$CONF_FILE" ]; then
-    cp "$CONF_FILE" "${CONF_FILE}.bak"
 fi
 
 # Zápis nové konfigurace pro agetty
@@ -66,4 +44,3 @@ echo "Autologin pro uživatele '$USER_NAME' na tty1 byl úspěšně nastaven."
 echo "Změna se projeví po restartu systému (příkaz: reboot)."
 
 #### END OF FILE ####
-

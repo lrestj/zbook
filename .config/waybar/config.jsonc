@@ -166,7 +166,7 @@
            "critical": 15
        },
        "format": "{icon} {capacity}%  ❌",
-       "format-full": "{icon} {capacity}%  ❌",
+       "format-full": "{icon}  {capacity}%  ❌",
        "format-charging": "{capacity}%  ❌",
        "format-plugged": " {capacity}%  ❌",
        "format-alt": "{icon} {time}  ❌",
@@ -185,12 +185,6 @@
            "power-saver": " "
        }
    },
-
-   "custom/power": {
-       "format" : "  ",
-       "tooltip-format": "",
-       "on-click": "pkill fuzzel || powerniri"
-   }
 }] 
 
 // END OF FILE
