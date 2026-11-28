@@ -7,7 +7,6 @@
   imports =
       [ # Include hardware-configuration.nix
         ./hardware-configuration.nix
-        # ../../modules/cinnamon.nix
         ../../modules/niri.nix
         ../../modules/pkgs.nix
         ../../modules/disableNvidia.nix
@@ -15,15 +14,10 @@
 
   xdg.portal = {
       enable = true;
-      extraPortals = with pkgs; [
-          xdg-desktop-portal-gnome
-          xdg-desktop-portal-gtk
-      ];
+      xdgOpenUsePortal=true;
+      extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
       config.common = {
-         default = [ "gnome" ]; 
-         "org.freedesktop.impl.portal.FileChooser"= [ "gtk" ];
-         # "org.freedesktop.impl.portal.ScreenCast"= [ "wlr" ];
-         # "org.freedesktop.impl.portal.Screenshot"= [ "wlr" ];
+         default = [ "gtk" ]; 
       };
   };
   documentation.man.cache.enable = false;
@@ -80,6 +74,21 @@
           AllowHibernation="no";
           AllowHybridSleep="no";
           AllowSuspendThenHibernate="no";
+      };
+      user.services = {
+          polkit-mate-authentication-agent-1 = { 
+              description = "polkit-mate-authentication-agent-1"; 
+              wantedBy = [ "graphical-session.target" ]; 
+              wants = [ "graphical-session.target" ]; 
+              after = [ "graphical-session.target" ]; 
+              serviceConfig = { 
+                  Type = "simple"; 
+                  ExecStart = "${pkgs.mate-polkit}/libexec/polkit-mate-authentication-agent-1"; 
+                  Restart = "on-failure"; 
+                  RestartSec = 1; 
+                  TimeoutStopSec = 10;
+             };     
+          }; 
       };
   };
   

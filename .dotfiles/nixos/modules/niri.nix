@@ -3,6 +3,15 @@
 {
 
     programs.niri.enable = true;
+    xdg.portal = {
+        extraPortals = with pkgs; [
+            xdg-desktop-portal-gnome
+        ];
+        config.niri = {
+           default = [ "gnome" "gtk" ]; 
+           "org.freedesktop.impl.portal.FileChooser"= [ "gtk" ];
+        };
+    };
 
     environment.systemPackages =
         (with pkgs; [
@@ -45,23 +54,7 @@
             # galculator
         ]);
 
-
-systemd.user.services = {
-      polkit-mate-authentication-agent-1 = { 
-          description = "polkit-mate-authentication-agent-1"; 
-          wantedBy = [ "graphical-session.target" ]; 
-          wants = [ "graphical-session.target" ]; 
-          after = [ "graphical-session.target" ]; 
-          serviceConfig = { 
-              Type = "simple"; 
-              ExecStart = "${pkgs.mate-polkit}/libexec/polkit-mate-authentication-agent-1"; 
-              Restart = "on-failure"; 
-              RestartSec = 1; 
-              TimeoutStopSec = 10;
-         };     
-      }; 
-  };
-
 }
 
 #####  END OF FILE  #####
+
