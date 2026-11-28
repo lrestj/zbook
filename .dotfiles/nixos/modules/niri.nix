@@ -44,6 +44,7 @@
           swaylock
           swayidle
           system-config-printer
+          waybar
           xed-editor
           xwayland-satellite
        ])

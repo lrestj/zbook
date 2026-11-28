@@ -40,7 +40,6 @@
             rclone
             ripgrep
             simple-scan
-            waybar
             wmctrl
             xdotool
             xournalpp
